@@ -1,0 +1,141 @@
+{
+	"interesados": [
+		{
+			"id": "1",
+			"nombre": "Ytalo",
+			"celular": "987654321",
+			"correo_electronico": "ytaloduenas@gmail.com",
+			"programa": "1",
+			"descuento": 0.1
+		}
+	],
+
+	"programs": [
+		{
+			"id": "1",
+			"name": "Corte y confeccion",
+			"description": "aqui aprendera a realizar vestidos",
+			"price": "100",
+			"duration": "96 horas académicas (4 horas apróximadamente) ",
+			"image": "hhtp://tudominio.com/img/programa1.jpg"
+		},
+		{
+			"id": "2",
+			"name": "Cocina Gourmet",
+			"description": "aqui aprendera a realizar vestidos",
+			"price": "100",
+			"duration": "96 horas académicas (4 horas apróximadamente) ",
+			"image": "hhtp://tudominio.com/img/programa1.jpg"
+		},
+		{
+			"id": "3",
+			"name": "Corte y confeccion",
+			"description": "aqui aprendera a realizar vestidos",
+			"price": "100",
+			"duration": "96 horas académicas (4 horas apróximadamente) ",
+			"image": "hhtp://tudominio.com/img/programa1.jpg"
+		},
+		{
+			"id": "4",
+			"name": "Corte y confeccion",
+			"description": "aqui aprendera a realizar vestidos",
+			"price": "100",
+			"duration": "96 horas académicas (4 horas apróximadamente) ",
+			"image": "hhtp://tudominio.com/img/programa1.jpg"
+		}
+	],
+
+	"beneficios": [
+		{
+			"id": "1",
+			"url_img": "Beneficio 1",
+			"descripcion": "este beneficio es el nuemro 1"
+		}
+	],
+
+	"usuers": [
+		{
+			"id": "1",
+			"username": "ytaloduenas",
+			"email": "ytaloduenas@gmail.com",
+			"contrasena": "1234",
+			"terminos": true,
+			"is_verified": true,
+			"is_staff": true,
+			"is_active": true
+		}
+	],
+
+	"compras": [
+		{
+			"id_compra": "",
+			"id_alumno": "",
+			"id_programa": "",
+			"precio": "",
+			"cupon": ""
+		}
+	],
+
+	"cupones": [
+		{
+			"id_cupon": 1,
+			"codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
+			"porcentaje_descuento": 0.1,
+			"estado": true
+		},
+		{
+			"id_cupon": 2,
+			"codigo_cupon": "SFDGfdasdfdsasdaffdsafdsa",
+			"porcentaje_descuento": 0.15,
+			"estado": true
+		},
+		{
+			"id_cupon": 3,
+			"codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
+			"porcentaje_descuento": 0.2,
+			"estado": true
+		}
+	],
+
+	"order": [
+		{
+			"id": "",
+			"price": "",
+			"iduser": "",
+			"code": "",
+			"cupon": ""
+		}
+	],
+
+	"order_detail": [
+		{
+			"id": "",
+			"idorder": "",
+			"idprogram": "",
+			"quantity": 1,
+			"price": ""
+		}
+	],
+
+	"shoppingcart": [
+		{
+			"id_user": "",
+			"cupon": "",
+			"programas": [
+				{
+					"id_programs": 1,
+					"price": 0
+				},
+				{
+					"id_programs": 2,
+					"price": 0
+				},
+				{
+					"id_programs": 3,
+					"price": 0
+				}
+			],
+			"precio_total": 0
+		}
+	]
+}
