@@ -1,10 +1,18 @@
 <template>
-	<div id="nav">
-		<router-link to="/">Home</router-link> |
-		<router-link to="/about">About</router-link> |
-		<router-link to="/pachacutec">Pachacutec</router-link>
+	<div>
+		<div id="nav">
+			<router-link to="/">Home</router-link> |
+			<router-link to="/about">About</router-link> |
+			<router-link to="/pachacutec">Pachacutec</router-link> |
+			<router-link to="/card">Card</router-link> |
+			<router-link to="/login">Login</router-link> |
+			<router-link to="/pasarelapagopaypal">Pago paypal</router-link> |
+			<router-link to="/pasarelapagoefectivo">Pago Efectivo</router-link>
+			| <router-link to="/registro">Registro</router-link> |
+			<router-link to="/resumencompra">Resumen Compra</router-link>
+		</div>
+		<router-view />
 	</div>
-	<router-view />
 </template>
 
 <style>
@@ -28,14 +36,13 @@
 #nav a.router-link-exact-active {
 	color: #42b983;
 }
-body{
-  background: #F2F3F5; 
-  min-height: 100vh;
+body {
+	background: #f2f3f5;
+	min-height: 100vh;
 }
-.contenedor {  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.contenedor {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 </style>
