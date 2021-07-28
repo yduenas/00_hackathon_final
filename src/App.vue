@@ -28,4 +28,14 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+body{
+  background: #F2F3F5; 
+  min-height: 100vh;
+}
+.contenedor {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 </style>

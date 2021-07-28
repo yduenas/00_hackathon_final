@@ -1,0 +1,106 @@
+{
+	"interesados": [
+		{
+			"id": "",
+			"nombre": "",
+			"celular": "",
+			"correo_electronico": "",
+			"programa": "",
+			"descuento": 0.1
+		}
+	],
+
+	"programas": [
+		{
+			"id": "",
+			"nombre": "",
+			"descripcion": "",
+			"precio": "",
+			"duracion": "",
+			"url_img": ""
+		}
+	],
+
+	"beneficios": [
+		{
+			"id": "",
+			"url_img": "",
+			"titulo": "",
+			"descripcion": ""
+		}
+	],
+
+	"usuers": [
+		{
+			"id": "",
+			"username": "",
+			"email": "",
+			"contrasena": "",
+			"terminos": "",
+			"is_verified": true,
+			"is_staff": true,
+			"is_active": true
+		}
+	],
+
+	"compras": [
+		{
+			"id_compra": "",
+			"id_alumno": "",
+			"id_programa": "",
+			"precio": "",
+			"cupon": ""
+		}
+	],
+
+	"cupones": [
+		{
+			"id_cupon": 1,
+			"codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
+			"porcentaje_descuento": 0.1,
+			"estado": true
+		}
+	],
+
+	"order": [
+		{
+			"id": "",
+			"precio": "",
+			"id_usuario": "",
+			"codigo": "",
+			"cupon": ""
+		}
+	],
+
+	"order_detail": [
+		{
+			"id": "",
+			"id_order": "",
+			"id_programa": "",
+			"cantidad": 1,
+			"precio": ""
+		}
+	],
+
+	"carrito": [
+		{
+			"id_usuario": "",
+			"cupon": "",
+			"programas": [
+				{
+					"id_programa": 1,
+					"precio": 0
+				},
+				{
+					"id_programa": 2,
+					"precio": 0
+				},
+				{
+					"id_programa": 3,
+					"precio": 0
+				}
+			],
+			"precio_total": 0
+		}
+	]
+}

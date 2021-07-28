@@ -1,12 +1,17 @@
 <template>
   <Home/>
+  <Programas/>
 </template>
 
 <script>
+import Home from '@/components/Home.vue'
+import Programas from '@/components/Programas.vue'
 export default {
-    name: 'Home',
+  
+  name: 'Pachacutec',
   components: {
-    Home
+    Home,
+    Programas
   }
 }
 </script>
