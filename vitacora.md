@@ -6,6 +6,7 @@ Hola Ytalo
 
 Hola chang
 referenciar imagenes: https://www.youtube.com/watch?v=HAcNZhSDhnQ
+Descargue todas las imagenes y ya se como linkearlas en dinamico (arriba te dejo video de referencia)
 
 # DAVID HUILCA
 
