@@ -5,6 +5,7 @@ Hola Ytalo
 # ANOTACIONES YTALO
 
 Hola chang
+referenciar imagenes: https://www.youtube.com/watch?v=HAcNZhSDhnQ
 
 # DAVID HUILCA
 

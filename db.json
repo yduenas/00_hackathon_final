@@ -17,7 +17,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "hhtp://tudominio.com/img/programa1.jpg"
+			"image": "http://tudominio.com/img/programa1.jpg"
 		},
 		{
 			"id": "2",
@@ -25,7 +25,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "hhtp://tudominio.com/img/programa1.jpg"
+			"image": "http://tudominio.com/img/programa1.jpg"
 		},
 		{
 			"id": "3",
@@ -33,7 +33,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "hhtp://tudominio.com/img/programa1.jpg"
+			"image": "http://tudominio.com/img/programa1.jpg"
 		},
 		{
 			"id": "4",
@@ -41,19 +41,29 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "hhtp://tudominio.com/img/programa1.jpg"
+			"image": "http://tudominio.com/img/programa1.jpg"
 		}
 	],
 
 	"beneficios": [
 		{
 			"id": "1",
-			"url_img": "Beneficio 1",
+			"url_img": "beneficio_001.svg",
 			"descripcion": "este beneficio es el nuemro 1"
+		},
+		{
+			"id": "2",
+			"url_img": "beneficio_002.svg",
+			"descripcion": "este beneficio es el nuemro 2"
+		},
+		{
+			"id": "3",
+			"url_img": "beneficio_003.svg",
+			"descripcion": "este beneficio es el nuemro 3"
 		}
 	],
 
-	"usuers": [
+	"users": [
 		{
 			"id": "1",
 			"username": "ytaloduenas",

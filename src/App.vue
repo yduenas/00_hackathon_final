@@ -9,11 +9,52 @@
 			<router-link to="/pasarelapagopaypal">Pago paypal</router-link> |
 			<router-link to="/pasarelapagoefectivo">Pago Efectivo</router-link>
 			| <router-link to="/registro">Registro</router-link> |
-			<router-link to="/resumencompra">Resumen Compra</router-link>
+			<router-link to="/resumencompra">Resumen Compra</router-link> |
+			<router-link to="/pruebas">Pruebas conexion</router-link>
 		</div>
+		<div>{{ nombre }}</div>
 		<router-view />
 	</div>
 </template>
+
+<script>
+import { mapState, mapActions } from 'vuex';
+export default {
+	name: 'Home',
+
+	data() {
+		return {
+			nombre: 'Ytalo',
+			valor: {},
+		};
+	},
+	computed: {
+		//	//	...mapState(['contactos', 'ini', 'fin']),
+		//	...mapState(['programas']),
+	},
+	components: {
+		//	ContactCard,
+		//	Modal,
+		//	Spinner,
+	},
+	methods: {
+		refrescar(valor) {
+			//console.log('refrescando' + JSON.stringify(valor));
+			this.valor = valor;
+		},
+		// ...mapActions([
+		// 	'getProgramasAction',
+		// 	// 'deleteContactoAction',
+		// 	// 'actualizarContactoAction',
+		// 	// 'nextContactoAction',
+		// 	// 'prevContactoAction',
+		// ]),
+	},
+	created() {
+		//	this.getProgramasAction();
+	},
+};
+</script>
 
 <style>
 #app {
