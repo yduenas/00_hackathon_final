@@ -1,21 +1,21 @@
 <template>
   <section class="contenedor">
-    <div class="grupo-caja">
-      <div class="caja caja__item">
-        <div class="caja__internet">
+    <div class="grupo-caja caja-margen">
+      <div class="caja caja-item">
+        <div class="caja-internet">
           <img
             src="../assets/movil/Senial_Internet.jpg"
             alt="Señal de Internet"
           />
         </div>
-        <div class="caja__carrier">Carrier</div>
-        <div class="caja__wifi">
+        <div class="caja-carrier">Carrier</div>
+        <div>
           <img src="../assets/movil/wifi.jpg" alt="Wifi" />
         </div>
       </div>
-      <div class="caja caja__hora">{{ hora }}:{{ minutos }}</div>
+      <div class="caja caja-hora">{{ hora }}:{{ minutos }}</div>
       <div class="caja">
-        <div class="caja__bateria">
+        <div class="caja-bateria">
           <div>
             <img src="../assets/movil/estado-de-la-bateria.jpg" alt="" />
           </div>
@@ -23,16 +23,31 @@
       </div>
     </div>
     <div class="grupo-caja">
-      <div>
-        <img class="caja__file" src="../assets/movil/file.jpg" alt="" />
+      <div class="caja-file">
+        <div class="file-url">
+          <img src="../assets/movil/respaldo.jpg" alt="bloquear" />
+          <div class="url__marginText">files.design</div>
+        </div>
+        <div>
+          <img src="../assets/movil/flecha-curva.jpg" alt="" />
+        </div>
       </div>
     </div>
     <div class="grupo-caja">
-      <div>
-        <img
-          src="../assets/movil/movil-1.jpg"
-          alt=""
-        />
+      <div class="caja-imgPchacutec">
+        <img src="../assets/movil/pachacutec.jpg" alt="" />
+        <div class="grupo-logoPachacutec">
+          <div class="logoPachacutec">
+            <img src="../assets/movil/logo-pachacutec.jpg" alt="logo" />
+            <img src="../assets/movil/lista.jpg" alt="Menu" />
+          </div>
+          <div class="logoPachacutec__titulo">
+            !Explota todo tu potencial tecnólogico!
+          </div>
+          <div class="logoPachacutec__subtitulo">
+            Con nuestros programas de especialización
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -74,29 +89,71 @@ export default {
   align-items: center;
   width: 33.3%;
 }
-.caja__item {
+.caja-item {
   display: flex;
   justify-content: flex-start;
 }
-.caja__internet,
-.caja__carrier {
+.caja-internet,
+.caja-carrier {
   padding-right: 0.3em;
 }
-.caja__carrier {
+.caja-carrier {
   font-size: larger;
 }
-.caja__hora {
+.caja-hora {
   display: flex;
   justify-content: center;
   font-weight: bold;
 }
-.caja__bateria {
+.caja-bateria {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
-.caja__file {
-  width: 350px;
-  border-radius: 4px;
+.caja-file {
+  width: 340px;
+  border-radius: 10px;
+  background: #e3e3e3;
+  display: flex;
+  justify-content: center;
+  margin: 0.7em auto;
+  padding: 0.4em;
+}
+.file-url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5.5em;
+}
+.caja-imgPchacutec {
+  height: 240px;
+}
+.url__marginText {
+  padding: 0 0.4em;
+  font-weight: bold;
+}
+.grupo-logoPachacutec {
+  margin: 1em;
+  position: relative;
+  top: -120%;
+}
+.logoPachacutec {
+  display: flex;
+  justify-content: space-between;
+}
+.logoPachacutec__titulo,
+.logoPachacutec__subtitulo {
+  color: white;
+  text-align: left;
+}
+.logoPachacutec__titulo {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30%;
+}
+.logoPachacutec__subtitulo {
+  font-weight: 300;
+  margin-top: 3%;
+  width: 60%;
 }
 </style>
