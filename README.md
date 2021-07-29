@@ -25,6 +25,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Nombre del proyecto
 
 cd 00_hackathon_final
+git add .
+git commit -m 'separe el store'
 
 ### json-server
 
