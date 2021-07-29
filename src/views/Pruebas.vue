@@ -69,7 +69,18 @@ export default {
 			]
 			//	{ programasA: (state) => state.moduloA.programas }
 		),
-		...mapState({ programasA: (state) => state.programasA }),
+		...mapState(
+			{ programasA: (state) => state.programasA },
+			{ beneficiosA: (state) => state.beneficiosA },
+			{ comprasA: (state) => state.comprasA },
+			{ cuponesA: (state) => state.cuponesA },
+			{ interesadosA: (state) => state.interesadosA },
+			{ orderdetailA: (state) => state.orderdetailA },
+			{ ordersA: (state) => state.ordersA },
+			//	{ programasA: (state) => state.programasA }
+			{ shoppingcartA: (state) => state.shoppingcartA },
+			{ usersA: (state) => state.usersA }
+		),
 		// ...mapState({
 		// 	//	programasA: (state) => state.programasA.programasA,
 		// 	programasA(state) {
@@ -82,6 +93,14 @@ export default {
 		//	...mapActions(['moduloA/getProgramasAction']},
 		...mapMutations({
 			getProgramasMutation: 'programasA/getProgramasMutation',
+			getBeneficiosMutation: 'beneficiosA/getBeneficiosMutation',
+			getComprassMutation: 'comprassA/getComprassMutation',
+			getCuponesMutation: 'cuponesA/getCuponesMutation',
+			getInteresadosMutation: 'interesadosA/getInteresadosMutation',
+			getOrderDetailsMutation: 'orderdetailsA/getOrderDetailsMutation',
+			getProgramasMutation: 'programasA/getProgramasMutation',
+			getShoppingCartMutation: 'shoppingcartA/getShoppingCartMutation',
+			getUsersMutation: 'usersA/getUsersMutation',
 		}),
 		...mapActions({
 			getProgramasActionA: 'programasA/getProgramasAction',
