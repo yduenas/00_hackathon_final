@@ -29,7 +29,7 @@
 		},
 		{
 			"id": "3",
-			"name": "Corte y confeccion",
+			"name": "Desarrollo BackEnd",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
@@ -37,7 +37,7 @@
 		},
 		{
 			"id": "4",
-			"name": "Corte y confeccion",
+			"name": "Desarrollo FrontEnd",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",

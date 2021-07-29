@@ -80,6 +80,12 @@ export default {
 	methods: {
 		//...mapMutations(['moduloA/getProgramasMutation']),
 		//	...mapActions(['moduloA/getProgramasAction']},
+		...mapMutations({
+			getProgramasMutation: 'programasA/getProgramasMutation',
+		}),
+		...mapActions({
+			getProgramasActionA: 'programasA/getProgramasAction',
+		}),
 		...mapActions([
 			//	'moduloA/getProgramasAction',
 			'getProgramasAction',
@@ -105,7 +111,7 @@ export default {
 		this.getOrdersAction();
 		this.getOrderDetailsAction();
 		this.getShoppingCartsAction();
-		//	this.programasA.getProgramasAction();
+		this.getProgramasActionA();
 		//	this.state.programasA.getProgramasAction();
 		// this.$store.dispatch('programasA/loadprogramasA');
 		//	this['moduleA/getProgramasAction']();

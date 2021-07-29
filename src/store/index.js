@@ -1,6 +1,15 @@
 import { createStore } from 'vuex';
 
+//import programasA from './programasA';
+import beneficiosA from './beneficiosA';
+import comprasA from './comprasA';
+import cuponesA from './cuponesA';
+import interesadosA from './interesadosA';
+import orderdetailA from './orderdetailA';
+import ordersA from './ordersA';
 import programasA from './programasA';
+import shoppingcartA from './shoppingcartA';
+import usersA from './usersA';
 
 const URL = 'http://localhost:3000/programs/';
 
@@ -66,8 +75,14 @@ export default createStore({
 		orderdetail: {},
 		shoppincarts: [],
 		shoppincart: {},
+		interesados: [],
+		interesado: {},
 	},
 	mutations: {
+		getInteresadosMutation(state, payload) {
+			//	state.programas.push(payload);
+			state.interesados = payload;
+		},
 		getProgramasMutation(state, payload) {
 			//	state.programas.push(payload);
 			state.programas = payload;
@@ -102,6 +117,12 @@ export default createStore({
 		},
 	},
 	actions: {
+		async getInteresadosAction({ commit, state }) {
+			const data = await fetch(`${state.URLInteresados}`); //'http://localhost:3000/Interesados'
+			let interesados = await data.json();
+			commit('getInteresadosMutation', interesados);
+			console.log(interesados);
+		},
 		async getProgramasAction({ commit, state }) {
 			const data = await fetch(`${state.URLProgramas}`); //'http://localhost:3000/programas'
 			let programas = await data.json();
@@ -158,6 +179,14 @@ export default createStore({
 		//moduleA,
 		//moduleA: moduleA,
 		//moduleB: moduleB,
+		beneficiosA,
+		comprasA,
+		cuponesA,
+		interesadosA,
+		orderdetailA,
+		ordersA,
 		programasA,
+		shoppingcartA,
+		usersA,
 	},
 });
