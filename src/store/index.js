@@ -1,6 +1,27 @@
 import { createStore } from 'vuex';
 
+import programasA from './programasA';
+
 const URL = 'http://localhost:3000/programs/';
+
+const moduleA = {
+	namespaced: true,
+	state: {
+		programasA: ['Programa 1', 'Programa 2', 'Programa 3'],
+	},
+	mutations: {},
+	actions: {},
+	getters: {
+		/* Son computed properties dentro del store */
+	},
+};
+const moduleB = {
+	namespaced: true,
+	state: {},
+	mutations: {},
+	actions: {},
+	getters: {},
+};
 
 export default createStore({
 	state: {
@@ -130,5 +151,13 @@ export default createStore({
 			console.log(ShoppingCart);
 		},
 	},
-	modules: {},
+	getters: {
+		/* Son computed properties dentro del store */
+	},
+	modules: {
+		//moduleA,
+		//moduleA: moduleA,
+		//moduleB: moduleB,
+		programasA,
+	},
 });
