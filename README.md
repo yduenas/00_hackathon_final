@@ -26,7 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'separe el store actualice el readme'
+git commit -m 'separe el store cree todos los js dentro del store'
 git status
 
 ### json-server

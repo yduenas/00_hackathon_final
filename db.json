@@ -13,35 +13,35 @@
 	"programs": [
 		{
 			"id": "1",
-			"name": "Corte y confeccion",
+			"name": "Desarrollo de Aplicaciones Moviles",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "http://tudominio.com/img/programa1.jpg"
+			"image": "c_desarrollo_aplicaciones_moviles.svg"
 		},
 		{
 			"id": "2",
-			"name": "Cocina Gourmet",
+			"name": "Desarrollo Back End",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "http://tudominio.com/img/programa1.jpg"
+			"image": "c_desarrollo_backend.svg"
 		},
 		{
 			"id": "3",
-			"name": "Desarrollo BackEnd",
+			"name": "Desarrollo Frond End",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "http://tudominio.com/img/programa1.jpg"
+			"image": "c_desarrollo_frondend.svg"
 		},
 		{
 			"id": "4",
-			"name": "Desarrollo FrontEnd",
+			"name": "Desarrollo Video Juegos",
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "http://tudominio.com/img/programa1.jpg"
+			"image": "c_desarrollo_videojuegos.svg"
 		}
 	],
 
