@@ -175,7 +175,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .grupo {
 	padding: 2.5em 0 0;
 	height: 200px;

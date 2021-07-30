@@ -34,10 +34,12 @@ const routes = [
 	},
 
 	{
-		path: '/card',
-		name: 'Card',
+		path: '/carrito',
+		name: 'Carrito',
 		component: () =>
-			import(/* webpackChunkName: "pachacutec" */ '../views/Cart.vue'),
+			import(
+				/* webpackChunkName: "pachacutec" */ '../views/CarritoCompras.vue'
+			),
 	},
 	{
 		path: '/login',
@@ -46,27 +48,12 @@ const routes = [
 			import(/* webpackChunkName: "pachacutec" */ '../views/Login.vue'),
 	},
 	{
-		path: '/pasarelapagopaypal',
-		name: 'PasarelaPagoPayPal',
+		path: '/pasarelapago',
+		name: 'PasarelaPago',
 		component: () =>
-			import(
-				/* webpackChunkName: "pachacutec" */ '../views/PasarelaPagoPayPal.vue'
-			),
+			import(/* webpackChunkName: "pachacutec" */ '../views/PasarelaPago.vue'),
 	},
-	{
-		path: '/pasarelapagoefectivo',
-		name: 'PasarelaPagoEfectivo',
-		component: () =>
-			import(
-				/* webpackChunkName: "pachacutec" */ '../views/PasarelaPagoEfectivo.vue'
-			),
-	},
-	{
-		path: '/registro',
-		name: 'Registro',
-		component: () =>
-			import(/* webpackChunkName: "pachacutec" */ '../views/Registro.vue'),
-	},
+
 	{
 		path: '/resumencompra',
 		name: 'ResumenCompra',

@@ -90,7 +90,7 @@
 									class="form-control"
 									id="contrasena"
 									name="contrasena"
-									placeholder="ingrese nombre"
+									placeholder="ingrese contraseña"
 									autocomplete="off"
 								/>
 							</div>
@@ -148,7 +148,7 @@
 									class="form-control"
 									id="contrasena"
 									name="contrasena"
-									placeholder="ingrese nombre"
+									placeholder="ingrese contraseña"
 									autocomplete="off"
 								/>
 							</div>
@@ -158,7 +158,7 @@
 									class="form-control"
 									id="contrasena2"
 									name="contrasena2"
-									placeholder="ingrese nombre"
+									placeholder="ingrese nuevamente contraseña"
 									autocomplete="off"
 								/>
 							</div>
@@ -207,7 +207,7 @@ export default {};
 	height: 100vh;
 }
 .ladoA {
-	background-image: url('../assets/img/background_login.svg');
+	background-image: url('../assets/img/background_login.png');
 	height: 100vh;
 	color: white;
 	padding-left: 30px;

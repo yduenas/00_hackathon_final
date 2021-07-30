@@ -4,11 +4,10 @@
 			<router-link to="/">Home</router-link> |
 			<router-link to="/about">About</router-link> |
 			<router-link to="/pachacutec">Pachacutec</router-link> |
-			<router-link to="/card">Card</router-link> |
+			<router-link to="/carrito">Carrito Compras</router-link> |
 			<router-link to="/login">Login</router-link> |
-			<router-link to="/pasarelapagopaypal">Pago paypal</router-link> |
-			<router-link to="/pasarelapagoefectivo">Pago Efectivo</router-link> |
-			<router-link to="/registro">Registro</router-link> |
+			<router-link to="/pasarelapago">Pasarela de Pago </router-link> |
+
 			<router-link to="/resumencompra">Resumen Compra</router-link> |
 			<router-link to="/pruebas">Pruebas conexion</router-link>
 		</div>
