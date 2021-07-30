@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
-		<header class="header">
+		<HeaderBlack />
+		<!-- <header class="header">
 			<div class="row">
 				<div class="col-8 ladoA">
 					<img src="@/assets/img/pachacutec.svg" alt="" />
@@ -11,14 +12,15 @@
 					<i class="bi bi-list"></i>
 				</div>
 			</div>
-		</header>
+		</header> -->
 		<section class="secction">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
 					<router-link to="/login" class="routerdecoration">
 						<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
 					</router-link>
-					<table class="table borderless">
+					<ListaCompras />
+					<!-- <table class="table borderless">
 						<tbody>
 							<tr>
 								<td width="20%">
@@ -44,7 +46,7 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
+					</table> -->
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="subtotal">
@@ -83,7 +85,15 @@
 </template>
 
 <script>
-export default {};
+import HeaderBlack from '@/components/HeaderBlack.vue';
+import ListaCompras from '@/components/ListaCompras.vue';
+export default {
+	name: 'CarritoCompras',
+	components: {
+		HeaderBlack,
+		ListaCompras,
+	},
+};
 </script>
 
 <style scoped>

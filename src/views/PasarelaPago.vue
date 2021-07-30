@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
-		<header class="header">
+		<HeaderBlack />
+		<!-- <header class="header">
 			<div class="row">
 				<div class="col-8 ladoA">
 					<img src="@/assets/img/pachacutec.svg" alt="" />
@@ -11,7 +12,7 @@
 					<i class="bi bi-list"></i>
 				</div>
 			</div>
-		</header>
+		</header> -->
 		<section class="secctions">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 pasarela">
@@ -21,8 +22,8 @@
 
 					<p class="metodo"><b> selecciona tu metodo de pago </b></p>
 					<!-- Tabs navs d-none d-sm-block-->
-
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<MedioPago />
+					<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
 						<li class="nav-item col-4" role="presentation">
 							<button
 								class="nav-link active"
@@ -70,8 +71,8 @@
 								Pago Efectivo
 							</button>
 						</li>
-					</ul>
-					<div class="tab-content" id="myTabContent">
+					</ul> -->
+					<!-- <div class="tab-content" id="myTabContent">
 						<div
 							class="tab-pane fade show active"
 							id="credito"
@@ -399,11 +400,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Tabs content -->
 				</div>
 				<div class="col-xs-12 col-md-5 carrito">
+					<ListaCompras />
+					<!--
 					<table class="table borderless">
 						<tbody>
 							<tr>
@@ -430,7 +433,7 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
+					</table> -->
 
 					<form>
 						<div class="m-3 inner-addon right-addon">
@@ -457,7 +460,17 @@
 </template>
 
 <script>
-export default {};
+import HeaderBlack from '@/components/HeaderBlack.vue';
+import ListaCompras from '@/components/ListaCompras.vue';
+import MedioPago from '@/components/MedioPago.vue';
+export default {
+	name: 'PasarelaPagos',
+	components: {
+		HeaderBlack,
+		ListaCompras,
+		MedioPago,
+	},
+};
 </script>
 
 <style scoped>

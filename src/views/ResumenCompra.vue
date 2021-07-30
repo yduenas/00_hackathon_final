@@ -1,6 +1,7 @@
 <template>
 	<div class="container">
-		<header class="header">
+		<HeaderBlack />
+		<!-- <header class="header">
 			<div class="row">
 				<div class="col-8 ladoA">
 					<img src="@/assets/img/pachacutec.svg" alt="" />
@@ -11,13 +12,15 @@
 					<i class="bi bi-list"></i>
 				</div>
 			</div>
-		</header>
+		</header> -->
 		<section class="secction">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
 					<router-link to="/pasarelapago" class="routerdecoration">
 						<h3><i class="bi bi-arrow-left"></i> Resumen de compras</h3>
 					</router-link>
+					<ListaCompras />
+					<!-- 
 					<table class="table borderless">
 						<tbody>
 							<tr>
@@ -44,7 +47,7 @@
 								</td>
 							</tr>
 						</tbody>
-					</table>
+					</table> -->
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="compraexitosa">
@@ -75,7 +78,15 @@
 </template>
 
 <script>
-export default {};
+import HeaderBlack from '@/components/HeaderBlack.vue';
+import ListaCompras from '@/components/ListaCompras.vue';
+export default {
+	name: 'ResumenCompra',
+	components: {
+		HeaderBlack,
+		ListaCompras,
+	},
+};
 </script>
 
 <style scoped>

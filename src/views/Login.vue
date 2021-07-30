@@ -55,8 +55,111 @@
 							Registrarse
 						</button>
 					</li>
+					<!-- <li class="nav-item  col-6" role="presentation">
+						<button
+							class="nav-link"
+							id="profile-tab"
+							data-bs-toggle="tab"
+							data-bs-target="#contrasena"
+							type="button"
+							role="tab"
+							aria-controls="profile"
+							aria-selected="false"
+						>
+							cccc
+						</button>
+					</li> -->
 				</ul>
 				<div class="tab-content" id="myTabContent">
+					<div
+						class="tab-pane fade"
+						id="terminos"
+						role="tabpanel"
+						aria-labelledby="home-tab"
+					>
+						<br />
+						<h3><b> Terminos y condiciones</b></h3>
+						<br />
+						<p style="text-align:justify; padding-left:15px;padding-right:15px">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+							illum veritatis nemo explicabo accusamus eaque eum modi optio
+							velit sed saepe dolor maxime enim fugiat, ipsum soluta odio.
+							Nulla, ipsum.
+						</p>
+						<p style="text-align:justify; padding-left:15px;padding-right:15px">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+							illum veritatis nemo explicabo accusamus eaque eum modi optio
+							velit sed saepe dolor maxime enim fugiat, ipsum soluta odio.
+							Nulla, ipsum.
+						</p>
+						<p style="text-align:justify; padding-left:15px;padding-right:15px">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+							illum veritatis nemo explicabo accusamus eaque eum modi optio
+							velit sed saepe dolor maxime enim fugiat, ipsum soluta odio.
+							Nulla, ipsum.
+						</p>
+						<div class="mb-3 nav nav-pills">
+							<a
+								class="olvido"
+								data-bs-toggle="tab"
+								data-bs-target="#home"
+								href="#home"
+							>
+								<b> regresar al home </b>
+							</a>
+						</div>
+					</div>
+					<div
+						class="tab-pane fade"
+						id="contrasena"
+						role="tabpanel"
+						aria-labelledby="home-tab"
+					>
+						<p>
+							Puedes iniciar sesion con:
+						</p>
+						<img src="../assets/img/logo_facebook.svg" alt="" />
+						<img src="../assets/img/logo_linkedin.svg" alt="" />
+						<br /><br /><br /><br />
+						<p>Ingrese su correo para el envio de contraseña:</p>
+						<div class="mb-3">
+							<input
+								type="email"
+								class="form-control"
+								id="contrasena"
+								name="contrasena"
+								placeholder="ingrese correo"
+								autocomplete="off"
+							/>
+							<small style="text-align:left;"
+								>Ingrese un correo registrado</small
+							>
+						</div>
+						<div class="mb-3">
+							<input
+								type="submit"
+								class="form-control ingresar"
+								value="Enviar Contraseña"
+								@click="correo()"
+							/>
+							<router-link
+								to="/carrito"
+								type="submit"
+								class="form-control ingresar"
+								>Enviar Contraseña
+							</router-link>
+						</div>
+						<div class="mb-3 nav nav-pills">
+							<a
+								class="olvido"
+								data-bs-toggle="tab"
+								data-bs-target="#home"
+								href="#home"
+							>
+								<b> regresar al home </b>
+							</a>
+						</div>
+					</div>
 					<div
 						class="tab-pane fade show active"
 						id="home"
@@ -107,10 +210,15 @@
 									>Ingresar
 								</router-link>
 							</div>
-							<div class="mb-3">
-								<a class="olvido" href="#"
-									><b> ¿Olvidaste tu contraseña? </b></a
+							<div class="mb-3 nav nav-pills">
+								<a
+									class="olvido"
+									data-bs-toggle="tab"
+									data-bs-target="#contrasena"
+									href="#contrasena"
 								>
+									<b> ¿Olvidaste tu contraseña? </b>
+								</a>
 							</div>
 						</form>
 					</div>
@@ -174,14 +282,31 @@
 									type="checkbox"
 									id="flexCheckDefault"
 								/>
-								<label class="form-check-label" for="flexCheckDefault">
+								<label
+									class="form-check-label nav nav-pills"
+									for="flexCheckDefault"
+								>
 									Acepto
 									<b>
-										<a href="#" style="color:black"
+										<a
+											style="color:black"
+											data-bs-toggle="tab"
+											data-bs-target="#terminos"
+											href="#terminos"
 											>Terminos y condiciones</a
-										></b
-									>
+										>
+									</b>
 								</label>
+								<!-- <div class="mb-3 nav nav-pills">
+									<a
+										style="color:black"
+										data-bs-toggle="tab"
+										data-bs-target="#terminos"
+										href="#terminos"
+									>
+										<b> Terminos y condiciones</b>
+									</a>
+								</div> -->
 							</div>
 							<div class="mb-3">
 								<input
@@ -210,7 +335,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+	name: 'Home',
+
+	data() {
+		return {
+			nombre: 'Ytalo',
+			valor: {},
+		};
+	},
+	computed: {
+		//	//	...mapState(['contactos', 'ini', 'fin']),
+		//	...mapState(['programas']),
+	},
+	components: {
+		//	ContactCard,
+		//	Modal,
+		//	Spinner,
+	},
+	methods: {
+		refrescar(valor) {
+			//console.log('refrescando' + JSON.stringify(valor));
+			this.valor = valor;
+		},
+		correo() {
+			alert('Envio de correo');
+		},
+	},
+	created() {
+		//	this.getProgramasAction();
+	},
+};
 </script>
 
 <style scoped>
@@ -290,5 +445,6 @@ h3 {
 }
 .olvido {
 	color: #5640ff;
+	text-align: center;
 }
 </style>
