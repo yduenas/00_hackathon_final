@@ -220,7 +220,10 @@ export default {};
 }
 .ladoA {
 	background-image: url('../assets/img/background_login.png');
-	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* min-height: 100vh; */
+	/* height: 100vh; */
 	color: white;
 	padding-left: 30px;
 	padding-right: 20px;
