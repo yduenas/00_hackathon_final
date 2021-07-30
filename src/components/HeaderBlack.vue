@@ -1,20 +1,29 @@
 <template>
 	<header class="header">
 		<div class="row">
-			<div class="col-8 ladoA">
-				<img src="@/assets/img/pachacutec.svg" alt="" />
+			<div class="col-8 col-md-6 ladoA">
+				<router-link to="/pachacutec">
+					<img src="@/assets/img/pachacutec.svg" alt="" />
+				</router-link>
 			</div>
-			<div class="col-4 ladoB">
+			<div class="col-4 col-md-6 ladoB d-none d-sm-block">
 				<i class="bi bi-cart"></i>
-
-				<i class="bi bi-list"></i>
+				<!-- 
+				<i class="bi bi-list"></i> -->
+				<MenuBar />
 			</div>
 		</div>
 	</header>
 </template>
 
 <script>
-export default {};
+import MenuBar from '@/components/MenuBar.vue';
+export default {
+	name: 'HeaderBlack',
+	components: {
+		MenuBar,
+	},
+};
 </script>
 
 <style scoped>

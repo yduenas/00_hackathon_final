@@ -87,6 +87,7 @@
 <script>
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
+
 export default {
 	name: 'CarritoCompras',
 	components: {
