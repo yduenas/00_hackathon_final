@@ -60,6 +60,12 @@
 								type="submit"
 								value="Volver a mis cursos"
 							/>
+							<router-link
+								to="/pachacutec"
+								type="submit"
+								class="form-control btn-continuar"
+								>Volver a mis cursos
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -149,6 +155,7 @@ form {
 .btn-continuar {
 	background-color: #5640ff;
 	color: white;
+	text-align: center;
 }
 .inner-addon {
 	position: relative;
