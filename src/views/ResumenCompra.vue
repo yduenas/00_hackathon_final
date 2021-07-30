@@ -138,8 +138,8 @@ a {
 	height: 30vh;
 	background-color: white;
 	margin-top: 50px;
-	margin-right: 15vh;
-	margin-left: 50px;
+	margin-right: 15px;
+	margin-left: 15px;
 	color: black;
 	font-size: 30px;
 	font-weight: bold;
