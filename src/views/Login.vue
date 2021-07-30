@@ -100,6 +100,12 @@
 									class="form-control ingresar"
 									value="Ingresar"
 								/>
+								<router-link
+									to="/carrito"
+									type="submit"
+									class="form-control ingresar"
+									>Ingresar
+								</router-link>
 							</div>
 							<div class="mb-3">
 								<a class="olvido" href="#"
@@ -184,6 +190,12 @@
 									value="Registrarse"
 								/>
 							</div>
+							<router-link
+								to="/carrito"
+								type="submit"
+								class="form-control ingresar"
+								>Registrarse
+							</router-link>
 						</form>
 					</div>
 				</div>

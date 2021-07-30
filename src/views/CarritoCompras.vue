@@ -15,7 +15,9 @@
 		<section class="secction">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
-					<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
+					<router-link to="/login" class="routerdecoration">
+						<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
+					</router-link>
 					<table class="table borderless">
 						<tbody>
 							<tr>
@@ -65,6 +67,12 @@
 									type="submit"
 									value="Continuar"
 								/>
+								<router-link
+									to="/pasarelapago"
+									type="submit"
+									class="form-control btn-continuar"
+									>Continuar
+								</router-link>
 							</div>
 						</form>
 					</div>
@@ -185,5 +193,9 @@ form {
 		margin-left: 0vh;
 		height: 30vh;
 	}
+}
+.routerdecoration {
+	text-decoration: none;
+	color: black;
 }
 </style>

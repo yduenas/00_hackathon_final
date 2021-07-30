@@ -15,7 +15,10 @@
 		<section class="secctions">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 pasarela">
-					<h3><i class="bi bi-arrow-left"></i> pasarela de pagos</h3>
+					<router-link to="/carrito" class="routerdecoration">
+						<h3><i class="bi bi-arrow-left"></i> pasarela de pagos</h3>
+					</router-link>
+
 					<p class="metodo"><b> selecciona tu metodo de pago </b></p>
 					<!-- Tabs navs d-none d-sm-block-->
 
@@ -263,6 +266,12 @@
 										type="submit"
 										value="Finalizar la compra"
 									/>
+									<router-link
+										to="/resumencompra"
+										type="submit"
+										class="form-control btn-continuar"
+										>Finalizar la compra
+									</router-link>
 								</div>
 							</form>
 						</div>
@@ -632,5 +641,9 @@ i {
 img {
 	margin-left: 3px;
 	margin-top: 3px;
+}
+.routerdecoration {
+	text-decoration: none;
+	color: black;
 }
 </style>
