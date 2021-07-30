@@ -17,7 +17,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_aplicaciones_moviles.svg"
+			"image": "c_desarrollo_aplicaciones_moviles.png"
 		},
 		{
 			"id": "2",
@@ -25,7 +25,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_backend.svg"
+			"image": "c_desarrollo_backend.png"
 		},
 		{
 			"id": "3",
@@ -33,7 +33,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_frondend.svg"
+			"image": "c_desarrollo_frondend.png"
 		},
 		{
 			"id": "4",
@@ -41,7 +41,7 @@
 			"description": "aqui aprendera a realizar vestidos",
 			"price": "100",
 			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_videojuegos.svg"
+			"image": "c_desarrollo_videojuegos.png"
 		}
 	],
 
