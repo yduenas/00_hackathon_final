@@ -374,7 +374,7 @@ export default {
 	height: 100vh;
 }
 .ladoA {
-	background-image: url('../assets/img/background_login.png');
+	background-image: url('../assets/img/background_login2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* min-height: 100vh; */

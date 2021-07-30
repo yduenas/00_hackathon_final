@@ -26,7 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'corregi nav de app'
+git commit -m 'agregue imagenes png'
 git push
 git pull
 git status
