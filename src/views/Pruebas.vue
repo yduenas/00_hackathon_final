@@ -17,6 +17,12 @@
 			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
 				{{ programa.name }}
 			</h3>
+			<div>
+				<img class="phone" src="../assets/img/phone.svg" alt="" />
+			</div>
+			<div>
+				<img class="logo" src="../assets/img/logo_whatsapp.svg" alt="" />
+			</div>
 
 			<!-- <h3 v-for="(user, index) in users" :key="index">
 			{{ user.name }}
@@ -37,6 +43,14 @@
 			{{ shoppingcart.name }}
 		</h3> -->
 		</div>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	</div>
 </template>
 
@@ -150,4 +164,31 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.phone {
+	position: fixed;
+	bottom: 500;
+	left: 20;
+	right: 10%;
+	top: 20%;
+	height: 500px;
+}
+.logo {
+	/* position: absolute;
+	bottom: 15px;
+	right: 15px;*/
+
+	/* position: relative;
+	right: 0px;
+	top: 23px;
+	padding-top: 15px;
+	margin-bottom: 0; */
+	position: fixed;
+	bottom: 0;
+	/* left: 0;
+	right: 0; */
+	bottom: 15px;
+	right: 15px;
+	height: 50px;
+}
+</style>

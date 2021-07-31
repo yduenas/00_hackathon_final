@@ -173,7 +173,7 @@
 						<img src="../assets/img/logo_linkedin.svg" alt="" />
 						<br /><br /><br /><br />
 						<p>Tambien puedes iniciar sesion con tu correo:</p>
-						<form>
+						<form autocomplete="off">
 							<div class="mb-3">
 								<input
 									type="email"
@@ -183,7 +183,7 @@
 									placeholder="name@example.com"
 									autocomplete="new-text"
 								/>
-								<div id="emailHelp" class="form-text ">
+								<div id="emailHelp" class="form-text">
 									ingrese un correo valido.
 								</div>
 							</div>
@@ -194,7 +194,7 @@
 									id="contrasena"
 									name="contrasena"
 									placeholder="ingrese contraseña"
-									autocomplete="off"
+									autocomplete="new-password"
 								/>
 							</div>
 							<div class="mb-3">
