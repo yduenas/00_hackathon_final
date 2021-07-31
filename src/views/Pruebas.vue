@@ -2,6 +2,9 @@
 	<div>
 		<div><HeaderBlack /></div>
 
+		<div>{{ interesadosA.interesadosA }}</div>
+		<!-- <div>{{ programasA }}</div> -->
+
 		<div>
 			<h1>Estoy en Pruebas</h1>
 			<h2>{{ apellido }}</h2>
@@ -25,27 +28,77 @@
 			</h3>
 			<div class="phone">
 				<!-- <img src="../assets/img/phone.svg" alt="" /> -->
-				<input
-					class="form-control"
-					type="text"
-					name=""
-					id=""
-					placeholder="nombre"
-				/>
-				<input
-					class="form-control"
-					type="text"
-					name=""
-					id=""
-					placeholder="telefono"
-				/>
-				<input
-					class="form-control"
-					type="text"
-					name=""
-					id=""
-					placeholder="correo"
-				/>
+				<form @submit.prevent="procesarInformacion">
+					<!-- {{ interesadoA.interesadoA.nombre }}
+					{{ $data }} -->
+
+					<input
+						class="form-control inputs"
+						type="text"
+						name="nombre"
+						id="nombre"
+						placeholder="nombre"
+						v-model="interesadosA.interesadoA.nombre"
+					/>
+
+					<input
+						class="form-control inputs"
+						type="text"
+						name="celular"
+						id="celular"
+						placeholder="celular"
+						v-model="interesadosA.interesadoA.celular"
+					/>
+
+					<input
+						class="form-control inputs"
+						type="text"
+						name="correo_electronico"
+						id="correo_electronico"
+						placeholder="correo"
+						v-model="interesadosA.interesadoA.correo_electronico"
+					/>
+					<!-- <input
+						class="form-control inputs"
+						type="text"
+						name="programa"
+						id="programa"
+						placeholder="programa"
+						v-model="interesadosA.interesadoA.programa"
+					/> -->
+					<select
+						class="form-control inputs"
+						name="programa"
+						id="programa"
+						v-model="interesadosA.interesadoA.programa"
+						><option value="" readonly>..Seleccione el programa</option>
+						<option
+							v-for="(programa, index) in programasA.programasA"
+							:key="index"
+							>{{ programa.name }}</option
+						>
+					</select>
+					<input
+						class="form-control inputs"
+						type="text"
+						name="descuento"
+						id="descuento"
+						placeholder="descuento"
+						v-model="descuento"
+						readonly
+					/>
+					{{ interesadosA.interesadoA.descuento * 100 + '%' }}
+					{{ descuento }}
+					<input
+						class="form-control btn-primary inputs"
+						type="button"
+						value="Enviar Interes"
+						@click="crearInteresado(interesadosA.interesadoA)"
+					/>
+
+					<div>{{ interesadosA.interesadoA }}</div>
+					<!-- <div>{{ $data.interesado }}</div> -->
+				</form>
 			</div>
 			<div>
 				<img class="logo" src="../assets/img/logo_whatsapp.svg" alt="" />
@@ -102,11 +155,26 @@ export default {
 				url: '',
 				imagen: '',
 			},
-			//	programasA: [],
+			interesados: [],
+			interesado: {
+				id: '',
+				nombre: '',
+				celular: '',
+				correo_electronico: '',
+				programa: '',
+				descuento: 0.1,
+			},
+			// programasA: [],
 		};
 	},
 	computed: {
 		//	...mapState(['contactos', 'ini', 'fin']),
+
+		descuento: function() {
+			// `this` apunta a la instancia vm
+			return this.interesadosA.interesadoA.descuento * 100 + '%';
+			//interesadosA.interesadoA.descuento * 100 + '%'
+		},
 		...mapState(
 			[
 				'programas',
@@ -118,22 +186,23 @@ export default {
 				'orders',
 				'orderdetails',
 				'shoppingcarts',
+
 				//	'programaA/programaA',
 			]
 			//	{ programasA: (state) => state.moduloA.programas }
 		),
-		...mapState(
-			{ programasA: (state) => state.programasA },
-			{ beneficiosA: (state) => state.beneficiosA },
-			{ comprasA: (state) => state.comprasA },
-			{ cuponesA: (state) => state.cuponesA },
-			{ interesadosA: (state) => state.interesadosA },
-			{ orderdetailA: (state) => state.orderdetailA },
-			{ ordersA: (state) => state.ordersA },
-			//	{ programasA: (state) => state.programasA }
-			{ shoppingcartA: (state) => state.shoppingcartA },
-			{ usersA: (state) => state.usersA }
-		),
+
+		...mapState({ programasA: (state) => state.programasA }),
+		...mapState({ beneficiosA: (state) => state.beneficiosA }),
+		...mapState({ comprasA: (state) => state.comprasA }),
+		...mapState({ cuponesA: (state) => state.cuponesA }),
+		...mapState({ interesadosA: (state) => state.interesadosA }),
+		...mapState({ interesadoA: (state) => state.interesadoA }),
+		...mapState({ orderdetailA: (state) => state.orderdetailA }),
+		...mapState({ ordersA: (state) => state.ordersA }),
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+		...mapState({ usersA: (state) => state.usersA }),
+
 		// ...mapState({
 		// 	//	programasA: (state) => state.programasA.programasA,
 		// 	programasA(state) {
@@ -150,6 +219,7 @@ export default {
 			getComprassMutation: 'comprassA/getComprassMutation',
 			getCuponesMutation: 'cuponesA/getCuponesMutation',
 			getInteresadosMutation: 'interesadosA/getInteresadosMutation',
+			crearInteresadoMutation: 'interesadosA/crearInteresadoMutation',
 			getOrderDetailsMutation: 'orderdetailsA/getOrderDetailsMutation',
 			getProgramasMutation: 'programasA/getProgramasMutation',
 			getShoppingCartMutation: 'shoppingcartA/getShoppingCartMutation',
@@ -157,6 +227,8 @@ export default {
 		}),
 		...mapActions({
 			getProgramasActionA: 'programasA/getProgramasAction',
+			getInteresadosAction: 'interesadosA/getInteresadosAction',
+			crearInteresadoAction: 'interesadosA/crearInteresadoAction',
 		}),
 		...mapActions([
 			//	'moduloA/getProgramasAction',
@@ -173,6 +245,44 @@ export default {
 			// 'nextContactoAction',
 			// 'prevContactoAction',
 		]),
+
+		procesarInformacion() {
+			alert(this.interesado.nombre);
+			// console.log(uuidv4());
+			// //console.log(this.tarea);
+			// if (this.tarea.nombre.trim() === '') {
+			// 	console.log('Campo vacio');
+			// 	return;
+			// }
+			// //gerenar ID
+			// this.tarea.id = uuidv4();
+			// console.log(this.tarea);
+			// //mandar al action
+			// this.setTareaAction(this.tarea);
+
+			// this.tarea = {
+			// 	id: '',
+			// 	nombre: '',
+			// 	frameworks: [],
+			// 	jobTitle: '',
+			// 	pretension: 0,
+			// };
+		},
+		crearInteresado(interesado) {
+			alert(interesado.nombre);
+			this.crearInteresadoAction(interesado);
+			// this.crearContactoAction(contacto);
+			// this.contacto = {
+			// 	id: '',
+			// 	nombre: '',
+			// 	visualizaciones: '',
+			// 	url: './img/silueta.jpg',
+			// 	telefono: '',
+			// 	correo: '',
+			// 	pais: '',
+			// 	about: '',
+			// };
+		},
 	},
 	created() {
 		this.getProgramasAction();
@@ -184,6 +294,7 @@ export default {
 		this.getOrderDetailsAction();
 		this.getShoppingCartsAction();
 		this.getProgramasActionA();
+		this.getInteresadosAction();
 		//	this.state.programasA.getProgramasAction();
 		// this.$store.dispatch('programasA/loadprogramasA');
 		//	this['moduleA/getProgramasAction']();
@@ -192,11 +303,14 @@ export default {
 </script>
 
 <style scoped>
+.inputs {
+	margin-bottom: 10px;
+}
 .phone {
-	padding-top: 50px;
+	padding-top: 100px;
 	padding-bottom: 50px;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 70px;
+	padding-right: 70px;
 	background-image: url('../assets/img/phone.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
