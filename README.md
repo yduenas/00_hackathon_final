@@ -26,7 +26,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'separe el store cree todos los js dentro del store'
+git commit -m 'Cree Menu'
+git push
+git pull
 git status
 
 ### json-server

@@ -30,7 +30,7 @@ export default {};
   padding-top: 20%;
 }
 .caja {
-  height: 520px;
+  height: 530px;
   background-image: linear-gradient(#3116fd, #553fff);
   margin-top: 5em;
 }

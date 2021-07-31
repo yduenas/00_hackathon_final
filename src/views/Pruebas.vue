@@ -1,20 +1,24 @@
 <template>
 	<div>
-		<h1>Estoy en Pruebas</h1>
-		<h2>{{ apellido }}</h2>
+		<div><HeaderBlack /></div>
 
-		<h3 v-for="(programa, index) in programas" :key="index">
-			{{ programa.name }}
-		</h3>
-		<h3 v-for="(beneficio, index) in beneficios" :key="index">
-			{{ beneficio.url_img }}
-			<img :src="require(`@/assets/img/${beneficio.url_img}`)" alt="" />
-		</h3>
+		<div>
+			<h1>Estoy en Pruebas</h1>
+			<h2>{{ apellido }}</h2>
 
-		<h3 v-for="(programa, index) in programasA.programasA" :key="index">
-			{{ programa.name }}
-		</h3>
-		<!-- <h3 v-for="(user, index) in users" :key="index">
+			<h3 v-for="(programa, index) in programas" :key="index">
+				{{ programa.name }}
+			</h3>
+			<h3 v-for="(beneficio, index) in beneficios" :key="index">
+				{{ beneficio.url_img }}
+				<img :src="require(`@/assets/img/${beneficio.url_img}`)" alt="" />
+			</h3>
+
+			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
+				{{ programa.name }}
+			</h3>
+
+			<!-- <h3 v-for="(user, index) in users" :key="index">
 			{{ user.name }}
 		</h3>
 		<h3 v-for="(compra, index) in compras" :key="index">
@@ -32,12 +36,20 @@
 		<h3 v-for="(shoppingcart, index) in shoppingcarts" :key="index">
 			{{ shoppingcart.name }}
 		</h3> -->
+		</div>
 	</div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex';
+import MenuBar from '@/components/MenuBar.vue';
+import HeaderBlack from '@/components/HeaderBlack.vue';
 export default {
+	name: 'Pruebas',
+	components: {
+		MenuBar,
+		HeaderBlack,
+	},
 	data() {
 		return {
 			apellido: 'Duenas',

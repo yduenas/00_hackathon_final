@@ -1,6 +1,10 @@
 # ANOTACIONES CHANG
 
 Hola Ytalo
+POPPINS
+font-family: 'Poppins', sans-serif;
+ROBOTO
+font-family: 'Roboto', sans-serif;
 
 # ANOTACIONES YTALO
 

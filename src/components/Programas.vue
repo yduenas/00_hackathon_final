@@ -88,6 +88,10 @@ export default {
   padding: 2.5em 0 0;
   height: 200px;
 }
+.grupo {
+  padding: 2.5em 0 0;
+  height: 200px;
+}
 .caja-texto {
   margin: 2em 0;
   padding: 0 1em;

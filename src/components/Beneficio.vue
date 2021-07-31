@@ -33,8 +33,7 @@
 <script>
 export default {};
 </script>
-
-<style>
+<style scoped>
 .beneficio-titulo {
   font-weight: bold;
   text-align: left;

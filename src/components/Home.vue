@@ -49,7 +49,7 @@
           <div class="grupo-logoPachacutec">
             <div class="logoPachacutec">
               <img src="../assets/movil/logo-pachacutec.jpg" alt="logo" />
-              <router-link to="/pruebas"
+              <router-link to="/login"
                 ><img src="../assets/movil/lista.jpg" alt="Menu"
               /></router-link>
             </div>

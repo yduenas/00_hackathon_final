@@ -85,11 +85,9 @@ export default {};
   font-size: 10px;
   width: 83%;
   margin: 0 auto;
-  width: 83%;
 }
 .formulario-button {
   padding-bottom: 1em;
-  width: 100%;
 }
 .button {
   color: white;
