@@ -58,11 +58,11 @@
 						</h5>
 
 						<div class="m-3">
-							<input
+							<!-- <input
 								class="form-control btn-continuar"
 								type="submit"
 								value="Volver a mis cursos"
-							/>
+							/> -->
 							<router-link
 								to="/pachacutec"
 								type="submit"

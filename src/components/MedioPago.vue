@@ -200,11 +200,11 @@
 					</div>
 
 					<div class="m-3">
-						<input
+						<!-- <input
 							class="form-control btn-continuar"
 							type="submit"
 							value="Finalizar la compra"
-						/>
+						/> -->
 						<router-link
 							to="/resumencompra"
 							type="submit"

@@ -16,12 +16,69 @@
 					class="btn-close text-reset"
 					data-bs-dismiss="offcanvas"
 					aria-label="Close"
-				></button>
+					style="color: white;"
+				>
+					<b> X </b>
+				</button>
 			</div>
 			<!-- <hr /> -->
 			<div class="offcanvas-body px-3">
-				<p>Nombre :</p>
-				<p>Correo :</p>
+				<div>
+					<p>Nombre :</p>
+					<p>Correo :</p>
+				</div>
+				<div>
+					<div id="nav">
+						<ul class="nav navbar-nav">
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/"> - Home</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/about"> - About</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/pachacutec"> - Pachacutec</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/login"> - Login</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/carrito"> - Carrito Compras</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/pasarelapago">
+										- Pasarela de Pago
+									</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/resumencompra">
+										- Resumen Compra</router-link
+									></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
+									<router-link to="/pruebas">
+										- Pruebas conexion</router-link
+									></i
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- <div class="container-fluid">
@@ -115,5 +172,14 @@ i {
 hr {
 	background-color: #3926c5;
 	height: 10px;
+}
+a {
+	text-decoration: none;
+}
+button {
+	color: white;
+}
+.btn-close {
+	color: white;
 }
 </style>

@@ -64,11 +64,11 @@
 								/>
 							</div>
 							<div class="m-3">
-								<input
+								<!-- <input
 									class="form-control btn-continuar"
 									type="submit"
 									value="Continuar"
-								/>
+								/> -->
 								<router-link
 									to="/pasarelapago"
 									type="submit"

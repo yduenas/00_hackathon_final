@@ -142,12 +142,12 @@
 								value="Enviar Contraseña"
 								@click="correo()"
 							/>
-							<router-link
+							<!-- <router-link
 								to="/carrito"
 								type="submit"
 								class="form-control ingresar"
 								>Enviar Contraseña
-							</router-link>
+							</router-link> -->
 						</div>
 						<div class="mb-3 nav nav-pills">
 							<a
@@ -198,11 +198,11 @@
 								/>
 							</div>
 							<div class="mb-3">
-								<input
+								<!-- <input
 									type="submit"
 									class="form-control ingresar"
 									value="Ingresar"
-								/>
+								/> -->
 								<router-link
 									to="/carrito"
 									type="submit"
@@ -315,12 +315,12 @@
 									value="Registrarse"
 								/>
 							</div>
-							<router-link
+							<!-- <router-link
 								to="/carrito"
 								type="submit"
 								class="form-control ingresar"
 								>Registrarse
-							</router-link>
+							</router-link> -->
 						</form>
 					</div>
 				</div>
