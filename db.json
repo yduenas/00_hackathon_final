@@ -13,67 +13,35 @@
   "programs": [
     {
       "id": "1",
-      "name": "Desarrollo Front-End",
+      "name": "Desarrollo de Aplicaciones Moviles",
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_aplicaciones_moviles.svg"
+      "image": "c_desarrollo_aplicaciones_moviles.png"
     },
     {
       "id": "2",
-      "name": "Desarrollo Back-End",
+      "name": "Desarrollo Back End",
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_backend.svg"
+      "image": "c_desarrollo_backend.png"
     },
     {
       "id": "3",
-      "name": "Desarrollo de Aplicaciones Móviles",
+      "name": "Desarrollo Frond End",
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_frondend.svg"
+      "image": "c_desarrollo_frondend.png"
     },
     {
       "id": "4",
-      "name": "Diseño de Experiencia De Usuario",
+      "name": "Desarrollo Video Juegos",
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_videojuegos.svg"
-    },
-    {
-      "id": "5",
-      "name": "Desarrollo de Videojuegos",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_aplicaciones_moviles.svg"
-    },
-    {
-      "id": "6",
-      "name": "Marketing Digital",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_backend.svg"
-    },
-    {
-      "id": "7",
-      "name": "Data Analytics",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_frondend.svg"
-    },
-    {
-      "id": "8",
-      "name": "Desarrollo Front-End Avanzado",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_videojuegos.svg"
+      "image": "c_desarrollo_videojuegos.png"
     }
   ],
 

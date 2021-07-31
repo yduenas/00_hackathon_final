@@ -16,12 +16,11 @@
 		<section class="secction">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
-					<router-link to="/pasarelapago" class="routerdecoration">
-						<h3><i class="bi bi-arrow-left"></i> Resumen de compras</h3>
+					<router-link to="/login" class="routerdecoration">
+						<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
 					</router-link>
 					<ListaCompras />
-					<!-- 
-					<table class="table borderless">
+					<!-- <table class="table borderless">
 						<tbody>
 							<tr>
 								<td width="20%">
@@ -50,26 +49,34 @@
 					</table> -->
 				</div>
 				<div class="col-xs-12 col-md-6">
-					<div class="compraexitosa">
-						<h2><b> ¡Compra exitosa! </b></h2>
-						<h5>
-							La boleta o factura solicitada será enviada a tu correo en unos
-							momentos.
-						</h5>
+					<div class="subtotal">
+						<p>Subtotal S/. 600.00</p>
 
-						<div class="m-3">
-							<!-- <input
-								class="form-control btn-continuar"
-								type="submit"
-								value="Volver a mis cursos"
-							/> -->
-							<router-link
-								to="/pachacutec"
-								type="submit"
-								class="form-control btn-continuar"
-								>Volver a mis cursos
-							</router-link>
-						</div>
+						<form>
+							<div class="m-3 inner-addon right-addon">
+								<i class="bi bi-forward-fill"></i>
+								<input
+									type="text"
+									name="cupon"
+									id="cupon"
+									class="form-control cupon"
+									placeholder="agregar un codigo de descuento"
+								/>
+							</div>
+							<div class="m-3">
+								<!-- <input
+									class="form-control btn-continuar"
+									type="submit"
+									value="Continuar"
+								/> -->
+								<router-link
+									to="/pasarelapago"
+									type="submit"
+									class="form-control btn-continuar"
+									>Continuar
+								</router-link>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -80,8 +87,9 @@
 <script>
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
+
 export default {
-	name: 'ResumenCompra',
+	name: 'CarritoCompras',
 	components: {
 		HeaderBlack,
 		ListaCompras,
@@ -145,19 +153,16 @@ a {
 	color: #5640ff;
 	font-weight: bold;
 }
-.compraexitosa {
+.subtotal {
 	height: 30vh;
 	background-color: white;
 	margin-top: 50px;
-	margin-right: 15px;
-	margin-left: 15px;
-	color: black;
+	margin-right: 15vh;
+	margin-left: 50px;
+	color: #5640ff;
 	font-size: 30px;
 	font-weight: bold;
 	padding-top: 50px;
-	text-align: left;
-	padding-left: 20px;
-	padding-right: 20px;
 }
 form {
 	padding-left: 50px;
@@ -166,7 +171,6 @@ form {
 .btn-continuar {
 	background-color: #5640ff;
 	color: white;
-	text-align: center;
 }
 .inner-addon {
 	position: relative;
