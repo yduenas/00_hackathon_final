@@ -17,6 +17,12 @@
 			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
 				{{ programa.name }}
 			</h3>
+			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
+				{{ programa.name }}
+			</h3>
+			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
+				{{ programa.name }}
+			</h3>
 			<div>
 				<img class="phone" src="../assets/img/phone.svg" alt="" />
 			</div>
