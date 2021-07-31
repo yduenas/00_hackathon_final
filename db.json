@@ -1,151 +1,183 @@
 {
-	"interesados": [
-		{
-			"id": "1",
-			"nombre": "Ytalo",
-			"celular": "987654321",
-			"correo_electronico": "ytaloduenas@gmail.com",
-			"programa": "1",
-			"descuento": 0.1
-		}
-	],
+  "interesados": [
+    {
+      "id": "1",
+      "nombre": "Ytalo",
+      "celular": "987654321",
+      "correo_electronico": "ytaloduenas@gmail.com",
+      "programa": "1",
+      "descuento": 0.1
+    }
+  ],
 
-	"programs": [
-		{
-			"id": "1",
-			"name": "Desarrollo de Aplicaciones Moviles",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_aplicaciones_moviles.svg"
-		},
-		{
-			"id": "2",
-			"name": "Desarrollo Back End",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_backend.svg"
-		},
-		{
-			"id": "3",
-			"name": "Desarrollo Frond End",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_frondend.svg"
-		},
-		{
-			"id": "4",
-			"name": "Desarrollo Video Juegos",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_videojuegos.svg"
-		}
-	],
+  "programs": [
+    {
+      "id": "1",
+      "name": "Desarrollo Front-End",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_frondend.svg"
+    },
+    {
+      "id": "2",
+      "name": "Desarrollo Back-End",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_backend.svg"
+    },
+    {
+      "id": "3",
+      "name": "Desarrollo de Aplicaciones Móviles",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_aplicaciones_moviles.svg"
+    },
+    {
+      "id": "4",
+      "name": "Diseño de Experiencia De Usuario",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_diseño_experiencia.svg"
+    },
+    {
+      "id": "5",
+      "name": "Desarrollo de Videojuegos",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_videojuegos.svg"
+    },
+    {
+      "id": "6",
+      "name": "Marketing Digital",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_marketing_digital.svg"
+    },
+    {
+      "id": "7",
+      "name": "Data Analytics",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_frondend.svg"
+    },
+    {
+      "id": "8",
+      "name": "Desarrollo Front-End Avanzado",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_videojuegos.svg"
+    }
+  ],
 
-	"beneficios": [
-		{
-			"id": "1",
-			"url_img": "beneficio_001.svg",
-			"descripcion": "este beneficio es el nuemro 1"
-		},
-		{
-			"id": "2",
-			"url_img": "beneficio_002.svg",
-			"descripcion": "este beneficio es el nuemro 2"
-		},
-		{
-			"id": "3",
-			"url_img": "beneficio_003.svg",
-			"descripcion": "este beneficio es el nuemro 3"
-		}
-	],
+  "beneficios": [
+    {
+      "id": "1",
+      "url_img": "beneficio_001.svg",
+      "descripcion": "este beneficio es el nuemro 1"
+    },
+    {
+      "id": "2",
+      "url_img": "beneficio_002.svg",
+      "descripcion": "este beneficio es el nuemro 2"
+    },
+    {
+      "id": "3",
+      "url_img": "beneficio_003.svg",
+      "descripcion": "este beneficio es el nuemro 3"
+    }
+  ],
 
-	"users": [
-		{
-			"id": "1",
-			"username": "ytaloduenas",
-			"email": "ytaloduenas@gmail.com",
-			"contrasena": "1234",
-			"terminos": true,
-			"is_verified": true,
-			"is_staff": true,
-			"is_active": true
-		}
-	],
+  "users": [
+    {
+      "id": "1",
+      "username": "ytaloduenas",
+      "email": "ytaloduenas@gmail.com",
+      "contrasena": "1234",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  ],
 
-	"compras": [
-		{
-			"id_compra": "",
-			"id_alumno": "",
-			"id_programa": "",
-			"precio": "",
-			"cupon": ""
-		}
-	],
+  "compras": [
+    {
+      "id_compra": "",
+      "id_alumno": "",
+      "id_programa": "",
+      "precio": "",
+      "cupon": ""
+    }
+  ],
 
-	"cupones": [
-		{
-			"id_cupon": 1,
-			"codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.1,
-			"estado": true
-		},
-		{
-			"id_cupon": 2,
-			"codigo_cupon": "SFDGfdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.15,
-			"estado": true
-		},
-		{
-			"id_cupon": 3,
-			"codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.2,
-			"estado": true
-		}
-	],
+  "cupones": [
+    {
+      "id_cupon": 1,
+      "codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.1,
+      "estado": true
+    },
+    {
+      "id_cupon": 2,
+      "codigo_cupon": "SFDGfdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.15,
+      "estado": true
+    },
+    {
+      "id_cupon": 3,
+      "codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.2,
+      "estado": true
+    }
+  ],
 
-	"order": [
-		{
-			"id": "",
-			"price": "",
-			"iduser": "",
-			"code": "",
-			"cupon": ""
-		}
-	],
+  "order": [
+    {
+      "id": "",
+      "price": "",
+      "iduser": "",
+      "code": "",
+      "cupon": ""
+    }
+  ],
 
-	"order_detail": [
-		{
-			"id": "",
-			"idorder": "",
-			"idprogram": "",
-			"quantity": 1,
-			"price": ""
-		}
-	],
+  "order_detail": [
+    {
+      "id": "",
+      "idorder": "",
+      "idprogram": "",
+      "quantity": 1,
+      "price": ""
+    }
+  ],
 
-	"shoppingcart": [
-		{
-			"id_user": "",
-			"cupon": "",
-			"programas": [
-				{
-					"id_programs": 1,
-					"price": 0
-				},
-				{
-					"id_programs": 2,
-					"price": 0
-				},
-				{
-					"id_programs": 3,
-					"price": 0
-				}
-			],
-			"precio_total": 0
-		}
-	]
+  "shoppingcart": [
+    {
+      "id_user": "",
+      "cupon": "",
+      "programas": [
+        {
+          "id_programs": 1,
+          "price": 0
+        },
+        {
+          "id_programs": 2,
+          "price": 0
+        },
+        {
+          "id_programs": 3,
+          "price": 0
+        }
+      ],
+      "precio_total": 0
+    }
+  ]
 }
