@@ -1,43 +1,77 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <section class="contenedor">
+    <div class="grupo">
+      <div class="grupo-caja caja-margen">
+        <div class="caja caja-item">
+          <div class="caja-internet">
+            <img
+              src="../assets/movil/Senial_Internet.jpg"
+              alt="Señal de Internet"
+            />
+          </div>
+          <div class="caja-carrier">Carrier</div>
+          <div>
+            <img src="../assets/movil/wifi.jpg" alt="Wifi" />
+          </div>
+        </div>
+        <div class="caja caja-hora">{{ hora }}:{{ minutos }}</div>
+        <div class="caja">
+          <div class="caja-bateria">
+            <div>
+              <img src="../assets/movil/estado-de-la-bateria.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-caja">
+        <div class="caja-file">
+          <div class="file-url">
+            <img src="../assets/movil/respaldo.jpg" alt="bloquear" />
+            <div class="url__marginText">files.design</div>
+          </div>
+          <div>
+            <img src="../assets/movil/flecha-curva.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="grupo-caja">
+        <div class="caja-imgPchacutec">
+          <img
+            class="imgPchacutec__img360"
+            src="../assets/movil/pachacutec.jpg"
+            alt=""
+          />
+          <img
+            class="imgPchacutec__img"
+            src="../assets/img/header.svg"
+            alt=""
+          />
+          <div class="grupo-logoPachacutec">
+            <div class="logoPachacutec">
+              <img src="../assets/movil/logo-pachacutec.jpg" alt="logo" />
+              <img src="../assets/movil/lista.jpg" alt="Menu" />
+            </div>
+            <div class="logoPachacutec__titulo">
+              !Explota todo tu potencial tecnólogico!
+            </div>
+            <div class="logoPachacutec__subtitulo">
+              Con nuestros programas de especialización
+            </div>
+          </div>
+          <div class="interesaso"><Interesados /></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
