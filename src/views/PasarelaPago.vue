@@ -489,12 +489,13 @@ export default {
 }
 .secctions {
 	height: 92vh;
-	padding-top: 50px;
+	padding-top: 20px;
 }
 .carrito {
 	background-color: white;
 	margin-right: 0;
 	padding-left: 0px;
+	height: 70vh;
 }
 .pasarela {
 	background-color: transparent;
