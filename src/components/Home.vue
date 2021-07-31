@@ -43,13 +43,15 @@
           />
           <img
             class="imgPchacutec__img"
-            src="../assets/img/header.svg"
+            src="../assets/img/header.png"
             alt=""
           />
           <div class="grupo-logoPachacutec">
             <div class="logoPachacutec">
               <img src="../assets/movil/logo-pachacutec.jpg" alt="logo" />
-              <img src="../assets/movil/lista.jpg" alt="Menu" />
+              <router-link to="/login"
+                ><img src="../assets/movil/lista.jpg" alt="Menu"
+              /></router-link>
             </div>
             <div class="logoPachacutec__titulo">
               !Explota todo tu potencial tecnólogico!
