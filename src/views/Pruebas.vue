@@ -23,8 +23,29 @@
 			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
 				{{ programa.name }}
 			</h3>
-			<div>
-				<img class="phone" src="../assets/img/phone.svg" alt="" />
+			<div class="phone">
+				<!-- <img src="../assets/img/phone.svg" alt="" /> -->
+				<input
+					class="form-control"
+					type="text"
+					name=""
+					id=""
+					placeholder="nombre"
+				/>
+				<input
+					class="form-control"
+					type="text"
+					name=""
+					id=""
+					placeholder="telefono"
+				/>
+				<input
+					class="form-control"
+					type="text"
+					name=""
+					id=""
+					placeholder="correo"
+				/>
 			</div>
 			<div>
 				<img class="logo" src="../assets/img/logo_whatsapp.svg" alt="" />
@@ -172,12 +193,21 @@ export default {
 
 <style scoped>
 .phone {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-image: url('../assets/img/phone.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/* background-color: blue; */
 	position: fixed;
 	bottom: 500;
 	left: 20;
 	right: 10%;
 	top: 20%;
 	height: 500px;
+	width: 300px;
 }
 .logo {
 	/* position: absolute;
