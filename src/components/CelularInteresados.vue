@@ -174,11 +174,14 @@ export default {
 		select_option: function() {
 			// alert('hola');
 			var selectBox = document.getElementById('programa');
-			if ((selectBox.value = 'programa')) {
-				selectBox.style.opacity = '100%';
-			} else {
-				alert('Dese seleccionar un progra');
+			// alert(selectBox.textContent);
+			if (selectBox.value == 'programa') {
+				// alert(selectBox.value);
 				selectBox.style.opacity = '50%';
+			} else {
+				// alert(selectBox.value);
+				// alert('Debe seleccionar un programa');
+				selectBox.style.opacity = '100%';
 			}
 		},
 		//...mapMutations(['moduloA/getProgramasMutation']),
