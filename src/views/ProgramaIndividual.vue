@@ -124,12 +124,12 @@ HeaderBlack
 	text-align: left;
 	padding: 30px 90px;
 }
-h2 {
+/* h2 {
 }
 h3 {
 }
 h4 {
 }
 p {
-}
+} */
 </style>
