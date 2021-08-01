@@ -86,7 +86,23 @@
 			</div>
 			<div class="col-4"><CelularInteresados /></div>
 		</div>
-		<Footer />
+		<!-- <Footer /> -->
+		<section class="contenedor">
+			<!-- <div class="grupo"> -->
+			<div class="footer">
+				<div>Con el respaldo de:</div>
+				<div>
+					<img
+						class="img"
+						src="../assets/img/logo_intercorp_white.svg"
+						alt=""
+					/>
+					<img class="img" src="../assets/img/logo_idat_white.svg" alt="" />
+					<img class="img" src="../assets/img/logo_zegel_white.svg" alt="" />
+				</div>
+			</div>
+			<!-- </div> -->
+		</section>
 	</div>
 </template>
 
