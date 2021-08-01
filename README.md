@@ -26,7 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'Cree Menu'
+git commit -m 'corregi icono cupon carrito de compras'
 git push
 git pull
 git status
