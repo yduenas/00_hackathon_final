@@ -16,7 +16,7 @@
 
 						<form>
 							<div class="m-3 inner-addon right-addon">
-								<i class="bi bi-forward-fill"></i>
+								<!-- <i class="bi bi-forward-fill"></i> -->
 								<input
 									type="text"
 									name="cupon"
@@ -150,6 +150,10 @@ form {
 }
 .cupon {
 	font-size: 10px;
+
+	background-image: url('../assets/img/enter.png');
+	background-repeat: no-repeat;
+	background-position: 95%, 50%;
 }
 
 @media only screen and (max-width: 600px) {
