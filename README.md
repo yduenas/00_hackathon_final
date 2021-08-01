@@ -26,7 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'corregi login'
+git commit -m 'corregi footer del individual'
 git push
 git pull
 git status
