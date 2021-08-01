@@ -24,8 +24,11 @@
 			<!-- <hr /> -->
 			<div class="offcanvas-body px-3">
 				<div>
-					<p>Nombre :</p>
-					<p>Correo :</p>
+					<h3><b>Bienvenido !!!</b></h3>
+					<p>Nombre : Ytalo Edgar</p>
+					<p>Correo : Dueñas de Chang</p>
+
+					<p>Fecha de logueo : 01/08/2021</p>
 				</div>
 				<div>
 					<div id="nav">
