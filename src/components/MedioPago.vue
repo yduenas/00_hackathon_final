@@ -1,5 +1,5 @@
 <template>
-	<div class="mediopago">
+	<div class="mediopago2">
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 			<li class="nav-item col-4" role="presentation">
 				<button
@@ -59,12 +59,12 @@
 			>
 				<form>
 					<div class="row">
-						<div class="col-6" style="text-align: left">
+						<div class="col-12" style="text-align: left">
 							<label><b>Datos Personales</b> </label>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12  col-md-6 campo">
 							<input
 								type="text"
 								name=""
@@ -73,7 +73,7 @@
 								placeholder="Documento de identidad"
 							/>
 						</div>
-						<div class="col-6">
+						<div class="col-12  col-md-6 campo">
 							<input
 								type="email"
 								name=""
@@ -90,21 +90,21 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12  col-md-6 campo">
 							<input
 								type="text"
 								name="nombre"
 								id=""
 								class="form-control"
-								placeholder="Nombre"
+								placeholder="Nombres y Apellidos"
 							/>
 						</div>
-						<div class="col-6">
+						<div class="col-12  col-md-6 campo" style="text-align:right">
 							<input
 								type="text"
 								name=""
 								id=""
-								class="form-control"
+								class="form-control numerotarjeta"
 								placeholder="0000 0000 0000 0000"
 								minlength="16"
 								maxlength="16"
@@ -112,9 +112,9 @@
 							<small>Ingresa una tarjeta valida</small>
 						</div>
 					</div>
-					<br />
+					<!-- <br /> -->
 					<div class="row">
-						<div class="col-2">
+						<div class="col-4 col-md-2">
 							<input
 								type="text"
 								name="mes"
@@ -125,18 +125,18 @@
 								maxlength="2"
 							/>
 						</div>
-						<div class="col-2">
+						<div class="col-4 col-md-2">
 							<input
 								type="text"
 								name="anio"
 								id=""
 								class="form-control"
-								placeholder="anio"
+								placeholder="año"
 								minlength="4"
 								maxlength="4"
 							/>
 						</div>
-						<div class="col-2">
+						<div class="col-4 col-md-2">
 							<input
 								type="text"
 								name="cvv"
@@ -147,6 +147,7 @@
 								maxlength="3"
 							/>
 						</div>
+						<div class="col-12 col-md-6"></div>
 					</div>
 					<br />
 					<div class="row">
@@ -155,7 +156,7 @@
 						</div>
 					</div>
 
-					<br />
+					<!-- <br /> -->
 
 					<div class="radio-toolbar">
 						<input type="radio" id="radio1" name="radiocuotas" value="1" />
@@ -229,57 +230,135 @@
 				aria-labelledby="profile-tab"
 				style="text-align:left"
 			>
-				<img src="../assets/img/pago_Efectivo.svg" alt="" />
-				<p>
-					<b>
-						Banca por internet y móvil:
-					</b>
-				</p>
-				<p>
-					Enviaremos un código de pago CIP a tu correo electrónico, con el cual
-					podrás pagar de la siguiente manera:
-				</p>
-				<p>
+				<img
+					class="pagoefectivo"
+					src="../assets/img/pago_Efectivo.svg"
+					alt=""
+				/>
+				<p class="poppins">
 					<b>
 						Pasos a seguir:
 					</b>
 				</p>
-				<p>
+				<p class="roboto">
+					Enviaremos un código de pago CIP a tu correo electrónico, con el cual
+					podrás pagar de la siguiente manera:
+				</p>
+				<p class="poppins">
+					<b>
+						Banca por internet y móvil:
+					</b>
+				</p>
+
+				<p class="roboto">
 					Paga por internet vía transferencia desde el aplicativo móvil o web de
 					tu banco de preferencia.
 				</p>
+
 				<div>
-					<img class="col-2" src="../assets/img/logo_bbva.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_bcp.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_caja.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_disashop.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_fullcarga.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_interbank.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_kasnet.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_moneygram.svg" alt="" />
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_bbva.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_bcp.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_caja.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_disashop.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_fullcarga.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_interbank.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_kasnet.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_moneygram.svg"
+						alt=""
+					/>
 				</div>
 				<br />
-				<p>
+				<p class="poppins">
 					<b>
 						Agencias y agentes:
 					</b>
 				</p>
-				<p>
+				<p class="roboto">
 					Realiza depósitos en efectivo en agencias bancarias, agentes o bodegas
 					a nivel nacional.
 				</p>
 				<div>
-					<img class="col-2" src="../assets/img/logo_bbva.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_bcp.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_caja.svg" alt="" />
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_bbva.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_bcp.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_caja.svg"
+						alt=""
+					/>
 
-					<img class="col-2" src="../assets/img/logo_interbank.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_kasnet.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_moneygram.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_scotiabank.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_tambo.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_wester_union.svg" alt="" />
-					<img class="col-2" src="../assets/img/logo_banbif.svg" alt="" />
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_interbank.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_kasnet.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_moneygram.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_scotiabank.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_tambo.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_wester_union.svg"
+						alt=""
+					/>
+					<img
+						class="col-2 marcabanco"
+						src="../assets/img/logo_banbif.svg"
+						alt=""
+					/>
 				</div>
 				<br />
 				<div class="row">
@@ -315,6 +394,33 @@ export default {};
 </script>
 
 <style scoped>
+.pagoefectivo {
+	width: 30%;
+	height: 30%;
+}
+.marcabanco {
+	width: 17%;
+	height: 17%;
+}
+.poppins {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	margin: 0 auto;
+}
+.roboto {
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 14px;
+	/* font-weight: bold; */
+	text-align: left;
+}
+.campo {
+	margin: 5px 0;
+}
+.mediopago2 {
+	margin: 0;
+}
 /* .carrito {
 	background-color: white;
 	margin-right: 0;
@@ -351,6 +457,7 @@ form {
 	padding-top: 30px;
 	padding-left: 50px;
 	padding-right: 50px;
+	padding: 30px 0 0px 0px;
 }
 .btn-continuar {
 	background-color: #5640ff;
@@ -380,11 +487,17 @@ form {
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
 }
+.nav-item .nav-link {
+	background-color: rgb(238, 235, 235);
+	width: 100%;
+	border-left: 5px solid #f8f8fa;
+}
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
 	color: white;
 	background-color: #5640ff;
 	border-color: #dee2e6 #dee2e6 #fff;
+	width: 100%;
 }
 h3 {
 	text-align: left;
@@ -436,7 +549,7 @@ small {
 .radio-toolbar label {
 	/* display: inline-block; */
 	background-color: transparent;
-	padding: 19px 19px;
+	padding: 12px 12px;
 	font-family: sans-serif, Arial;
 	font-size: 16px;
 	border: 2px solid #444;
@@ -478,9 +591,21 @@ i {
 img {
 	margin-left: 3px;
 	margin-top: 3px;
+	/* width: 17%;
+	height: 17%; */
 }
 .routerdecoration {
 	text-decoration: none;
 	color: black;
+}
+.numerotarjeta::placeholder {
+	color: red;
+}
+.numerotarjeta {
+	background-image: url('../assets/img/t_american_express.svg');
+	background-repeat: no-repeat;
+	background-position: 95%, 50%;
+	/* background-position-y: center;
+	background-position-x: right; */
 }
 </style>

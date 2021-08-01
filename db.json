@@ -7,9 +7,96 @@
       "correo_electronico": "ytaloduenas@gmail.com",
       "programa": "1",
       "descuento": 0.1
+    },
+    {
+      "id": "TUJvqyt",
+      "nombre": "CLAUDIA",
+      "celular": "981427867",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "1hzz09b",
+      "nombre": "gael",
+      "celular": "1234",
+      "correo_electronico": "gael@gmail,com",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "FwIeQbp",
+      "nombre": "giacomo",
+      "celular": "2453",
+      "correo_electronico": "giaco@GAMIL.COM",
+      "programa": "Desarrollo de Aplicaciones Móviles",
+      "descuento": 0.1
+    },
+    {
+      "id": "GVoFVin",
+      "nombre": "sole",
+      "celular": "54356",
+      "correo_electronico": "sole@gmail",
+      "programa": "Desarrollo de Videojuegos",
+      "descuento": 0.1
+    },
+    {
+      "id": "5V2fmqf",
+      "nombre": "asdf",
+      "celular": "afds",
+      "correo_electronico": "dsfa",
+      "programa": "Desarrollo de Aplicaciones Móviles",
+      "descuento": 0.1
+    },
+    {
+      "id": "8-z7GXe",
+      "nombre": "sdfg",
+      "celular": "sdfgsfd",
+      "correo_electronico": "sdfg",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "CXkrF8U",
+      "nombre": "dfsa",
+      "celular": "adsf",
+      "correo_electronico": "adsf",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "rdQir37",
+      "nombre": "hugo claudio",
+      "celular": "adsf",
+      "correo_electronico": "adsf",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "V2PHfrg",
+      "nombre": "jhg",
+      "celular": "fgh",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "EV4bKl2",
+      "nombre": "sfdg",
+      "celular": "sdfgsfd",
+      "correo_electronico": "fdgs",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "fE8Z1nZ",
+      "nombre": "CLAUDIA",
+      "celular": "981427867",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
     }
   ],
-
   "programs": [
     {
       "id": "1",
@@ -17,7 +104,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_frondend.svg"
+      "image": "c_desarrollo_frondend.png"
     },
     {
       "id": "2",
@@ -25,7 +112,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_backend.svg"
+      "image": "c_desarrollo_backend.png"
     },
     {
       "id": "3",
@@ -33,7 +120,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_aplicaciones_moviles.svg"
+      "image": "c_desarrollo_aplicaciones_moviles.png"
     },
     {
       "id": "4",
@@ -41,7 +128,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_diseño_experiencia.svg"
+      "image": "c_diseño_experiencia.png"
     },
     {
       "id": "5",
@@ -49,7 +136,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_videojuegos.svg"
+      "image": "c_desarrollo_videojuegos.png"
     },
     {
       "id": "6",
@@ -57,7 +144,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_marketing_digital.svg"
+      "image": "c_marketing_digital.png"
     },
     {
       "id": "7",
@@ -65,6 +152,7 @@
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+<<<<<<< HEAD
       "image": "c_desarrollo_frondend.svg"
     },
     {
@@ -74,9 +162,11 @@
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
       "image": "c_desarrollo_videojuegos.svg"
+=======
+      "image": "c_desarrollo_frondend.png"
+>>>>>>> fc9e21a8dea4d6bcfa2c91b610de6e8b3c70c077
     }
   ],
-
   "beneficios": [
     {
       "id": "1",
@@ -94,7 +184,6 @@
       "descripcion": "este beneficio es el nuemro 3"
     }
   ],
-
   "users": [
     {
       "id": "1",
@@ -107,7 +196,6 @@
       "is_active": true
     }
   ],
-
   "compras": [
     {
       "id_compra": "",
@@ -117,7 +205,6 @@
       "cupon": ""
     }
   ],
-
   "cupones": [
     {
       "id_cupon": 1,
@@ -138,7 +225,6 @@
       "estado": true
     }
   ],
-
   "order": [
     {
       "id": "",
@@ -148,7 +234,6 @@
       "cupon": ""
     }
   ],
-
   "order_detail": [
     {
       "id": "",
@@ -158,7 +243,6 @@
       "price": ""
     }
   ],
-
   "shoppingcart": [
     {
       "id_user": "",

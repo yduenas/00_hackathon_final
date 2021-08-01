@@ -166,13 +166,13 @@
 						role="tabpanel"
 						aria-labelledby="home-tab"
 					>
-						<p>
+						<p class="roboto">
 							Puedes iniciar sesion con:
 						</p>
 						<img src="../assets/img/logo_facebook.svg" alt="" />
 						<img src="../assets/img/logo_linkedin.svg" alt="" />
 						<br /><br /><br /><br />
-						<p>Tambien puedes iniciar sesion con tu correo:</p>
+						<p class="roboto">Tambien puedes iniciar sesion con tu correo:</p>
 						<form autocomplete="off">
 							<div class="mb-3">
 								<input
@@ -228,13 +228,13 @@
 						role="tabpanel"
 						aria-labelledby="profile-tab"
 					>
-						<p>
+						<p class="roboto">
 							Puedes iniciar sesion con:
 						</p>
 						<img src="../assets/img/logo_facebook.svg" alt="" />
 						<img src="../assets/img/logo_linkedin.svg" alt="" />
 						<br /><br /><br /><br />
-						<p>Tambien puedes iniciar sesion con tu correo:</p>
+						<p class="roboto">Tambien puedes iniciar sesion con tu correo:</p>
 						<form>
 							<div class="mb-3">
 								<input
@@ -381,7 +381,8 @@ export default {
 	/* height: 100vh; */
 	color: white;
 	padding-left: 30px;
-	padding-right: 20px;
+	padding-right: 75px;
+	padding-bottom: 31.9px;
 }
 .ladoB {
 	background-color: white;
@@ -402,15 +403,30 @@ export default {
 }
 .footer {
 	position: relative;
-	top: 60%;
-	left: 00%;
+	top: 70%;
+	left: 5%;
 	text-align: left;
+}
+.roboto {
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 12px;
 }
 img {
 	margin-left: 10px;
 }
+h2 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: right;
+	margin: 0 auto;
+}
 h3 {
-	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	/* font-weight: bold; */
+	text-align: right;
+	margin: 0 auto;
 }
 .nav-tabs .nav-link {
 	color: black;
@@ -420,6 +436,11 @@ h3 {
 	border-left-color: white;
 	border-right-color: white;
 	border-bottom-color: white;
+}
+.nav-item {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {

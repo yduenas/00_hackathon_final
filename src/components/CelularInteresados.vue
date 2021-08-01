@@ -1,37 +1,18 @@
 <template>
 	<div>
-		<div><HeaderBlack /></div>
-
-		<div>{{ interesadosA.interesadosA }}</div>
-		<!-- <div>{{ programasA }}</div> -->
+		<!-- <div>{{ interesadosA.interesadosA }}</div> -->
 
 		<div>
-			<h1>Estoy en Pruebas</h1>
-			<h2>{{ apellido }}</h2>
+			<!-- <h1>Estoy en telefono</h1> -->
 
-			<h3 v-for="(programa, index) in programas" :key="index">
-				{{ programa.name }}
-			</h3>
-			<h3 v-for="(beneficio, index) in beneficios" :key="index">
-				{{ beneficio.url_img }}
-				<img :src="require(`@/assets/img/${beneficio.url_img}`)" alt="" />
-			</h3>
-
-			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
-				{{ programa.name }}
-			</h3>
-			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
-				{{ programa.name }}
-			</h3>
-			<h3 v-for="(programa, index) in programasA.programasA" :key="index">
-				{{ programa.name }}
-			</h3>
 			<div class="phone">
 				<!-- <img src="../assets/img/phone.svg" alt="" /> -->
 				<form @submit.prevent="procesarInformacion">
 					<!-- {{ interesadoA.interesadoA.nombre }}
 					{{ $data }} -->
-
+					<p class="postula">
+						Postula y obten un 10% de descuento en el programa
+					</p>
 					<input
 						class="form-control inputs"
 						type="text"
@@ -71,8 +52,12 @@
 						name="programa"
 						id="programa"
 						v-model="interesadosA.interesadoA.programa"
-						><option value="" readonly>..Seleccione el programa</option>
+						@click="select_option()"
+						><option class="redColor" value="" selected disabled
+							>programa</option
+						>
 						<option
+							class="greenColor"
 							v-for="(programa, index) in programasA.programasA"
 							:key="index"
 							>{{ programa.name }}</option
@@ -87,8 +72,16 @@
 						v-model="descuento"
 						readonly
 					/>
-					{{ interesadosA.interesadoA.descuento * 100 + '%' }}
-					{{ descuento }}
+					<input
+						class="form-check-input inputs"
+						type="checkbox"
+						name="politica"
+						id="politica"
+					/><label for="politica" class="politica">
+						Acepto las politicas de privacidad</label
+					>
+					<!-- {{ interesadosA.interesadoA.descuento * 100 + '%' }}
+					{{ descuento }} -->
 					<input
 						class="form-control btn-primary inputs"
 						type="button"
@@ -96,32 +89,13 @@
 						@click="crearInteresado(interesadosA.interesadoA)"
 					/>
 
-					<div>{{ interesadosA.interesadoA }}</div>
+					<!-- <div>{{ interesadosA.interesadoA }}</div> -->
 					<!-- <div>{{ $data.interesado }}</div> -->
 				</form>
 			</div>
 			<div>
-				<img class="logo" src="../assets/img/logo_whatsapp.svg" alt="" />
+				<img class="whatsapp" src="../assets/img/logo_whatsapp.svg" alt="" />
 			</div>
-
-			<!-- <h3 v-for="(user, index) in users" :key="index">
-			{{ user.name }}
-		</h3>
-		<h3 v-for="(compra, index) in compras" :key="index">
-			{{ compra.name }}
-		</h3>
-		<h3 v-for="(cupon, index) in cupones" :key="index">
-			{{ cupon.name }}
-		</h3>
-		<h3 v-for="(order, index) in orders" :key="index">
-			{{ order.name }}
-		</h3>
-		<h3 v-for="(orderdetail, index) in orderdetails" :key="index">
-			{{ orderdetail.name }}
-		</h3>
-		<h3 v-for="(shoppingcart, index) in shoppingcarts" :key="index">
-			{{ shoppingcart.name }}
-		</h3> -->
 		</div>
 		<br />
 	</div>
@@ -129,13 +103,13 @@
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex';
-import MenuBar from '@/components/MenuBar.vue';
-import HeaderBlack from '@/components/HeaderBlack.vue';
+// import MenuBar from '@/components/MenuBar.vue';
+// import HeaderBlack from '@/components/HeaderBlack.vue';
 export default {
-	name: 'Pruebas',
+	name: 'CelularInteresdos',
 	components: {
-		MenuBar,
-		HeaderBlack,
+		// MenuBar,
+		// HeaderBlack,
 	},
 	data() {
 		return {
@@ -195,15 +169,21 @@ export default {
 		...mapState({ ordersA: (state) => state.ordersA }),
 		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
 		...mapState({ usersA: (state) => state.usersA }),
-
-		// ...mapState({
-		// 	//	programasA: (state) => state.programasA.programasA,
-		// 	programasA(state) {
-		// 		return state.programasA.programasA;
-		// 	},
-		// }),
 	},
 	methods: {
+		select_option: function() {
+			// alert('hola');
+			var selectBox = document.getElementById('programa');
+			// alert(selectBox.textContent);
+			if (selectBox.value == 'programa') {
+				// alert(selectBox.value);
+				selectBox.style.opacity = '50%';
+			} else {
+				// alert(selectBox.value);
+				// alert('Debe seleccionar un programa');
+				selectBox.style.opacity = '100%';
+			}
+		},
 		//...mapMutations(['moduloA/getProgramasMutation']),
 		//	...mapActions(['moduloA/getProgramasAction']},
 		...mapMutations({
@@ -238,43 +218,13 @@ export default {
 			// 'nextContactoAction',
 			// 'prevContactoAction',
 		]),
-
 		procesarInformacion() {
 			alert(this.interesado.nombre);
-			// console.log(uuidv4());
-			// //console.log(this.tarea);
-			// if (this.tarea.nombre.trim() === '') {
-			// 	console.log('Campo vacio');
-			// 	return;
-			// }
-			// //gerenar ID
-			// this.tarea.id = uuidv4();
-			// console.log(this.tarea);
-			// //mandar al action
-			// this.setTareaAction(this.tarea);
-
-			// this.tarea = {
-			// 	id: '',
-			// 	nombre: '',
-			// 	frameworks: [],
-			// 	jobTitle: '',
-			// 	pretension: 0,
-			// };
 		},
+
 		crearInteresado(interesado) {
 			alert(interesado.nombre);
 			this.crearInteresadoAction(interesado);
-			// this.crearContactoAction(contacto);
-			// this.contacto = {
-			// 	id: '',
-			// 	nombre: '',
-			// 	visualizaciones: '',
-			// 	url: './img/silueta.jpg',
-			// 	telefono: '',
-			// 	correo: '',
-			// 	pais: '',
-			// 	about: '',
-			// };
 		},
 	},
 	created() {
@@ -288,9 +238,6 @@ export default {
 		this.getShoppingCartsAction();
 		this.getProgramasActionA();
 		this.getInteresadosAction();
-		//	this.state.programasA.getProgramasAction();
-		// this.$store.dispatch('programasA/loadprogramasA');
-		//	this['moduleA/getProgramasAction']();
 	},
 };
 </script>
@@ -300,7 +247,7 @@ export default {
 	margin-bottom: 10px;
 }
 .phone {
-	padding-top: 100px;
+	padding-top: 60px;
 	padding-bottom: 50px;
 	padding-left: 70px;
 	padding-right: 70px;
@@ -315,8 +262,9 @@ export default {
 	top: 20%;
 	height: 500px;
 	width: 300px;
+	text-align: left;
 }
-.logo {
+.whatsapp {
 	/* position: absolute;
 	bottom: 15px;
 	right: 15px;*/
@@ -330,8 +278,48 @@ export default {
 	bottom: 0;
 	/* left: 0;
 	right: 0; */
-	bottom: 15px;
-	right: 15px;
-	height: 50px;
+	bottom: 50px;
+	right: 75px;
+	height: 75px;
 }
+.politica {
+	font-family: 'Roboto', sans-serif;
+	font-size: 9px;
+}
+.postula {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+	background-color: #5640ff;
+	border-radius: 5%;
+}
+input[type='text']::placeholder {
+	opacity: 50%;
+}
+.greenColor {
+	color: #000;
+	opacity: 100%;
+}
+.redColor {
+	color: gray;
+}
+select,
+option {
+	opacity: 50%;
+}
+select option:checked {
+	background: #ff9500 -webkit-linear-gradient(bottom, #ff9500 0%, #ff9500 100%);
+}
+/* input[type='select'] option {
+	opacity: 50%;
+} */
+/* 
+select,
+option:first-child {
+	opacity: 50%;
+} */
 </style>

@@ -1,18 +1,7 @@
 <template>
 	<div class="container">
 		<HeaderBlack />
-		<!-- <header class="header">
-			<div class="row">
-				<div class="col-8 ladoA">
-					<img src="@/assets/img/pachacutec.svg" alt="" />
-				</div>
-				<div class="col-4 ladoB">
-					<i class="bi bi-cart"></i>
 
-					<i class="bi bi-list"></i>
-				</div>
-			</div>
-		</header> -->
 		<section class="secction">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
@@ -20,33 +9,6 @@
 						<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
 					</router-link>
 					<ListaCompras />
-					<!-- <table class="table borderless">
-						<tbody>
-							<tr>
-								<td width="20%">
-									<img
-										class="img_curso"
-										src="../assets/img/c_desarrollo_frondend.svg"
-										alt=""
-									/>
-								</td>
-								<td width="50%">
-									<h5><b> Desarrollo Frond End </b></h5>
-									<div class="row">
-										<div class="col-6">
-											<a href="#">Eliminar</a>
-										</div>
-										<div class="col-6">
-											<b class="d-block d-sm-none"> S/.269.00</b>
-										</div>
-									</div>
-								</td>
-								<td class="d-none d-sm-block" width="30%">
-									<b> S/.269.00</b>
-								</td>
-							</tr>
-						</tbody>
-					</table> -->
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="subtotal">
@@ -54,7 +16,7 @@
 
 						<form>
 							<div class="m-3 inner-addon right-addon">
-								<i class="bi bi-forward-fill"></i>
+								<!-- <i class="bi bi-forward-fill"></i> -->
 								<input
 									type="text"
 									name="cupon"
@@ -102,15 +64,17 @@ export default {
 	background-color: #f8f8fa;
 	color: black;
 	height: 100vh;
+	width: auto;
+	padding: 0;
 }
-.header {
+/* .header {
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 100px;
 	background-color: black;
 	height: 8vh;
 	color: white;
-}
+} */
 .secction {
 	height: 92vh;
 }
@@ -186,6 +150,10 @@ form {
 }
 .cupon {
 	font-size: 10px;
+
+	background-image: url('../assets/img/enter.png');
+	background-repeat: no-repeat;
+	background-position: 95%, 50%;
 }
 
 @media only screen and (max-width: 600px) {
