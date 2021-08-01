@@ -3,12 +3,6 @@
     <div class="grupo">
       <div class="grupo-titulo">
         <div class="caja-texto">
-          <div class="texto-titulo">
-            Con respaldo de:
-          </div>
-          <div class="caja-logos">
-            <img class="logos__img" src="../assets/movil/logos.jpg" alt="" />
-          </div>
           <div class="texto-dinscripcion">
             Conoce nuestros Programas de Especialización
           </div>
@@ -29,7 +23,7 @@
           </div>
         </div>
       </div>
-      <div class="grupo-programa">
+      <!-- <div class="grupo-programa">
         <div
           class="programa"
           v-for="(programa, index) in programasA.programasA"
@@ -41,6 +35,200 @@
             alt=""
           />
           <div class="programa_nombre">{{ programa.name }}</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="grupo-programa">
+        <div class="programa">
+          <img
+            class="programa__frontend"
+            src="../assets/img/c_desarrollo_frondend.png"
+            alt=""
+          />
+          <div class="programa_nombre">Desarrollo</div>
+          <div class="programa_nombre">Frond-End</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__backend"
+            src="../assets/img/c_desarrollo_backend.png"
+            alt=""
+          />
+          <div class="programa_nombre">Desarrollo</div>
+          <div class="programa_nombre">Backend-End</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__aplicmoviles"
+            src="../assets/img/c_desarrollo_aplicaciones_moviles.png"
+            alt=""
+          />
+          <div class="programa_nombre">Desarrollo de</div>
+          <div class="programa_nombre">Aplicaciones Moviles</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__diseniousuario"
+            src="../assets/img/c_diseño_experiencia.png"
+            alt=""
+          />
+          <div class="programa_nombre">Diseño Experiencia</div>
+          <div class="programa_nombre">De Usuario</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__videojuegos"
+            src="../assets/img/c_desarrollo_videojuegos.png"
+            alt=""
+          />
+          <div class="programa_nombre">Desarrollo de</div>
+          <div class="programa_nombre">Videojuegos</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__marketing"
+            src="../assets/img/c_marketing_digital.png"
+            alt=""
+          />
+          <div class="programa_nombre">Marketing</div>
+          <div class="programa_nombre">Digital</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__analitycs"
+            src="../assets/img/c_diseño_experiencia.png"
+            alt=""
+          />
+          <div class="programa_nombre">Data</div>
+          <div class="programa_nombre">Analytics</div>
+          <div class="carrito">
+            <div>
+              <img
+                class="carrito__img"
+                src="../assets/movil/agregarCarritoCompras.png"
+                alt=""
+              />
+            </div>
+            <div class="vermas">
+              <div>
+                <img class="vermas__img" src="../assets/movil/mas.png" alt="" />
+              </div>
+              <div class="vermas__boton">Ver más</div>
+            </div>
+          </div>
+        </div>
+        <div class="programa">
+          <img
+            class="programa__frontendavanzado"
+            src="../assets/img/c_desarrollo_frondend.png"
+            alt=""
+          />
+          <div class="programa_nombre">Desarrollo</div>
+          <div class="programa_nombre">Front-End Avanzado</div>
           <div class="carrito">
             <div>
               <img
@@ -85,22 +273,8 @@ export default {
 
 <style scoped>
 .grupo-titulo {
-  padding: 2.5em 0 0;
-  height: 200px;
-}
-.grupo {
-  padding: 2.5em 0 0;
-  height: 200px;
-}
-.caja-texto {
-  margin: 2em 0;
-  padding: 0 1em;
-}
-.texto-titulo {
-  text-align: left;
-  font-weight: bold;
-  font-size: 12px;
-  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  height: 120px;
 }
 .texto-dinscripcion {
   width: 75%;
@@ -115,7 +289,7 @@ export default {
 }
 .inscripcion-whassap {
   position: relative;
-  top: -89%;
+  top: -88%;
   text-align: right;
   padding-right: 0.9em;
 }
@@ -127,7 +301,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: -80%;
+  top: -81%;
 }
 .inscripcion-boton {
   display: flex;
@@ -140,14 +314,12 @@ export default {
   font-weight: bold;
 }
 .grupo-programa {
-  margin-top: 3.1em;
-  padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
 .programa {
-  height: 325px;
-  padding-top: 1.6em;
+  height: 200px;
+  margin: 0.5em 0;
 }
 .programa__frontend,
 .programa__backend,
@@ -159,7 +331,9 @@ export default {
 .programa__frontendavanzado {
   padding: 0.25em 0.5em;
   border-radius: 25px;
-  width: 350px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 .programa_nombre {
   color: white;
@@ -174,7 +348,7 @@ export default {
 }
 .carrito {
   position: relative;
-  top: -35%;
+  top: -45%;
   left: 0%;
   display: flex;
   justify-content: center;
@@ -196,21 +370,13 @@ export default {
 .vermas__boton {
   padding-left: 0.5em;
 }
-@media (min-width: 361px) {
+@media (min-width: 767px) {
   .grupo {
-    height: 100%;
     margin: 0%;
     padding: 0%;
   }
-  .grupo-titulo {
-    height: 110px;
-  }
-  .caja-logos {
-    display: flex;
-    justify-content: flex-start;
-  }
   .inscripcion-whassap {
-    top: -305%;
+    top: -140%;
   }
   .whassap__logo {
     width: 50px;
@@ -222,33 +388,32 @@ export default {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    height: 40%;
-    margin-top: 0%;
+    top: 0;
+    width: 98%;
   }
   .programa {
     width: 35%;
     height: 200px;
     box-sizing: border-box;
   }
-  .programa__frontend {
-    width: 90%;
-  }
   .programa_nombre {
-    top: -40%;
-    left: 10%;
-    font-size: 10px;
+    top: -50%;
+    left: 5%;
+    font-size: 14px;
+    margin: 0%;
   }
   .carrito {
-    width: 90%;
+    width: 100%;
     align-items: center;
+    left: -10px;
   }
   .carrito__img {
     width: 60%;
-    padding-left: 7px;
+    padding-left: 0;
   }
   .vermas {
     width: 250px;
-    font-size: 10px;
+    font-size: 12px;
     padding: 0%;
   }
   .vermas__img {
@@ -263,11 +428,9 @@ export default {
   .caja-texto {
     height: 100px;
   }
-  .texto-titulo,
-  .caja-logos,
   .texto-dinscripcion {
     position: relative;
-    top: -60%;
+    top: 50%;
   }
 }
 </style>

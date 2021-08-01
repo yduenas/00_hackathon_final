@@ -13,7 +13,6 @@
   "programs": [
     {
       "id": "1",
-<<<<<<< HEAD
       "name": "Desarrollo Front-End",
       "description": "aqui aprendera a realizar vestidos",
       "price": "100",
@@ -75,37 +74,6 @@
       "price": "100",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
       "image": "c_desarrollo_videojuegos.svg"
-=======
-      "name": "Desarrollo de Aplicaciones Moviles",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_aplicaciones_moviles.png"
-    },
-    {
-      "id": "2",
-      "name": "Desarrollo Back End",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_backend.png"
-    },
-    {
-      "id": "3",
-      "name": "Desarrollo Frond End",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_frondend.png"
-    },
-    {
-      "id": "4",
-      "name": "Desarrollo Video Juegos",
-      "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
-      "duration": "96 horas académicas (4 horas apróximadamente) ",
-      "image": "c_desarrollo_videojuegos.png"
->>>>>>> b42e18c6e429eba372b807aa4699a0f947342506
     }
   ],
 

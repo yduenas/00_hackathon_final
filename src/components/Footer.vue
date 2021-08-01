@@ -1,11 +1,17 @@
 <template>
   <section class="contenedor">
-    <div class="footer">
-      <div>Con el respaldo de:</div>
-      <div>
-        <img class="img" src="../assets/img/logo_intercorp_white.svg" alt="" />
-        <img class="img" src="../assets/img/logo_idat_white.svg" alt="" />
-        <img class="img" src="../assets/img/logo_zegel_white.svg" alt="" />
+    <div class="grupo">
+      <div class="footer">
+        <div>Con el respaldo de:</div>
+        <div>
+          <img
+            class="img"
+            src="../assets/img/logo_intercorp_white.svg"
+            alt=""
+          />
+          <img class="img" src="../assets/img/logo_idat_white.svg" alt="" />
+          <img class="img" src="../assets/img/logo_zegel_white.svg" alt="" />
+        </div>
       </div>
     </div>
   </section>
@@ -14,8 +20,7 @@
 <script>
 export default {};
 </script>
-
-<style scoped>
+<style>
 .footer {
   color: white;
   background: #000d29;
