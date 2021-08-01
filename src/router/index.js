@@ -30,7 +30,9 @@ const routes = [
 		path: '/pachacutec/:id',
 		name: 'PachacutecId',
 		component: () =>
-			import(/* webpackChunkName: "pachacutec" */ '../views/Pachacutec.vue'),
+			import(
+				/* webpackChunkName: "pachacutec" */ '../views/ProgramaIndividual.vue'
+			),
 	},
 
 	{

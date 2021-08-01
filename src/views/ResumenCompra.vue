@@ -17,7 +17,9 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-6 flecha">
 					<router-link to="/pasarelapago" class="routerdecoration">
-						<h3><i class="bi bi-arrow-left"></i> Resumen de compras</h3>
+						<h3 class="poppins">
+							<i class="bi bi-arrow-left"></i> Resumen de compras
+						</h3>
 					</router-link>
 					<ListaCompras />
 					<!-- 
@@ -51,11 +53,17 @@
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<div class="compraexitosa">
-						<h2><b> ¡Compra exitosa! </b></h2>
-						<h5>
+						<h2 class="poppins"><b> ¡Compra exitosa! </b></h2>
+						<h5 class="roboto">
 							La boleta o factura solicitada será enviada a tu correo en unos
 							momentos.
 						</h5>
+						<router-link
+							to="/pachacutec"
+							type="submit"
+							class="form-control btn-continuar"
+							>Volver a mis cursos
+						</router-link>
 
 						<div class="m-3">
 							<!-- <input
@@ -63,12 +71,6 @@
 								type="submit"
 								value="Volver a mis cursos"
 							/> -->
-							<router-link
-								to="/pachacutec"
-								type="submit"
-								class="form-control btn-continuar"
-								>Volver a mis cursos
-							</router-link>
 						</div>
 					</div>
 				</div>
@@ -90,21 +92,37 @@ export default {
 </script>
 
 <style scoped>
+.poppins {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	/* margin: 0 10px; */
+}
+.roboto {
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 14px;
+	/* font-weight: bold; */
+	text-align: left;
+	margin-bottom: 30px;
+}
 .container {
 	background-color: #f8f8fa;
 	color: black;
 	height: 100vh;
+	padding: 0;
 }
-.header {
+/* .header {
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 100px;
 	background-color: black;
 	height: 8vh;
 	color: white;
-}
+} */
 .secction {
 	height: 92vh;
+	padding: 20px 90px;
 }
 .ladoA {
 	text-align: start;
@@ -116,9 +134,7 @@ i {
 	margin-left: 20px;
 	font-size: 30px;
 }
-.secction {
-	padding-top: 20px;
-}
+
 .flecha {
 	text-align: left;
 }

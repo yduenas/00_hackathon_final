@@ -47,6 +47,13 @@
 							</li>
 							<li>
 								<i class="bi bi-rss">
+									<router-link to="/pachacutec/1">
+										- Curso Individual</router-link
+									></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
 									<router-link to="/login"> - Login</router-link></i
 								>
 							</li>
@@ -167,7 +174,7 @@ export default {};
 }
 i {
 	margin-left: 20px;
-	font-size: 30px;
+	font-size: 20px;
 }
 hr {
 	background-color: #3926c5;
