@@ -12,7 +12,7 @@
 					<h3>Con nuestros programas</h3>
 					<h3>de especialización</h3>
 				</section>
-				<footer class="footer">
+				<footer class="footer2">
 					<p>Con respaldo de:</p>
 					<img src="@/assets/img/logo_intercorp_white.svg" alt="" />
 
@@ -401,7 +401,7 @@ export default {
 	left: 00%;
 	text-align: right;
 }
-.footer {
+.footer2 {
 	position: relative;
 	top: 70%;
 	left: 5%;
