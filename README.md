@@ -9,6 +9,7 @@ npm install
 ### Compiles and hot-reloads for development
 
 ```
+cd 00_hackathon_final
 npm run serve
 ```
 
