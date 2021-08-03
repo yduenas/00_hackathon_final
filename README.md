@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'corregi footer del individual'
+git commit -m 'corregi contaner espacio seguro'
 git push
 git pull
 git status
