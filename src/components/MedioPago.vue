@@ -45,7 +45,7 @@
 					aria-controls="profile"
 					aria-selected="false"
 				>
-					Pago Efectivo
+					Deposito Pago Efectivo
 				</button>
 			</li>
 		</ul>
@@ -462,6 +462,7 @@ form {
 .btn-continuar {
 	background-color: #5640ff;
 	color: white;
+	text-decoration: none;
 }
 .inner-addon {
 	position: relative;
@@ -479,6 +480,9 @@ form {
 	font-size: 15px;
 } */
 .nav-tabs .nav-link {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
 	height: 8vh;
 	color: black;
 	margin-bottom: -1px;

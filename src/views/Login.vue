@@ -8,7 +8,7 @@
 				</header>
 				<section class="section">
 					<h2><b> ¡Explota todo tu potencial</b></h2>
-					<h2><b>tecnológico!</b></h2>
+					<h2 class="mb20"><b>tecnológico!</b></h2>
 					<h3>Con nuestros programas</h3>
 					<h3>de especialización</h3>
 				</section>
@@ -70,6 +70,7 @@
 						</button>
 					</li> -->
 				</ul>
+
 				<div class="tab-content" id="myTabContent">
 					<div
 						class="tab-pane fade"
@@ -115,7 +116,7 @@
 						role="tabpanel"
 						aria-labelledby="home-tab"
 					>
-						<p>
+						<p class="roboto12">
 							Puedes iniciar sesion con:
 						</p>
 						<img src="../assets/img/logo_facebook.svg" alt="" />
@@ -126,8 +127,8 @@
 							<input
 								type="email"
 								class="form-control"
-								id="contrasena"
-								name="contrasena"
+								id="correo"
+								name="correo"
 								placeholder="ingrese correo"
 								autocomplete="off"
 							/>
@@ -180,22 +181,24 @@
 									class="form-control"
 									id="correo"
 									name="correo"
-									placeholder="name@example.com"
-									autocomplete="new-text"
+									placeholder="Correo electronico"
+									autocomplete="off"
+									required
 								/>
-								<div id="emailHelp" class="form-text">
-									ingrese un correo valido.
-								</div>
 							</div>
-							<div class="mb-3">
+							<div class=" passhelp">
 								<input
 									type="password"
-									class="form-control"
+									class="form-control contrasena"
 									id="contrasena"
 									name="contrasena"
 									placeholder="ingrese contraseña"
-									autocomplete="new-password"
+									autocomplete="off"
+									required
 								/>
+							</div>
+							<div id="emailHelp" class="form-text emailHelp">
+								ingrese un correo valido.
 							</div>
 							<div class="mb-3">
 								<!-- <input
@@ -210,14 +213,14 @@
 									>Ingresar
 								</router-link>
 							</div>
-							<div class="mb-3 nav nav-pills">
+							<div class="olvido">
 								<a
 									class="olvido"
 									data-bs-toggle="tab"
 									data-bs-target="#contrasena"
 									href="#contrasena"
 								>
-									<b> ¿Olvidaste tu contraseña? </b>
+									¿Olvidaste tu contraseña?
 								</a>
 							</div>
 						</form>
@@ -242,7 +245,7 @@
 									class="form-control"
 									id="name"
 									name="name"
-									placeholder="nombres y npellidos"
+									placeholder="nombres y apellidos"
 									autocomplete="new-text"
 								/>
 							</div>
@@ -252,14 +255,14 @@
 									class="form-control"
 									id="correo"
 									name="correo"
-									placeholder="name@example.com"
-									autocomplete="new-text"
+									placeholder="Correo electronico"
+									autocomplete="off"
 								/>
 							</div>
 							<div class="mb-3">
 								<input
 									type="password"
-									class="form-control"
+									class="form-control contrasena"
 									id="contrasena"
 									name="contrasena"
 									placeholder="ingrese contraseña"
@@ -269,7 +272,7 @@
 							<div class="mb-3">
 								<input
 									type="password"
-									class="form-control"
+									class="form-control contrasena"
 									id="contrasena2"
 									name="contrasena2"
 									placeholder="ingrese nuevamente contraseña"
@@ -283,17 +286,18 @@
 									id="flexCheckDefault"
 								/>
 								<label
-									class="form-check-label nav nav-pills"
+									class="form-check-label nav nav-pills montserrat"
 									for="flexCheckDefault"
 								>
 									Acepto
 									<b>
 										<a
+											class="montserrat"
 											style="color:black"
 											data-bs-toggle="tab"
 											data-bs-target="#terminos"
 											href="#terminos"
-											>Terminos y condiciones</a
+											>Términos y condiciones</a
 										>
 									</b>
 								</label>
@@ -370,8 +374,14 @@ export default {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-.container {
+.mb20 {
+	margin-bottom: 20px;
+}
+.roboto12 {
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 12px;
+}
+.container2 {
 	height: 100vh;
 }
 .ladoA {
@@ -381,7 +391,7 @@ export default {
 	/* min-height: 100vh; */
 	/* height: 100vh; */
 	color: white;
-	padding-left: 30px;
+	padding-left: 85px;
 	padding-right: 75px;
 	padding-bottom: 31.9px;
 }
@@ -406,7 +416,7 @@ export default {
 .footer2 {
 	position: relative;
 	top: 70%;
-	left: 5%;
+	left: 0%;
 	text-align: left;
 }
 .roboto {
@@ -424,7 +434,7 @@ h2 {
 	margin: 0 auto;
 }
 h3 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins Medium', sans-serif;
 	font-size: 16px;
 	/* font-weight: bold; */
 	text-align: right;
@@ -453,6 +463,7 @@ h3 {
 	border-left-color: white;
 	border-right-color: white;
 	border-bottom-color: black;
+	border-bottom-width: 5px;
 }
 .tab-pane {
 	margin-top: 30px;
@@ -462,12 +473,57 @@ h3 {
 	text-align: right;
 }
 .ingresar {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold !important ;
+	text-align: center;
+	align-content: center;
+	text-decoration: none;
 	color: white;
 	background-color: #5640ff;
-	font-weight: bold;
+	margin-bottom: 19.3px;
+	height: 50px;
+	padding: 15px 0px;
+	border-radius: 15px;
 }
 .olvido {
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
 	color: #5640ff;
 	text-align: center;
+	align-content: center;
 }
+.emailHelp {
+	font-family: 'Roboto Regular', sans-serif;
+	font-size: 10px;
+	margin-top: 0px;
+	margin-bottom: 272px;
+}
+.passhelp {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.contrasena {
+	background-image: url('../assets/img/eye.png');
+	background-repeat: no-repeat;
+	background-position: 95%, 50%;
+	/* font-size: 10px; */
+}
+.montserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+}
+.form-check-input {
+	/* display: none; */
+}
+/* input[type='checkbox']:checked {
+	box-shadow: 0 0 0 3px hotpink;
+	
+} */
+/* input[type='checkbox']:checked:before {
+	box-shadow: 0 0 0 3px hotpink;
+
+	background-color: green;
+} */
 </style>

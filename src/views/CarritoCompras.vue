@@ -1,44 +1,62 @@
 <template>
 	<div class="container2">
-		<HeaderBlack />
+		<HeaderBlack :mensaje="pagina" />
 
 		<section class="secction">
-			<div class="row">
-				<div class="col-xs-12 col-md-6 flecha">
+			<div class="row hijosection">
+				<div class="col-12 flecha d-none d-sm-block">
 					<router-link to="/login" class="routerdecoration">
-						<h3><i class="bi bi-arrow-left"></i> carrito de compras</h3>
+						<h3 class="poppins20">
+							<img
+								src="../assets/img/flecha_izquierda.svg"
+								alt=""
+								style="margin-right:10px"
+							/>
+							<!-- <i class="bi bi-arrow-left"></i>  -->
+							carrito de compras
+						</h3>
 					</router-link>
+				</div>
+				<div class="col-xs-12 col-md-7 flecha" style="padding-right:0px;">
 					<ListaCompras />
 				</div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-xs-12 col-md-5">
 					<div class="subtotal">
-						<p>Subtotal S/. 600.00</p>
-
-						<form>
-							<div class="m-3 inner-addon right-addon">
-								<!-- <i class="bi bi-forward-fill"></i> -->
-								<input
-									type="text"
-									name="cupon"
-									id="cupon"
-									class="form-control cupon"
-									placeholder="agregar un codigo de descuento"
-								/>
+						<div class="row">
+							<div class="col-6 poppins20" style="text-align:left">
+								<p>Subtotal</p>
 							</div>
-							<div class="m-3">
-								<!-- <input
+							<div class="col-6 poppins20" style="text-align:right">
+								<p>S/. 600.00</p>
+							</div>
+							<div class="col-12">
+								<form>
+									<div class="col-12">
+										<!-- <i class="bi bi-forward-fill"></i> -->
+										<input
+											type="text"
+											name="cupon"
+											id="cupon"
+											class="form-control cupon"
+											placeholder="agregar un codigo de descuento"
+										/>
+									</div>
+									<div class="col-12 mt-3">
+										<!-- <input
 									class="form-control btn-continuar"
 									type="submit"
 									value="Continuar"
 								/> -->
-								<router-link
-									to="/pasarelapago"
-									type="submit"
-									class="form-control btn-continuar"
-									>Continuar
-								</router-link>
+										<router-link
+											to="/pasarelapago"
+											type="submit"
+											class="form-control btn-continuar"
+											>Continuar
+										</router-link>
+									</div>
+								</form>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -56,10 +74,20 @@ export default {
 		HeaderBlack,
 		ListaCompras,
 	},
+	data() {
+		return {
+			pagina: 'Carrito de compras',
+		};
+	},
 };
 </script>
 
 <style scoped>
+.poppins20 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
 .container {
 	background-color: #f8f8fa;
 	color: black;
@@ -77,6 +105,7 @@ export default {
 } */
 .secction {
 	height: 92vh;
+	padding: 36px 85px;
 }
 .ladoA {
 	text-align: start;
@@ -88,9 +117,7 @@ i {
 	margin-left: 20px;
 	font-size: 30px;
 }
-.secction {
-	padding-top: 20px;
-}
+
 .flecha {
 	text-align: left;
 }
@@ -120,21 +147,30 @@ a {
 .subtotal {
 	height: 30vh;
 	background-color: white;
-	margin-top: 50px;
-	margin-right: 15vh;
-	margin-left: 50px;
 	color: #5640ff;
+
 	font-size: 30px;
 	font-weight: bold;
-	padding-top: 50px;
+	padding: 50px 50px;
 }
+
 form {
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .btn-continuar {
-	background-color: #5640ff;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold !important ;
+	text-align: center;
+	align-content: center;
+	text-decoration: none;
 	color: white;
+	background-color: #5640ff;
+	margin-bottom: 19.3px;
+	height: 50px;
+	padding: 15px 0px;
+	border-radius: 15px;
 }
 .inner-addon {
 	position: relative;
@@ -149,32 +185,48 @@ form {
 	right: 0px;
 }
 .cupon {
-	font-size: 10px;
+	font-family: 'Roboto Regular', sans-serif;
 
+	font-size: 12px;
+	height: 50px;
 	background-image: url('../assets/img/enter.png');
 	background-repeat: no-repeat;
 	background-position: 95%, 50%;
+
+	padding: 0 0;
+}
+.cupon::placeholder {
+	padding-left: 20px;
+}
+.routerdecoration {
+	text-decoration: none;
+	color: black;
 }
 
+@media only screen and (max-width: 400px) {
+	.hijosection {
+		width: 325px;
+	}
+}
 @media only screen and (max-width: 600px) {
 	.subtotal {
 		height: 50vh;
 		margin-right: 0vh;
-		margin-top: 50px;
+		margin-top: 0px;
 		margin-left: 0vh;
+	}
+	.secction {
+		height: 92vh;
+		padding: 36px 0px;
 	}
 }
 @media only screen and (max-width: 1100px) {
 	.subtotal {
 		height: 50vh;
-		margin-right: 5vh;
-		margin-top: 50px;
+		margin-right: 0px;
+		margin-top: 0px;
 		margin-left: 0vh;
 		height: 30vh;
 	}
-}
-.routerdecoration {
-	text-decoration: none;
-	color: black;
 }
 </style>

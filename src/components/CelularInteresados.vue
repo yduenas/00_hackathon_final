@@ -18,7 +18,7 @@
 						type="text"
 						name="nombre"
 						id="nombre"
-						placeholder="nombre"
+						placeholder="NOMBRE"
 						v-model="interesadosA.interesadoA.nombre"
 					/>
 
@@ -27,7 +27,7 @@
 						type="text"
 						name="celular"
 						id="celular"
-						placeholder="celular"
+						placeholder="CELULAR"
 						v-model="interesadosA.interesadoA.celular"
 					/>
 
@@ -36,7 +36,7 @@
 						type="text"
 						name="correo_electronico"
 						id="correo_electronico"
-						placeholder="correo"
+						placeholder="CORREO"
 						v-model="interesadosA.interesadoA.correo_electronico"
 					/>
 					<!-- <input
@@ -54,7 +54,7 @@
 						v-model="interesadosA.interesadoA.programa"
 						@click="select_option()"
 						><option class="redColor" value="" selected disabled
-							>programa</option
+							>PROGRAMA</option
 						>
 						<option
 							class="greenColor"
@@ -63,7 +63,7 @@
 							>{{ programa.name }}</option
 						>
 					</select>
-					<input
+					<!-- <input
 						class="form-control inputs"
 						type="text"
 						name="descuento"
@@ -71,21 +71,36 @@
 						placeholder="descuento"
 						v-model="descuento"
 						readonly
-					/>
-					<input
-						class="form-check-input inputs"
+					/> -->
+					<!-- <input
+						class="inputcheckbox"
 						type="checkbox"
 						name="politica"
 						id="politica"
-					/><label for="politica" class="politica">
+					/> -->
+					<!-- <img
+						for="politica"
+						class="check"
+						src="../assets/img/check-uncheck.svg"
+						alt=""
+					/> -->
+
+					<!-- <label class="check" for="politica"></label> -->
+					<!-- <label for="politica" class="check politica">
 						Acepto las politicas de privacidad</label
-					>
+					> -->
+
+					<label class="checkbox">
+						<input type="checkbox" />
+						<span class="span">Acepto las politicas de privacidad</span>
+					</label>
+
 					<!-- {{ interesadosA.interesadoA.descuento * 100 + '%' }}
 					{{ descuento }} -->
 					<input
 						class="form-control btn-primary inputs"
 						type="button"
-						value="Enviar Interes"
+						value="Quiero postular"
 						@click="crearInteresado(interesadosA.interesadoA)"
 					/>
 
@@ -247,7 +262,7 @@ export default {
 	margin-bottom: 10px;
 }
 .phone {
-	padding-top: 60px;
+	padding-top: 85px;
 	padding-bottom: 50px;
 	padding-left: 70px;
 	padding-right: 70px;
@@ -258,10 +273,10 @@ export default {
 	position: fixed;
 	bottom: 500;
 	left: 20;
-	right: 10%;
+	right: 5%;
 	top: 20%;
-	height: 500px;
-	width: 300px;
+	height: 608px;
+	width: 370px;
 	text-align: left;
 }
 .whatsapp {
@@ -279,26 +294,103 @@ export default {
 	/* left: 0;
 	right: 0; */
 	bottom: 50px;
-	right: 75px;
+	right: 35px;
 	height: 75px;
 }
 .politica {
-	font-family: 'Roboto', sans-serif;
-	font-size: 9px;
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
+	margin-left: 5px;
 }
 .postula {
-	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-family: 'Poppins Medium', sans-serif;
+	font-size: 16px;
 	font-weight: bold;
+	margin-bottom: 20px;
 }
+.form-control {
+	margin-bottom: 15px;
+	height: 50px;
+}
+.inputcheckbox {
+	display: none;
+}
+.check {
+	background-image: url('../assets/img/check-uncheck.svg');
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	padding-top: 3px;
+	margin-bottom: 15px;
+	height: 25px;
+	justify-content: center;
+	/* background-position: 95%, 50%; */
+}
+
+/* inicio checkbox */
+.checkbox {
+	display: inline-flex;
+	cursor: pointer;
+	position: relative;
+	vertical-align: middle;
+	align-items: center;
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
+	margin-bottom: 42px;
+}
+.span {
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
+	padding-bottom: 15px;
+}
+.checkbox > span {
+	color: #34495e;
+	padding: 0.5rem 0.25rem;
+}
+
+.checkbox > input {
+	height: 25px;
+	width: 25px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: 2px solid black;
+	border-radius: 4px;
+	outline: none;
+	transition-duration: 0.3s;
+	background-color: white;
+	cursor: pointer;
+}
+
+.checkbox > input:checked {
+	border: 6px double white;
+	border-radius: 5px;
+	background-color: #34495e;
+}
+/* fin checkbox */
+
+/* .form-check-input {
+	border: 2px black;
+} */
 input[type='button'],
 input[type='submit'],
 input[type='reset'] {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold !important ;
+	text-align: center;
+	align-content: center;
+	text-decoration: none;
+	color: white;
 	background-color: #5640ff;
-	border-radius: 5%;
+	margin-bottom: 19.3px;
+	height: 50px;
+	padding: 15px 0px;
+	border-radius: 5px;
 }
 input[type='text']::placeholder {
-	opacity: 50%;
+	opacity: 100%;
+	color: rgb(207, 204, 204);
 }
 .greenColor {
 	color: #000;
@@ -317,7 +409,7 @@ select option:checked {
 /* input[type='select'] option {
 	opacity: 50%;
 } */
-/* 
+/*
 select,
 option:first-child {
 	opacity: 50%;

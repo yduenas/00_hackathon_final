@@ -1,18 +1,26 @@
 <template>
 	<div class="row compras">
-		<div class="col-5 comprasa">
+		<div class="col-3 comprasa" style="text-align:left">
 			<img
 				class="img_curso"
 				src="../assets/img/c_desarrollo_frondend.svg"
 				alt=""
 			/>
 		</div>
-		<div class="col-5 comprasa">
+
+		<div class="col-6 comprasa" style="text-align:left; padding-left:5px;">
 			<b class="nombrecurso">Desarrollo Frond End </b>
 			<br />
-			<a href="#" class="eliminar">Eliminar</a>
+			<a
+				href="#"
+				class="eliminar"
+				style="font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: bold;"
+				>Eliminar</a
+			>
 		</div>
-		<div class="col-2 comprasa">
+		<div class="col-3 comprasa">
 			<b class="importe"> S/.269.00</b>
 		</div>
 	</div>
@@ -56,12 +64,6 @@ export default {};
 </script>
 
 <style scoped>
-.compras {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
 .comprasa {
 	margin: 0 0;
 	padding: 0 1px;
@@ -108,7 +110,7 @@ h5 {
 
 .nombrecurso {
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: bold;
 	text-align: left;
 }
@@ -121,5 +123,22 @@ h5 {
 table {
 	table-layout: fixed;
 	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.compras {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.compras {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
 </style>

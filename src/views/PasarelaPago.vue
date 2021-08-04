@@ -1,12 +1,18 @@
 <template>
 	<div class="container2">
-		<HeaderBlack />
+		<HeaderBlack :mensaje="pagina" />
 
 		<section class="secctions">
 			<div class="row mediopago">
-				<div class="col-xs-12 col-lg-7 pasarela">
+				<div class="col-xs-12 col-lg-7 pasarela d-none d-sm-block">
 					<router-link to="/carrito" class="routerdecoration">
-						<h3><i class="bi bi-arrow-left"></i> pasarela de pagos</h3>
+						<h3 class="poppins20">
+							<img
+								src="../assets/img/flecha_izquierda.svg"
+								alt=""
+								style="margin-right:10px"
+							/>pasarela de pagos
+						</h3>
 					</router-link>
 
 					<p class="metodo"><b> selecciona tu metodo de pago </b></p>
@@ -57,6 +63,11 @@ import ListaCompras from '@/components/ListaCompras.vue';
 import MedioPago from '@/components/MedioPago.vue';
 export default {
 	name: 'PasarelaPagos',
+	data() {
+		return {
+			pagina: 'Pasarela de pagos',
+		};
+	},
 	components: {
 		HeaderBlack,
 		ListaCompras,
@@ -66,6 +77,11 @@ export default {
 </script>
 
 <style scoped>
+.poppins20 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
 .container {
 	background-color: #f8f8fa;
 	color: black;
@@ -92,6 +108,7 @@ export default {
 }
 .pasarela {
 	background-color: transparent;
+	padding-right: 61px;
 }
 .table {
 	margin-top: 40px;

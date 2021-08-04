@@ -35,6 +35,11 @@
 						<ul class="nav navbar-nav">
 							<li>
 								<i class="bi bi-rss">
+									<router-link to="/inicio"> - Inicio</router-link></i
+								>
+							</li>
+							<li>
+								<i class="bi bi-rss">
 									<router-link to="/"> - Home</router-link></i
 								>
 							</li>
