@@ -348,8 +348,8 @@ export default {
 }
 
 .checkbox > input {
-	height: 25px;
-	width: 25px;
+	height: 20px;
+	width: 20px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-o-appearance: none;
@@ -389,8 +389,14 @@ input[type='reset'] {
 	border-radius: 5px;
 }
 input[type='text']::placeholder {
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
 	opacity: 100%;
 	color: rgb(207, 204, 204);
+}
+select option {
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
 }
 .greenColor {
 	color: #000;
@@ -401,9 +407,13 @@ input[type='text']::placeholder {
 }
 select,
 option {
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
 	opacity: 50%;
 }
 select option:checked {
+	font-family: 'Roboto Medium', sans-serif;
+	font-size: 12px;
 	background: #ff9500 -webkit-linear-gradient(bottom, #ff9500 0%, #ff9500 100%);
 }
 /* input[type='select'] option {
