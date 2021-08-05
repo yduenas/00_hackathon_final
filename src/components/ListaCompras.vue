@@ -1,66 +1,54 @@
 <template>
-	<div class="row compras">
-		<div class="col-3 comprasa" style="text-align:left">
-			<img
-				class="img_curso"
-				src="../assets/img/c_desarrollo_frondend.svg"
-				alt=""
-			/>
-		</div>
+	<div>
+		<!-- {{ shoppingcartA.programasSeleccionados }} -->
+		<div
+			class="row compras"
+			v-for="(programa, index) in shoppingcartA.programasSeleccionados"
+			:key="index"
+		>
+			<div class="col-3 comprasa" style="text-align:left">
+				<img
+					class="img_curso"
+					:src="require(`@/assets/img/${programa.image}`)"
+					alt=""
+				/>
+			</div>
 
-		<div class="col-6 comprasa" style="text-align:left; padding-left:5px;">
-			<b class="nombrecurso">Desarrollo Frond End </b>
-			<br />
-			<a
-				href="#"
-				class="eliminar"
-				style="font-family: 'Poppins', sans-serif;
-	font-size: 12px;
-	font-weight: bold;"
-				>Eliminar</a
-			>
-		</div>
-		<div class="col-3 comprasa">
-			<b class="importe"> S/.269.00</b>
+			<div class="col-6 comprasa" style="text-align:left; padding-left:5px;">
+				<b class="nombrecurso">{{ programa.name }} </b>
+				<br />
+				<a
+					href="#"
+					class="eliminar"
+					style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: bold;"
+					>Eliminar</a
+				>
+			</div>
+			<div class="col-3 comprasa">
+				<b class="importe"> S/.{{ programa.price }}</b>
+			</div>
 		</div>
 	</div>
-	<!-- <table class="table borderless" width="80%">
-			<tbody>
-				<tr>
-					<td width="20%">
-						<img
-							class="img_curso"
-							src="../assets/img/c_desarrollo_frondend.svg"
-							alt=""
-						/>
-					</td>
-					<td width="30%">
-						<div class="row">
-							<div class="col-12">
-								<h5 class="nombrecurso">
-									<b class="nombrecurso">Desarrollo Frond End </b>
-								</h5>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 eliminar">
-								<a href="#">Eliminar</a>
-							</div>
-							<div class="col-6 d-block d-sm-none">
-								<b class="importe"> S/.269.00</b>
-							</div>
-						</div>
-					</td>
-					<td class="d-none d-sm-block" width="20%">
-						<b class="importe"> S/.269.00</b>
-					</td>
-				</tr>
-			</tbody>
-		</table> -->
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations, mapActions } from 'vuex';
+export default {
+	name: 'ListaCompras',
+	data() {
+		return { apellido: 'Duenas' };
+	},
+	props: {
+		mensaje: String,
+	},
+	components: {},
+	computed: { ...mapState({ shoppingcartA: (state) => state.shoppingcartA }) },
+	methods: {
+		carrito: function() {
+			alert('Diste click en el carrito');
+		},
+	},
+};
 </script>
 
 <style scoped>

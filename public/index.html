@@ -46,8 +46,13 @@
 
 		<!------ Include the above in your HEAD tag ---------->
 		<title><%= htmlWebpackPlugin.options.title %></title>
+		<style>
+			.body {
+				overflow: scroll !important;
+			}
+		</style>
 	</head>
-	<body style="  ">
+	<body class="body" style="overflow: scroll;">
 		<noscript>
 			<strong
 				>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work

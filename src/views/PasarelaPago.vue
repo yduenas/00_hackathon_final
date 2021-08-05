@@ -104,7 +104,8 @@ export default {
 	background-color: white;
 	margin-right: 0 auto;
 	padding-left: 50px 50px;
-	height: 70vh;
+	height: 50%;
+	/* height: 100vh; */
 }
 .pasarela {
 	background-color: transparent;

@@ -4,7 +4,11 @@
 
 		<div>{{ interesadosA.interesadosA }}</div>
 		<!-- <div>{{ programasA }}</div> -->
-
+		<li>
+			<i class="bi bi-rss">
+				<router-link to="/inicio"> - Inicio</router-link>
+			</i>
+		</li>
 		<div>
 			<h1>Estoy en Pruebas</h1>
 			<h2>{{ apellido }}</h2>

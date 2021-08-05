@@ -83,7 +83,7 @@
 							/>
 						</div>
 					</div>
-					<br />
+
 					<div class="row">
 						<div class="col-6" style="text-align: left">
 							<label><b>Ingresa informacion de tu tarjeta</b> </label>

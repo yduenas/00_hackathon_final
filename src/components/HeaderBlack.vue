@@ -22,7 +22,7 @@
 
 			<div class="col-4 col-md-6 ladoB d-none d-sm-block">
 				<i class="bi bi-cart" @click="carrito"></i>
-				<span class="numero">3</span>
+				<span class="numero">{{ shoppingcartA.contador }}</span>
 				<!-- 
 				<i class="bi bi-list"></i> -->
 				<MenuBar />
@@ -32,15 +32,20 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import MenuBar from '@/components/MenuBar.vue';
 export default {
 	name: 'HeaderBlack',
+	data() {
+		return { apellido: 'Duenas' };
+	},
 	props: {
 		mensaje: String,
 	},
 	components: {
 		MenuBar,
 	},
+	computed: { ...mapState({ shoppingcartA: (state) => state.shoppingcartA }) },
 	methods: {
 		carrito: function() {
 			alert('Diste click en el carrito');

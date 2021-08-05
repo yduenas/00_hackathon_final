@@ -81,10 +81,10 @@ body {
 	background: white;
 	margin: 0%;
 	padding: 0%;
-}
-body {
+	overflow: scroll;
 	background: #f2f3f5;
 }
+
 .contenedor {
 	margin: 0;
 	padding: 0;

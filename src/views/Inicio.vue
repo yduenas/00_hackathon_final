@@ -7,11 +7,18 @@
 					<a to="/"
 						><img class="navi-left" src="../assets/img/pachacutec.svg" />
 					</a>
+					<p style="color:white;">
+						<!-- los datos son: {{ shoppingcartA.programasSeleccionados }} -->
+						<!-- los datos son: {{ shoppingcartA.programasB }} -->
+					</p>
 					<div class="navi-right">
-						<a class="navi-rightBadge">
+						<router-link to="/login" class="navi-rightBadge">
 							<img @click="carrito" src="../assets/img/cart.png" />
-							<span id="counter" class="badge">0</span>
-						</a>
+							<span id="counter" class="badge">{{
+								shoppingcartA.contador
+							}}</span>
+						</router-link>
+
 						<!-- <img
 							@click="carrito"
 							style="cursor: pointer"
@@ -50,21 +57,7 @@
 				</div>
 				<div class="col-4 d-none d-md-block"></div>
 			</div>
-			<!-- <div class="sponsors">
-				<div class="sponsor-images">
-					<div class="sponsors-Item">
-						<img
-							class="sponsors-ItemImg"
-							src="../assets/img/logo_intercorp.svg"
-						/>
-						<img class="sponsors-ItemImg" src="../assets/img/logo_idat.svg" />
-						<img class="sponsors-ItemImg" src="../assets/img/logo_zegel.svg" />
-					</div>
-				</div>
-				<div class="sponsors-arrow">
-					<img alt="" src="../assets/img/flechas_abajo.png" />
-				</div>
-			</div> -->
+
 			<!-- THIRD SECTION WITH COURSES -->
 		</div>
 		<div class="container">
@@ -72,77 +65,39 @@
 				<h5 id="conoce" class="tarjeta-list">
 					Conoce Nuestros Programas de Especialización
 				</h5>
+
 				<div class="row">
 					<div class="col-sm-8 col-xs-12">
 						<div class="row">
-							<div class="col-xs-12 col-md-6 curso">
+							<div
+								class="col-xs-12 col-md-6 curso"
+								v-for="(programa, index) in programasA.programasA"
+								:key="index"
+							>
 								<div class="cardCourse-item">
 									<div class="cardCourse-overflow"></div>
 									<img
 										alt="image"
 										class="cardCourse-img"
-										src="../assets/img/c_desarrollo_backend.png"
+										:src="require(`@/assets/img/${programa.image}`)"
 									/>
-
+									<!-- src="../assets/img/c_desarrollo_backend.png" -->
 									<div class="cardCourse-content">
-										<p class="cardCourse-contentName">Nombre del programa</p>
+										<p class="cardCourse-contentName">{{ programa.name }}</p>
 										<div class="cardCourse-contentActions">
-											<div class="cardCourse-contentBtn">
+											<div
+												class="cardCourse-contentBtn"
+												@click="accionIncrementar(programa.id)"
+											>
 												<img class="layer" src="../assets/img/addmas.png" />
 												<span>Comprar</span>
 											</div>
-											<div class="cardCourse-contentBtn">
-												<img class="layer" src="../assets/img/addmas.png" />
-												<span>Ver más</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-md-6 curso">
-								<div class="cardCourse-item">
-									<div class="cardCourse-overflow"></div>
-									<img
-										alt="image"
-										class="cardCourse-img"
-										src="../assets/img/c_desarrollo_backend.png"
-									/>
 
-									<div class="cardCourse-content">
-										<p class="cardCourse-contentName">Nombre del programa</p>
-										<div class="cardCourse-contentActions">
 											<div class="cardCourse-contentBtn">
-												<img class="layer" src="../assets/img/addmas.png" />
-												<span>Comprar</span>
-											</div>
-											<div class="cardCourse-contentBtn">
-												<img class="layer" src="../assets/img/addmas.png" />
-												<span>Ver más</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-xs-12 col-md-6 curso">
-								<div class="cardCourse-item">
-									<div class="cardCourse-overflow"></div>
-									<img
-										alt="image"
-										class="cardCourse-img"
-										src="../assets/img/c_desarrollo_backend.png"
-									/>
-
-									<div class="cardCourse-content">
-										<p class="cardCourse-contentName">Nombre del programa</p>
-										<div class="cardCourse-contentActions">
-											<div class="cardCourse-contentBtn">
-												<img class="layer" src="../assets/img/addmas.png" />
-												<span>Comprar</span>
-											</div>
-											<div class="cardCourse-contentBtn">
-												<img class="layer" src="../assets/img/addmas.png" />
-												<span>Ver más</span>
+												<router-link :to="`/pachacutec/${programa.id}`">
+													<img class="layer" src="../assets/img/addmas.png" />
+													<span>Ver más</span>
+												</router-link>
 											</div>
 										</div>
 									</div>
@@ -207,41 +162,17 @@
 		<div class="benefits">
 			<div class="container">
 				<p class="benefits-title">Beneficios</p>
-				<div class="benefitsCard">
-					<img src="../assets/img/beneficio_002.svg" />
-					<div class="benefitsCard-content">
-						<p class="benefitsCard-contentTitle">Aprende de expertos</p>
-						<p class="benefitsCard-contentBody">
-							Aprende directamente de expertos del mercado a través del análisis
-							y solución de problemas de programación. Utilizando los frameworks
-							y herramientas de mayor relevancia dentro del mundo del coding.
-						</p>
-					</div>
-				</div>
 
-				<div class="benefitsCard">
-					<img src="../assets/img/beneficio_001.svg" />
+				<div
+					class="benefitsCard"
+					v-for="(beneficio, index) in beneficiosA.beneficiosA"
+					:key="index"
+				>
+					<!-- v-for="(beneficio, index) in beneficios" :key="index" -->
+					<img :src="require(`@/assets/img/${beneficio.url_img}`)" />
 					<div class="benefitsCard-content">
-						<p class="benefitsCard-contentTitle">Clases virtuales</p>
-						<p class="benefitsCard-contentBody">
-							Aprovecha tu tiempo al máximo en nuestras clases virtuales y
-							participa presencialmente de nuestras hackathones semanales para
-							conocer y participar de la comunidad profesional que liderará la
-							transformación tecnológica del Perú.
-						</p>
-					</div>
-				</div>
-
-				<div class="benefitsCard">
-					<img src="../assets/img/beneficio_003.svg" />
-					<div class="benefitsCard-content">
-						<p class="benefitsCard-contentTitle">Empleabildad</p>
-						<p class="benefitsCard-contentBody">
-							Al finalizar el programa y certificarte a nombre de IDAT, podrás
-							acceder a ofertas laborales especialmente identificadas para la
-							comunidad PachaQTec, a través de nuestra plataforma de
-							empleabilidad IDAT JOB.
-						</p>
+						<p class="benefitsCard-contentTitle">{{ beneficio.name }}</p>
+						<p class="benefitsCard-contentBody">{{ beneficio.descripcion }}</p>
 					</div>
 				</div>
 			</div>
@@ -334,8 +265,8 @@
 						Acepto las politicas de privacidad</label
 					> -->
 
-				<label class="checkbox">
-					<input type="checkbox" />
+				<label for="chec" class="checkbox">
+					<input id="chec" type="checkbox" />
 					<span class="span">Acepto las politicas de privacidad</span>
 				</label>
 
@@ -467,6 +398,9 @@ export default {
 		//...mapMutations(['moduloA/getProgramasMutation']),
 		//	...mapActions(['moduloA/getProgramasAction']},
 		...mapMutations({
+			mutationIncrementar: 'shoppingcartA/mutationIncrementar',
+			mutationAgregarPrograma: 'shoppingcartA/mutationAgregarPrograma',
+			getProgramasMutationB: 'shoppingcartA/getProgramasMutation',
 			getProgramasMutation: 'programasA/getProgramasMutation',
 			getBeneficiosMutation: 'beneficiosA/getBeneficiosMutation',
 			getComprassMutation: 'comprassA/getComprassMutation',
@@ -479,7 +413,11 @@ export default {
 			getUsersMutation: 'usersA/getUsersMutation',
 		}),
 		...mapActions({
+			accionAgregarPrograma: 'shoppingcartA/accionAgregarPrograma',
+			accionIncrementar: 'shoppingcartA/accionIncrementar',
+			getProgramasActionB: 'shoppingcartA/getProgramasAction',
 			getProgramasActionA: 'programasA/getProgramasAction',
+			getBeneficiosActionA: 'beneficiosA/getBeneficiosAction',
 			getInteresadosAction: 'interesadosA/getInteresadosAction',
 			crearInteresadoAction: 'interesadosA/crearInteresadoAction',
 		}),
@@ -517,7 +455,9 @@ export default {
 		this.getOrderDetailsAction();
 		this.getShoppingCartsAction();
 		this.getProgramasActionA();
+		this.getBeneficiosActionA();
 		this.getInteresadosAction();
+		this.getProgramasActionB();
 	},
 };
 </script>
@@ -774,7 +714,7 @@ img {
 /*THIRD PART */
 
 .tarjeta {
-	margin-top: 190px;
+	margin-top: 60px;
 }
 
 .tarjeta-list {
@@ -846,6 +786,20 @@ img {
 	cursor: pointer;
 	color: white;
 	align-items: center;
+	text-decoration: none;
+}
+.cardCourse-contentBtn a {
+	text-decoration: none;
+}
+.cardCourse-contentBtn a:hover {
+	color: white;
+	text-decoration: none;
+	transform: scale(1.15);
+}
+.cardCourse-contentBtn:hover {
+	color: white;
+	text-decoration: none;
+	transform: scale(1.15);
 }
 
 .cardCourse-contentBtn:not(:first-child) {
@@ -1060,6 +1014,36 @@ span {
 	}
 }
 @media only screen and (max-width: 375px) {
+	.feature-image {
+		z-index: 1 !important;
+		left: -0rem;
+		top: -9rem;
+		bottom: -0rem;
+		position: absolute;
+	}
+
+	.feature-content {
+		height: 100%;
+		display: flex;
+		max-width: 650px;
+
+		margin-left: 20px;
+		margin-right: 20px;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+	}
+	.feature-wrapper {
+		padding-top: 300px;
+		height: 650px;
+	}
+	.benefits {
+		padding-top: 40px;
+		padding: 40px 10px;
+	}
+	.benefitsCard-contentBody {
+		display: none;
+	}
 }
 @media only screen and (max-width: 320px) {
 }

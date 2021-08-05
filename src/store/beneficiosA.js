@@ -24,7 +24,7 @@ export default {
 		async getBeneficiosAction({ commit, state }) {
 			const data = await fetch(`${state.URLBeneficios}`); //'http://localhost:3000/pbeneficios'
 			let beneficiosA = await data.json();
-			commit('getPbeneficiosMutation', beneficiosA);
+			commit('getBeneficiosMutation', beneficiosA);
 			console.log(beneficiosA);
 		},
 	},
