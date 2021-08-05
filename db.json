@@ -1,263 +1,279 @@
 {
-	"interesados": [
-		{
-			"id": "1",
-			"nombre": "Ytalo",
-			"celular": "987654321",
-			"correo_electronico": "ytaloduenas@gmail.com",
-			"programa": "1",
-			"descuento": 0.1
-		},
-		{
-			"id": "TUJvqyt",
-			"nombre": "CLAUDIA",
-			"celular": "981427867",
-			"correo_electronico": "CLADUIA@GAMIL.COM",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "1hzz09b",
-			"nombre": "gael",
-			"celular": "1234",
-			"correo_electronico": "gael@gmail,com",
-			"programa": "Marketing Digital",
-			"descuento": 0.1
-		},
-		{
-			"id": "FwIeQbp",
-			"nombre": "giacomo",
-			"celular": "2453",
-			"correo_electronico": "giaco@GAMIL.COM",
-			"programa": "Desarrollo de Aplicaciones Móviles",
-			"descuento": 0.1
-		},
-		{
-			"id": "GVoFVin",
-			"nombre": "sole",
-			"celular": "54356",
-			"correo_electronico": "sole@gmail",
-			"programa": "Desarrollo de Videojuegos",
-			"descuento": 0.1
-		},
-		{
-			"id": "5V2fmqf",
-			"nombre": "asdf",
-			"celular": "afds",
-			"correo_electronico": "dsfa",
-			"programa": "Desarrollo de Aplicaciones Móviles",
-			"descuento": 0.1
-		},
-		{
-			"id": "8-z7GXe",
-			"nombre": "sdfg",
-			"celular": "sdfgsfd",
-			"correo_electronico": "sdfg",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "CXkrF8U",
-			"nombre": "dfsa",
-			"celular": "adsf",
-			"correo_electronico": "adsf",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "rdQir37",
-			"nombre": "hugo claudio",
-			"celular": "adsf",
-			"correo_electronico": "adsf",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "V2PHfrg",
-			"nombre": "jhg",
-			"celular": "fgh",
-			"correo_electronico": "CLADUIA@GAMIL.COM",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "EV4bKl2",
-			"nombre": "sfdg",
-			"celular": "sdfgsfd",
-			"correo_electronico": "fdgs",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		},
-		{
-			"id": "fE8Z1nZ",
-			"nombre": "CLAUDIA",
-			"celular": "981427867",
-			"correo_electronico": "CLADUIA@GAMIL.COM",
-			"programa": "Desarrollo Back-End",
-			"descuento": 0.1
-		}
-	],
-	"programs": [
-		{
-			"id": "1",
-			"name": "Desarrollo Front-End",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_frondend.png"
-		},
-		{
-			"id": "2",
-			"name": "Desarrollo Back-End",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_backend.png"
-		},
-		{
-			"id": "3",
-			"name": "Desarrollo de Aplicaciones Móviles",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_aplicaciones_moviles.png"
-		},
-		{
-			"id": "4",
-			"name": "Diseño de Experiencia De Usuario",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_diseño_experiencia.png"
-		},
-		{
-			"id": "5",
-			"name": "Desarrollo de Videojuegos",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_videojuegos.png"
-		},
-		{
-			"id": "6",
-			"name": "Marketing Digital",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_marketing_digital.png"
-		},
-		{
-			"id": "7",
-			"name": "Data Analytics",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_frondend.svg"
-		},
-		{
-			"id": "8",
-			"name": "Desarrollo Front-End Avanzado",
-			"description": "aqui aprendera a realizar vestidos",
-			"price": "100",
-			"duration": "96 horas académicas (4 horas apróximadamente) ",
-			"image": "c_desarrollo_videojuegos.svg"
-		}
-	],
-	"beneficios": [
-		{
-			"id": "1",
-			"url_img": "beneficio_001.svg",
-			"descripcion": "este beneficio es el nuemro 1"
-		},
-		{
-			"id": "2",
-			"url_img": "beneficio_002.svg",
-			"descripcion": "este beneficio es el nuemro 2"
-		},
-		{
-			"id": "3",
-			"url_img": "beneficio_003.svg",
-			"descripcion": "este beneficio es el nuemro 3"
-		}
-	],
-	"users": [
-		{
-			"id": "1",
-			"username": "ytaloduenas",
-			"email": "ytaloduenas@gmail.com",
-			"contrasena": "1234",
-			"terminos": true,
-			"is_verified": true,
-			"is_staff": true,
-			"is_active": true
-		}
-	],
-	"compras": [
-		{
-			"id_compra": "",
-			"id_alumno": "",
-			"id_programa": "",
-			"precio": "",
-			"cupon": ""
-		}
-	],
-	"cupones": [
-		{
-			"id_cupon": 1,
-			"codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.1,
-			"estado": true
-		},
-		{
-			"id_cupon": 2,
-			"codigo_cupon": "SFDGfdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.15,
-			"estado": true
-		},
-		{
-			"id_cupon": 3,
-			"codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
-			"porcentaje_descuento": 0.2,
-			"estado": true
-		}
-	],
-	"order": [
-		{
-			"id": "",
-			"price": "",
-			"iduser": "",
-			"code": "",
-			"cupon": ""
-		}
-	],
-	"order_detail": [
-		{
-			"id": "",
-			"idorder": "",
-			"idprogram": "",
-			"quantity": 1,
-			"price": ""
-		}
-	],
-	"shoppingcart": [
-		{
-			"id_user": "",
-			"cupon": "",
-			"programas": [
-				{
-					"id_programs": 1,
-					"price": 0
-				},
-				{
-					"id_programs": 2,
-					"price": 0
-				},
-				{
-					"id_programs": 3,
-					"price": 0
-				}
-			],
-			"precio_total": 0
-		}
-	]
+  "interesados": [
+    {
+      "id": "1",
+      "nombre": "Ytalo",
+      "celular": "987654321",
+      "correo_electronico": "ytaloduenas@gmail.com",
+      "programa": "1",
+      "descuento": 0.1
+    },
+    {
+      "id": "TUJvqyt",
+      "nombre": "CLAUDIA",
+      "celular": "981427867",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "1hzz09b",
+      "nombre": "gael",
+      "celular": "1234",
+      "correo_electronico": "gael@gmail,com",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "FwIeQbp",
+      "nombre": "giacomo",
+      "celular": "2453",
+      "correo_electronico": "giaco@GAMIL.COM",
+      "programa": "Desarrollo de Aplicaciones Móviles",
+      "descuento": 0.1
+    },
+    {
+      "id": "GVoFVin",
+      "nombre": "sole",
+      "celular": "54356",
+      "correo_electronico": "sole@gmail",
+      "programa": "Desarrollo de Videojuegos",
+      "descuento": 0.1
+    },
+    {
+      "id": "5V2fmqf",
+      "nombre": "asdf",
+      "celular": "afds",
+      "correo_electronico": "dsfa",
+      "programa": "Desarrollo de Aplicaciones Móviles",
+      "descuento": 0.1
+    },
+    {
+      "id": "8-z7GXe",
+      "nombre": "sdfg",
+      "celular": "sdfgsfd",
+      "correo_electronico": "sdfg",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "CXkrF8U",
+      "nombre": "dfsa",
+      "celular": "adsf",
+      "correo_electronico": "adsf",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "rdQir37",
+      "nombre": "hugo claudio",
+      "celular": "adsf",
+      "correo_electronico": "adsf",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "V2PHfrg",
+      "nombre": "jhg",
+      "celular": "fgh",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "EV4bKl2",
+      "nombre": "sfdg",
+      "celular": "sdfgsfd",
+      "correo_electronico": "fdgs",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "fE8Z1nZ",
+      "nombre": "CLAUDIA",
+      "celular": "981427867",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "d6EHsZW",
+      "nombre": "edgar",
+      "celular": "54431",
+      "correo_electronico": "edgar@gmail.com",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "eB30KyO",
+      "nombre": "edgar2",
+      "celular": "544312",
+      "correo_electronico": "edgar@gmail.com",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    }
+  ],
+  "programs": [
+    {
+      "id": "1",
+      "name": "Desarrollo Front-End",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_frondend.png"
+    },
+    {
+      "id": "2",
+      "name": "Desarrollo Back-End",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_backend.png"
+    },
+    {
+      "id": "3",
+      "name": "Desarrollo de Aplicaciones Móviles",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_aplicaciones_moviles.png"
+    },
+    {
+      "id": "4",
+      "name": "Diseño de Experiencia De Usuario",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_diseño_experiencia.png"
+    },
+    {
+      "id": "5",
+      "name": "Desarrollo de Videojuegos",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_videojuegos.png"
+    },
+    {
+      "id": "6",
+      "name": "Marketing Digital",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_marketing_digital.png"
+    },
+    {
+      "id": "7",
+      "name": "Data Analytics",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_frondend.svg"
+    },
+    {
+      "id": "8",
+      "name": "Desarrollo Front-End Avanzado",
+      "description": "aqui aprendera a realizar vestidos",
+      "price": "100",
+      "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "image": "c_desarrollo_videojuegos.svg"
+    }
+  ],
+  "beneficios": [
+    {
+      "id": "1",
+      "url_img": "beneficio_001.svg",
+      "descripcion": "este beneficio es el nuemro 1"
+    },
+    {
+      "id": "2",
+      "url_img": "beneficio_002.svg",
+      "descripcion": "este beneficio es el nuemro 2"
+    },
+    {
+      "id": "3",
+      "url_img": "beneficio_003.svg",
+      "descripcion": "este beneficio es el nuemro 3"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "ytaloduenas",
+      "email": "ytaloduenas@gmail.com",
+      "contrasena": "1234",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  ],
+  "compras": [
+    {
+      "id_compra": "",
+      "id_alumno": "",
+      "id_programa": "",
+      "precio": "",
+      "cupon": ""
+    }
+  ],
+  "cupones": [
+    {
+      "id_cupon": 1,
+      "codigo_cupon": "asdfdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.1,
+      "estado": true
+    },
+    {
+      "id_cupon": 2,
+      "codigo_cupon": "SFDGfdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.15,
+      "estado": true
+    },
+    {
+      "id_cupon": 3,
+      "codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.2,
+      "estado": true
+    }
+  ],
+  "order": [
+    {
+      "id": "",
+      "price": "",
+      "iduser": "",
+      "code": "",
+      "cupon": ""
+    }
+  ],
+  "order_detail": [
+    {
+      "id": "",
+      "idorder": "",
+      "idprogram": "",
+      "quantity": 1,
+      "price": ""
+    }
+  ],
+  "shoppingcart": [
+    {
+      "id_user": "",
+      "cupon": "",
+      "programas": [
+        {
+          "id_programs": 1,
+          "price": 0
+        },
+        {
+          "id_programs": 2,
+          "price": 0
+        },
+        {
+          "id_programs": 3,
+          "price": 0
+        }
+      ],
+      "precio_total": 0
+    }
+  ]
 }

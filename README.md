@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'cree el home llamandolo inicio'
+git commit -m 'corrregi el home llamandolo inicio'
 git push
 git pull
 git status
