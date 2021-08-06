@@ -21,6 +21,7 @@
 					href="#"
 					class="eliminar"
 					style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: bold;"
+					@click="accionEliminarPrograma(programa)"
 					>Eliminar</a
 				>
 			</div>
@@ -44,6 +45,12 @@ export default {
 	components: {},
 	computed: { ...mapState({ shoppingcartA: (state) => state.shoppingcartA }) },
 	methods: {
+		...mapMutations({
+			mutationEliminarPrograma: 'shoppingcartA/mutationEliminarPrograma',
+		}),
+		...mapActions({
+			accionEliminarPrograma: 'shoppingcartA/accionEliminarPrograma',
+		}),
 		carrito: function() {
 			alert('Diste click en el carrito');
 		},

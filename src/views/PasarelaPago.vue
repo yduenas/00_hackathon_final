@@ -4,7 +4,8 @@
 
 		<section class="secctions">
 			<div class="row mediopago">
-				<div class="col-xs-12 col-lg-7 pasarela d-none d-sm-block">
+				<div class="col-xs-12 col-lg-7 pasarela ">
+					<!-- d-none d-sm-block -->
 					<router-link to="/carrito" class="routerdecoration">
 						<h3 class="poppins20">
 							<img
@@ -45,7 +46,8 @@
 							</div>
 							<div class="col-6" style="text-align:right">
 								<p class="subtotal">
-									S/ 600.00
+									S/
+									{{ shoppingcartA.subTotal }}.00
 								</p>
 							</div>
 						</div>
@@ -58,6 +60,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
 import MedioPago from '@/components/MedioPago.vue';
@@ -72,6 +75,9 @@ export default {
 		HeaderBlack,
 		ListaCompras,
 		MedioPago,
+	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
 	},
 };
 </script>

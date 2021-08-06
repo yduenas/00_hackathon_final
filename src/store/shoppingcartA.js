@@ -4,8 +4,11 @@ export default {
 		URLShoppingcarts: 'http://localhost:3000/shoppingcarts/',
 		URLProgramas: 'http://localhost:3000/programs/',
 		contador: 0,
+		botonDeshabilitado: 'pointer-events: none;',
+
 		programasSeleccionados: [],
 		programasB: [],
+		subTotal: 0.0,
 		ShoppingcartsA: [],
 		ShoppingcartA: {
 			id_user: '',
@@ -27,12 +30,31 @@ export default {
 			precio_total: 0,
 		},
 	},
+	computed: {
+		// subTotal: function() {
+		// 	let sum = 0;
+		// 	//return this.items.reduce((sum, item) => sum + item.price, 0);
+		// 	return sum;
+		// },
+	},
 	mutations: {
 		mutationIncrementar(state) {
 			state.contador += 1;
 		},
 		mutationAgregarPrograma(state, payload) {
 			state.programasSeleccionados.push(payload);
+			state.subTotal += parseInt(payload.price);
+			if (state.contador > 0) {
+				state.botonDeshabilitado = '';
+			}
+		},
+		mutationEliminarPrograma(state, payload) {
+			//	console.log(state.contactos);
+			//	console.log(payload);
+			//	state.contactos.push(payload);
+			state.programasSeleccionados = state.programasSeleccionados.filter(
+				(programa) => programa.id !== payload
+			);
 		},
 		getShoppingCartsMutation(state, payload) {
 			//	state.Shoppingcarts.push(payload);
@@ -64,6 +86,15 @@ export default {
 		accionAgregarPrograma({ commit }, programa) {
 			commit('mutationAgregarPrograma', programa);
 			//	console.log(tarea);
+		},
+		accionEliminarPrograma({ commit, state }, programa) {
+			alert(`Ha eliminado el curso ${programa.id}`);
+			commit('mutationEliminarPrograma', programa.id);
+			state.subTotal -= parseInt(programa.price);
+			state.contador -= 1;
+			if (state.contador <= 0) {
+				state.botonDeshabilitado = 'pointer-events: none;';
+			}
 		},
 		async getProgramasAction({ commit, state }) {
 			//	alert('estoy aqui');

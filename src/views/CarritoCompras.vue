@@ -27,7 +27,7 @@
 								<p>Subtotal</p>
 							</div>
 							<div class="col-6 poppins20" style="text-align:right">
-								<p>S/. 600.00</p>
+								<p>S/ {{ shoppingcartA.subTotal }}.00</p>
 							</div>
 							<div class="col-12">
 								<form>
@@ -51,8 +51,12 @@
 											to="/pasarelapago"
 											type="submit"
 											class="form-control btn-continuar"
+											:style="shoppingcartA.botonDeshabilitado"
 											>Continuar
 										</router-link>
+										<!-- {{ shoppingcartA.botonDeshabilitado }}
+										<br />
+										{{ shoppingcartA.contador }} -->
 									</div>
 								</form>
 							</div>
@@ -65,6 +69,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
 
@@ -73,6 +78,9 @@ export default {
 	components: {
 		HeaderBlack,
 		ListaCompras,
+	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
 	},
 	data() {
 		return {

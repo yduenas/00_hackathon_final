@@ -210,6 +210,7 @@
 							to="/resumencompra"
 							type="submit"
 							class="form-control btn-continuar"
+							:style="shoppingcartA.botonDeshabilitado"
 							>Finalizar la compra
 						</router-link>
 					</div>
@@ -390,7 +391,19 @@
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations, mapActions } from 'vuex';
+export default {
+	name: 'Mediodepago',
+	components: {},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+	},
+	data() {
+		return {
+			pagina: 'Medio de Pago',
+		};
+	},
+};
 </script>
 
 <style scoped>

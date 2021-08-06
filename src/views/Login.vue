@@ -11,6 +11,9 @@
 					<h2 class="mb20"><b>tecnológico!</b></h2>
 					<h3>Con nuestros programas</h3>
 					<h3>de especialización</h3>
+					<!-- {{ $data.aceptaTerminos }} -->
+					<!-- {{ inicioSesion }}
+					{{ usersA.usersA }} -->
 				</section>
 				<footer class="footer2">
 					<p>Con respaldo de:</p>
@@ -21,6 +24,7 @@
 					<img src="@/assets/img/logo_zegel_white.svg" alt="" />
 				</footer>
 			</div>
+
 			<div class="col-sm-4 col-xs-12 ladoB ">
 				<!-- Tabs navs d-none d-sm-block-->
 
@@ -174,7 +178,10 @@
 						<img src="../assets/img/logo_linkedin.svg" alt="" />
 						<br /><br /><br /><br />
 						<p class="roboto">Tambien puedes iniciar sesion con tu correo:</p>
-						<form autocomplete="off">
+						<form
+							autocomplete="off"
+							@submit.prevent="procesarInicioSesion(inicioSesion)"
+						>
 							<div class="mb-3">
 								<input
 									type="email"
@@ -183,6 +190,7 @@
 									name="correo"
 									placeholder="Correo electronico"
 									autocomplete="off"
+									v-model="inicioSesion.email"
 									required
 								/>
 							</div>
@@ -194,6 +202,7 @@
 									name="contrasena"
 									placeholder="ingrese contraseña"
 									autocomplete="off"
+									v-model="inicioSesion.contrasena"
 									required
 								/>
 							</div>
@@ -201,17 +210,17 @@
 								ingrese un correo valido.
 							</div>
 							<div class="mb-3">
-								<!-- <input
+								<input
 									type="submit"
 									class="form-control ingresar"
 									value="Ingresar"
-								/> -->
-								<router-link
+								/>
+								<!-- <router-link
 									to="/carrito"
 									type="submit"
 									class="form-control ingresar"
 									>Ingresar
-								</router-link>
+								</router-link> -->
 							</div>
 							<div class="olvido">
 								<a
@@ -238,7 +247,7 @@
 						<img src="../assets/img/logo_linkedin.svg" alt="" />
 						<br /><br /><br /><br />
 						<p class="roboto">Tambien puedes iniciar sesion con tu correo:</p>
-						<form>
+						<form @submit.prevent="procesarRegistro">
 							<div class="mb-3">
 								<input
 									type="text"
@@ -247,6 +256,7 @@
 									name="name"
 									placeholder="nombres y apellidos"
 									autocomplete="new-text"
+									v-model="registro.username"
 								/>
 							</div>
 							<div class="mb-3">
@@ -256,6 +266,7 @@
 									id="correo"
 									name="correo"
 									placeholder="Correo electronico"
+									v-model="registro.email"
 									autocomplete="off"
 								/>
 							</div>
@@ -266,6 +277,7 @@
 									id="contrasena"
 									name="contrasena"
 									placeholder="ingrese contraseña"
+									v-model="registro.contrasena"
 									autocomplete="off"
 								/>
 							</div>
@@ -276,6 +288,7 @@
 									id="contrasena2"
 									name="contrasena2"
 									placeholder="ingrese nuevamente contraseña"
+									v-model="registro.contrasena2"
 									autocomplete="off"
 								/>
 							</div>
@@ -284,6 +297,9 @@
 									class="form-check-input"
 									type="checkbox"
 									id="flexCheckDefault"
+									v-on:click="validaAceptaTerminos()"
+									v-model="aceptaTerminos"
+									value="true"
 								/>
 								<label
 									class="form-check-label nav nav-pills montserrat"
@@ -301,6 +317,7 @@
 										>
 									</b>
 								</label>
+
 								<!-- <div class="mb-3 nav nav-pills">
 									<a
 										style="color:black"
@@ -317,6 +334,8 @@
 									type="submit"
 									class="form-control ingresar"
 									value="Registrarse"
+									@click="crearUsuario(registro)"
+									:style="botonDeshabilitado"
 								/>
 							</div>
 							<!-- <router-link
@@ -339,6 +358,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 export default {
 	name: 'Home',
 
@@ -346,11 +366,40 @@ export default {
 		return {
 			nombre: 'Ytalo',
 			valor: {},
+			aceptaTerminos: '',
+			botonDeshabilitado: 'pointer-events: none;',
+			users: [],
+			user: {
+				id: '',
+				username: '',
+				email: '',
+				contrasena: '',
+				terminos: true,
+				is_verified: true,
+				is_staff: true,
+				is_active: true,
+			},
+			inicioSesion: {
+				email: '',
+				contrasena: '',
+			},
+			registro: {
+				id: '',
+				username: '',
+				email: '',
+				contrasena: '',
+				contrasena2: '',
+				terminos: true,
+				is_verified: true,
+				is_staff: true,
+				is_active: true,
+			},
 		};
 	},
 	computed: {
 		//	//	...mapState(['contactos', 'ini', 'fin']),
 		//	...mapState(['programas']),
+		...mapState({ usersA: (state) => state.usersA }),
 	},
 	components: {
 		//	ContactCard,
@@ -358,6 +407,21 @@ export default {
 		//	Spinner,
 	},
 	methods: {
+		...mapMutations({
+			getUsersMutation: 'usersA/getUsersMutation',
+		}),
+		...mapActions({
+			getUsersAction: 'usersA/getUsersAction',
+		}),
+
+		validaAceptaTerminos() {
+			alert(this.aceptaTerminos);
+			if (this.botonDeshabilitado == 'pointer-events: none;') {
+				this.botonDeshabilitado = '';
+			} else {
+				this.botonDeshabilitado = 'pointer-events: none;';
+			}
+		},
 		refrescar(valor) {
 			//console.log('refrescando' + JSON.stringify(valor));
 			this.valor = valor;
@@ -365,9 +429,56 @@ export default {
 		correo() {
 			alert('Envio de correo');
 		},
+		procesarRegistro() {
+			alert('Procesando Registro');
+			//	this.$router.push('home');
+			//	window.location.href = '/inicio';
+			this.$router.push({ path: 'inicio' });
+		},
+		procesarInicioSesion(datosLogin) {
+			//	alert('Procesando Inicio de Sesion');
+			//alert(datosLogin);
+			//alert(this.usersA.usersA);
+			//alert(datosLogin.email);
+			//{ commit, state },
+			//	alert(datosLogin.email);
+			//alert(datosLogin.contrasena);
+			//	alert(usersA.usersA);
+			const validarLogueo = this.usersA.usersA.find(
+				(usuario) =>
+					usuario.email === datosLogin.email &&
+					usuario.contrasena === datosLogin.contrasena
+			);
+			if (validarLogueo != null) {
+				//	alert(validarLogueo.email);
+				alert('Bienvenido');
+				this.$router.push({ path: 'carrito' });
+			} else {
+				alert('Usuario y/o contraseña invalido');
+			}
+			console.log(validarLogueo);
+			//	this.$router.push('home');
+			//	window.location.href = '/inicio';
+			//	this.$router.push({ path: 'inicio' });
+		},
+		...mapMutations({
+			crearUserMutation: 'usersA/crearUserMutation',
+			getUsersMutation: 'usersA/getUsersMutation',
+		}),
+		...mapActions({
+			getUsersAction: 'usersA/getUsersAction',
+			crearUserAction: 'usersA/crearUserAction',
+		}),
+		crearUsuario(usuario) {
+			alert(usuario.username);
+			this.crearUserAction(usuario);
+		},
+		validarIngreso() {
+			alert('estoy validando el ingreso');
+		},
 	},
 	created() {
-		//	this.getProgramasAction();
+		this.getUsersAction();
 	},
 };
 </script>
@@ -514,9 +625,9 @@ h3 {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 }
-.form-check-input {
-	/* display: none; */
-}
+/* .form-check-input {
+	 display: none; 
+} */
 /* input[type='checkbox']:checked {
 	box-shadow: 0 0 0 3px hotpink;
 	

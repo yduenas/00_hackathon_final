@@ -55,6 +55,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
 export default {
@@ -67,6 +68,9 @@ export default {
 	components: {
 		HeaderBlack,
 		ListaCompras,
+	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
 	},
 };
 </script>
