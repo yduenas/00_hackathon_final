@@ -304,18 +304,21 @@
 			</div>
 		</div>
 		<div class="col-4 d-none d-sm-block"><CelularInteresados /></div>
+		<div class="col-4 d-block d-sm-none"><Whatsapp /></div>
 	</div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex';
 import CelularInteresados from '@/components/CelularInteresados.vue';
+import Whatsapp from '@/components/Whatsapp.vue';
 import MenuBar from '@/components/MenuBar.vue';
 export default {
 	name: 'Inicio',
 	components: {
 		CelularInteresados,
 		MenuBar,
+		Whatsapp,
 	},
 	// methods: {
 	// 	carrito: function() {
@@ -462,7 +465,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .postula {
 	font-family: 'Poppins Medium', sans-serif;
 	font-size: 16px;
