@@ -61,6 +61,18 @@ export default {
 </script>
 
 <style scoped>
+body {
+  min-height: 100vh;
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0%;
+  background: #f2f3f5;
+}
 .grupo {
   box-sizing: border-box;
   margin-bottom: 0;

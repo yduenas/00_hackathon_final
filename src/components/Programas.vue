@@ -276,6 +276,12 @@ export default {
 </script>
 
 <style scoped>
+body {
+  min-height: 100vh;
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
 .grupo-titulo {
   padding-left: 0.5em;
   height: 120px;

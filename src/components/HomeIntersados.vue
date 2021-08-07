@@ -86,6 +86,12 @@ export default {};
 </script>
 
 <style scoped>
+body {
+  min-height: 100vh;
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
 .formulario-titulo {
   padding: 2em 1em 1em;
   font-size: 14px;

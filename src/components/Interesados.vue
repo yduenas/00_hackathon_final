@@ -70,6 +70,12 @@ export default {};
 </script>
 
 <style scoped>
+body {
+  min-height: 100vh;
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
 .formulario {
   margin: 3em 0 0 1em;
 }

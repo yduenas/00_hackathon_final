@@ -58,6 +58,12 @@
 export default {};
 </script>
 <style scoped>
+body {
+  min-height: 100vh;
+  background: white;
+  margin: 0%;
+  padding: 0%;
+}
 .grupo {
   padding: 3em 0;
   margin-bottom: 0;
