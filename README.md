@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'cree boton inscribete y lo direccione al login'
+git commit -m 'cree cupones'
 git push
 git pull
 git status

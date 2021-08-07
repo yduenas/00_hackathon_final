@@ -77,28 +77,12 @@ export default {
 	color: #42b983;
 }
 body {
-<<<<<<< HEAD
-  min-height: 100vh;
-  background: white;
-  margin: 0%;
-  padding: 0%;
-}
-.container {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 0%;
-  background: #f2f3f5;
-}
-/* body {
-  background: #f2f3f5;
-=======
 	min-height: 100vh;
 	background: white;
 	margin: 0%;
 	padding: 0%;
 	overflow: scroll;
 	background: #f2f3f5;
->>>>>>> 16a78b5a76537e259251f5b378d04c7e533b7232
 }
 
 .contenedor {
@@ -107,32 +91,14 @@ body {
 	box-sizing: border-box;
 }
 .grupo {
-<<<<<<< HEAD
-  background: #f2f3f5;
-  margin: 0%;
-  padding: 0%;
-  max-width: 960px;
-=======
 	background: #f2f3f5;
 	margin: 0%;
 	padding: 0%;
->>>>>>> 16a78b5a76537e259251f5b378d04c7e533b7232
 }
 .caja-margen {
 	margin: 0 0.5em;
 }
 @media (min-width: 576px) {
-<<<<<<< HEAD
-  .contenedor {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .grupo {
-    max-width: 1366px;
-    margin: 0% auto;
-  } }*/
-=======
 	.contenedor {
 		display: flex;
 		justify-content: center;
@@ -143,5 +109,4 @@ body {
 		margin: 0% auto;
 	}
 }
->>>>>>> 16a78b5a76537e259251f5b378d04c7e533b7232
 </style>
