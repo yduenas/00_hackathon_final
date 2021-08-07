@@ -27,7 +27,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 cd 00_hackathon_final
 git add .
-git commit -m 'actualice container'
+git commit -m 'programe el home'
 git push
 git pull
 git status
