@@ -51,6 +51,47 @@
 								</p>
 							</div>
 						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;;color: #5640ff;"
+							>
+								<p>Cupon Descuento</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right;color: #5640ff;"
+							>
+								<p>{{ cuponesA.cuponA.porcentaje_descuento * 100 }} %</p>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;;color: #5640ff;"
+							>
+								<p>Nuevo total</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right;color: #5640ff;"
+							>
+								<p>
+									S/
+									{{
+										parseFloat(
+											shoppingcartA.subTotal -
+												shoppingcartA.subTotal *
+													cuponesA.cuponA.porcentaje_descuento
+										).toFixed(2)
+									}}
+								</p>
+							</div>
+						</div>
 					</form>
 				</div>
 				<div class="col-xs-12 col-md-1"></div>
@@ -78,6 +119,7 @@ export default {
 	},
 	computed: {
 		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+		...mapState({ cuponesA: (state) => state.cuponesA }),
 	},
 };
 </script>
@@ -87,6 +129,7 @@ export default {
 	font-family: 'Poppins', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
+	/* color: #5640ff; */
 }
 .container {
 	background-color: #f8f8fa;

@@ -111,6 +111,30 @@
       "correo_electronico": "edgar@gmail.com",
       "programa": "Desarrollo Back-End",
       "descuento": 0.1
+    },
+    {
+      "id": "KztYo3M",
+      "nombre": "PAOLA",
+      "celular": "1234",
+      "correo_electronico": "ADFAS@GMAIL.COM",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "SIDhacP",
+      "nombre": "JUANITA",
+      "celular": "1234",
+      "correo_electronico": "ADFAS@GMAIL.COM",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "jz-HxC-",
+      "nombre": "francisco",
+      "celular": "453",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
     }
   ],
   "programs": [
@@ -287,8 +311,19 @@
       "id": "MEQWSAe",
       "username": "edgarchang",
       "email": "edgarchang@gmail.com",
-      "contrasena": "edgarchang",
-      "contrasena2": "edgarchang",
+      "contrasena": "1234",
+      "contrasena2": "1234",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "id": "JAMFdeO",
+      "username": "edgar chang",
+      "email": "edgarchang@gmail.com",
+      "contrasena": "1234",
+      "contrasena2": "1234",
       "terminos": true,
       "is_verified": true,
       "is_staff": true,
@@ -320,6 +355,12 @@
     {
       "id_cupon": 3,
       "codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.2,
+      "estado": true
+    },
+    {
+      "id_cupon": 4,
+      "codigo_cupon": "AABB",
       "porcentaje_descuento": 0.2,
       "estado": true
     }

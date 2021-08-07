@@ -415,7 +415,7 @@ export default {
 		}),
 
 		validaAceptaTerminos() {
-			alert(this.aceptaTerminos);
+			//	alert(this.aceptaTerminos);
 			if (this.botonDeshabilitado == 'pointer-events: none;') {
 				this.botonDeshabilitado = '';
 			} else {

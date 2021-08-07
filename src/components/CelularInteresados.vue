@@ -236,11 +236,11 @@ export default {
 			// 'prevContactoAction',
 		]),
 		procesarInformacion() {
-			alert(this.interesado.nombre);
+			//	alert(this.interesado.nombre);
 		},
 
 		crearInteresado(interesado) {
-			alert(interesado.nombre);
+			alert(interesado.nombre + ' Ya esta registrado para obtener descuento');
 			this.crearInteresadoAction(interesado);
 		},
 	},

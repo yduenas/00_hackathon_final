@@ -29,8 +29,49 @@
 							<div class="col-6 poppins20" style="text-align:right">
 								<p>S/ {{ shoppingcartA.subTotal }}.00</p>
 							</div>
+						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;"
+							>
+								<p>Cupon Descuento</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right"
+							>
+								<p>{{ cuponesA.cuponA.porcentaje_descuento * 100 }} %</p>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;"
+							>
+								<p>Nuevo total</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right"
+							>
+								<p>
+									S/
+									{{
+										parseFloat(
+											shoppingcartA.subTotal -
+												shoppingcartA.subTotal *
+													cuponesA.cuponA.porcentaje_descuento
+										).toFixed(2)
+									}}
+								</p>
+							</div>
 							<div class="col-12">
-								<form>
+								<form @submit.prevent="">
 									<div class="col-12">
 										<!-- <i class="bi bi-forward-fill"></i> -->
 										<input
@@ -38,25 +79,32 @@
 											name="cupon"
 											id="cupon"
 											class="form-control cupon"
+											v-model="cupon"
 											placeholder="agregar un codigo de descuento"
 										/>
 									</div>
 									<div class="col-12 mt-3">
-										<!-- <input
-									class="form-control btn-continuar"
-									type="submit"
-									value="Continuar"
-								/> -->
-										<router-link
+										<input
+											class="form-control btn-continuar"
+											type="submit"
+											value="Continuar"
+											@click="validarCupon(cupon)"
+											:style="shoppingcartA.botonDeshabilitado"
+										/>
+										<!-- <router-link
 											to="/pasarelapago"
 											type="submit"
 											class="form-control btn-continuar"
+											@click="validarCupon(cupon)"
 											:style="shoppingcartA.botonDeshabilitado"
 											>Continuar
-										</router-link>
+										</router-link> -->
 										<!-- {{ shoppingcartA.botonDeshabilitado }}
 										<br />
 										{{ shoppingcartA.contador }} -->
+										<!-- {{ cupon }}
+										{{ cuponesA.cuponesA }} -->
+										<!-- {{ cuponesA.cuponA }} -->
 									</div>
 								</form>
 							</div>
@@ -81,11 +129,62 @@ export default {
 	},
 	computed: {
 		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+		...mapState({ cuponesA: (state) => state.cuponesA }),
 	},
 	data() {
 		return {
 			pagina: 'Carrito de compras',
+			cupon: '',
 		};
+	},
+	methods: {
+		...mapMutations({
+			getCuponesMutation: 'cuponesA/getCuponesMutation',
+			getCuponMutation: 'cuponesA/getCuponMutation',
+		}),
+		...mapActions({
+			getCuponesAction: 'cuponesA/getCuponesAction',
+			getCuponAction: 'cuponesA/getCuponAction',
+		}),
+		validarCupon(cod_cupon) {
+			//	alert('Validando cupon');
+			//	alert(this.cuponesA);
+			//	alert(cod_cupon);
+			const validandoCupon = this.cuponesA.cuponesA.find(
+				(cupon) => cupon.codigo_cupon === cod_cupon
+			);
+			console.log(validandoCupon);
+			if (validandoCupon != null) {
+				//	alert(validarLogueo.email);
+				// var r = confirm(
+				// 	'Cupon con : ' +
+				// 		validandoCupon.porcentaje_descuento * 100 +
+				// 		'% de descuento.'
+				// );
+				// this.getCuponAction(validandoCupon);
+				// this.$router.push({ path: 'pasarelapago' });
+
+				var r = confirm(
+					'Cupon con : ' +
+						validandoCupon.porcentaje_descuento * 100 +
+						'% de descuento.'
+				);
+				if (r == true) {
+					this.getCuponAction(validandoCupon);
+					this.$router.push({ path: 'pasarelapago' });
+				} else {
+				}
+			} else {
+				var r = confirm('Cupon No existe, ¿desea continuar?');
+				if (r == true) {
+					this.$router.push({ path: 'pasarelapago' });
+				} else {
+				}
+			}
+		},
+	},
+	created() {
+		this.getCuponesAction();
 	},
 };
 </script>

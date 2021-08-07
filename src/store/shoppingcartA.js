@@ -88,7 +88,7 @@ export default {
 			//	console.log(tarea);
 		},
 		accionEliminarPrograma({ commit, state }, programa) {
-			alert(`Ha eliminado el curso ${programa.id}`);
+			alert(`Ha eliminado el curso ${programa.name}`);
 			commit('mutationEliminarPrograma', programa.id);
 			state.subTotal -= parseInt(programa.price);
 			state.contador -= 1;
