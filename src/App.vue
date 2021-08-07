@@ -82,7 +82,13 @@ body {
   margin: 0%;
   padding: 0%;
 }
-body {
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0%;
+  background: #f2f3f5;
+}
+/* body {
   background: #f2f3f5;
 }
 .contenedor {
@@ -94,6 +100,7 @@ body {
   background: #f2f3f5;
   margin: 0%;
   padding: 0%;
+  max-width: 960px;
 }
 .caja-margen {
   margin: 0 0.5em;
@@ -105,8 +112,7 @@ body {
     width: 100%;
   }
   .grupo {
-    width: 960px;
+    max-width: 1366px;
     margin: 0% auto;
-  }
-}
+  } }*/
 </style>

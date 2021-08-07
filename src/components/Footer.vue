@@ -1,5 +1,5 @@
 <template>
-  <section class="contenedor">
+  <section class="container">
     <div class="grupo">
       <div class="footer">
         <div>Con el respaldo de:</div>
@@ -20,7 +20,12 @@
 <script>
 export default {};
 </script>
-<style>
+<style scoped>
+.grupo {
+  background: chartreuse;
+  margin: 0;
+  padding: 0;
+}
 .footer {
   color: white;
   background: #000d29;

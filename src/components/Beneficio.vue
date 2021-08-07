@@ -1,5 +1,5 @@
 <template>
-  <section class="contenedor">
+  <section class="container">
     <div class="grupo">
       <div class="beneficio">
         <div class="beneficio-titulo">
@@ -57,29 +57,35 @@
 <script>
 export default {};
 </script>
-<style>
+<style scoped>
+.grupo {
+  padding: 3em 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+  background: white;
+}
+.beneficio {
+  width: 90%;
+  margin: 0em auto;
+}
 .beneficio-titulo {
   font-weight: bold;
   text-align: left;
-  padding-left: 0.5em;
+  padding-left: 0;
   margin: 2em 0;
+  font-size: 20px;
+  font-family: "Poppins Medium", sans-serif;
 }
 .beneficios-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1.5em;
-  background: #d3d3d3;
+  background: #f2f3f5;
   border-radius: 10px;
-  margin: 0.5em;
+  margin: 0.5em 0;
 }
-/* .beneficios-item-img,
-.beneficios-item-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .beneficios-item-img {
   width: 30%;
 }
@@ -90,6 +96,9 @@ export default {};
   font-weight: bold;
   text-align: left;
   padding: 1em 1em 0.5em;
+  font-size: 16px;
+  font-family: "Poppins Medium", sans-serif;
+  text-align: center;
 }
 .beneficios__descripcion {
   display: none;
@@ -105,9 +114,49 @@ export default {};
     padding: 0.5em;
   }
   .beneficios__descripcion {
-    display: block;
     text-align: left;
     padding: 1em 1em 0.5em;
+  }
+}
+@media (min-width: 374px) {
+  .beneficio {
+    width: 95%;
+  }
+}
+@media (min-width: 410px) {
+  .beneficio {
+    width: 90%;
+  }
+}
+@media (min-width: 767px) {
+  .beneficio-titulo {
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 0;
+  }
+  .beneficios__titulo {
+    font-size: 20px;
+    font-family: "Poppins Medium", sans-serif;
+    padding-left: 0;
+    text-align: left;
+  }
+  .beneficios__descripcion {
+    display: block;
+    font-size: 14px;
+    font-family: "Roboto Regular";
+    padding-left: 0;
+    text-align: left;
+  }
+}
+@media (min-width: 1023px) {
+  /* .grupo {
+    padding: 0;
+    margin: 0;
+  } */
+  .beneficio {
+    width: 62%;
+    margin-left: 3em;
+    padding-bottom: 1em;
   }
 }
 </style>

@@ -1,48 +1,10 @@
 <template>
   <section class="contenedor">
     <div class="grupo">
-      <div class="formulario">
-        <!-- <div>
-          <h2 class="formulario-titulo">
-            Postula y obtén un 10% de descuento en el programa
-          </h2>
-        </div> -->
-        <div class="formulario-form">
+      <div class="formulario-form">
+        <div>
           <form action="" autocomplete="off">
-            <!-- <div class="formulario-form-padding">
-              <input
-                class="input"
-                type="text"
-                name="nombre"
-                placeholder="NOMBRE"
-              />
-            </div>
-            <div class="formulario-form-padding">
-              <input
-                class="input"
-                type="text"
-                name="celular"
-                placeholder="CELULAR"
-              />
-            </div>
-            <div class="formulario-form-padding">
-              <input
-                class="input"
-                type="text"
-                name="correo"
-                placeholder="CORREO ELECTRÓNICO"
-              />
-            </div>
-            <div class="formulario-form-padding">
-              <input
-                class="input"
-                type="text"
-                name="programa"
-                placeholder="PROGRAMA"
-              />
-            </div> -->
             <div class="phone">
-              <!-- <img src="../assets/img/phone.svg" alt="" /> -->
               <div>
                 <h2 class="formulario-titulo">
                   Postula y obtén un 10% de descuento en el programa
@@ -55,30 +17,27 @@
                 id=""
                 placeholder="NOMBRE"
                 autocomplete="off"
+                required
+                pattern="[A-Za-z]{4-20}"
               />
               <input
                 class="form-control"
-                type="text"
+                type="tel"
                 name=""
                 id=""
                 placeholder="CELULAR"
                 autocomplete="off"
+                required
+                pattern="[0-9]{9}"
               />
               <input
                 class="form-control"
-                type="text"
+                type="email"
                 name=""
                 id=""
                 placeholder="CORREO ELECTRONICO"
                 autocomplete="off"
-              />
-              <input
-                class="form-control"
-                type="text"
-                name=""
-                id=""
-                placeholder="correo"
-                autocomplete="off"
+                required
               />
               <input
                 class="form-control"
@@ -87,6 +46,7 @@
                 id=""
                 placeholder="PROGRAMA"
                 autocomplete="off"
+                required
               />
               <div class="formulario-input">
                 <input
@@ -95,6 +55,7 @@
                   id="cbox"
                   value="checkbox"
                   autocomplete="off"
+                  required
                 />
                 <div class="politica">
                   Acepto las Políticas de privacidad.
@@ -104,6 +65,13 @@
                 <button class="button" type="button">
                   Quiero postular
                 </button>
+              </div>
+              <div class="inscripcion-whassap">
+                <img
+                  class="whassap__logo"
+                  src="../assets/img/logo_whatsapp.svg"
+                  alt="Icono de Whassap"
+                />
               </div>
             </div>
           </form>
@@ -118,18 +86,12 @@ export default {};
 </script>
 
 <style scoped>
-/* .grupo {
-  border-radius: 10px;
-} */
 .formulario-titulo {
-  font-size: 14px;
   padding: 2em 1em 1em;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
-}
-.formulario-form-padding {
-  padding-bottom: 0.5em;
-  font-size: 12px;
+  font-family: "Poppins", sans-serif;
 }
 .input {
   font-size: 10px;
@@ -164,26 +126,68 @@ export default {};
   font-weight: bold;
   width: 90%;
   margin: 0 auto;
+  border-radius: 6px;
+  border: none;
 }
-
 .phone {
-  padding: 50px;
+  padding: 55px 50px;
   background-image: url("../assets/img/phone.png");
   background-size: 100%;
   background-repeat: no-repeat;
   /* background-color: blue; */
   position: fixed;
+  z-index: 10;
   bottom: 500;
-  left: 57%;
-  right: 10%;
+  left: 68%;
   top: 10%;
   height: 500px;
   width: 320px;
 }
 .form-control {
   margin: 1em;
-  padding: 0.7em;
+  padding: 1em;
   width: 89%;
   font-size: 12px;
+  font-family: "Roboto Regular";
+}
+.inscripcion-whassap {
+  position: absolute;
+  bottom: 0;
+  right: -22%;
+}
+
+@media (min-width: 767px) {
+  .phone {
+    left: 53%;
+    top: 0%;
+  }
+  .inscripcion-whassap {
+    position: absolute;
+    bottom: 0;
+    right: -8%;
+  }
+}
+@media (min-width: 1024px) {
+  .phone {
+    top: 10%;
+    left: 58%;
+  }
+  .inscripcion-whassap {
+    position: absolute;
+    bottom: 0;
+    right: -20%;
+  }
+}
+
+@media (min-width: 1365px) {
+  .phone {
+    top: 21%;
+    left: 68%;
+  }
+  .inscripcion-whassap {
+    position: absolute;
+    bottom: 0;
+    right: 10;
+  }
 }
 </style>
