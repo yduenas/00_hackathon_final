@@ -1,67 +1,64 @@
 <template>
-	<div class="row compras">
-		<div class="col-5 comprasa">
-			<img
-				class="img_curso"
-				src="../assets/img/c_desarrollo_frondend.svg"
-				alt=""
-			/>
-		</div>
-		<div class="col-5 comprasa">
-			<b class="nombrecurso">Desarrollo Frond End </b>
-			<br />
-			<a href="#" class="eliminar">Eliminar</a>
-		</div>
-		<div class="col-2 comprasa">
-			<b class="importe"> S/.269.00</b>
+	<div>
+		<!-- {{ shoppingcartA.programasSeleccionados }} -->
+		<div
+			class="row compras"
+			v-for="(programa, index) in shoppingcartA.programasSeleccionados"
+			:key="index"
+		>
+			<div class="col-3 comprasa" style="text-align:left">
+				<img
+					class="img_curso"
+					:src="require(`@/assets/img/${programa.image}`)"
+					alt=""
+				/>
+			</div>
+
+			<div class="col-6 comprasa" style="text-align:left; padding-left:5px;">
+				<b class="nombrecurso">{{ programa.name }} </b>
+				<br />
+				<a
+					href="#"
+					class="eliminar"
+					style="font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: bold;"
+					@click="accionEliminarPrograma(programa)"
+					>Eliminar</a
+				>
+			</div>
+			<div class="col-3 comprasa">
+				<b class="importe"> S/.{{ programa.price }}</b>
+			</div>
 		</div>
 	</div>
-	<!-- <table class="table borderless" width="80%">
-			<tbody>
-				<tr>
-					<td width="20%">
-						<img
-							class="img_curso"
-							src="../assets/img/c_desarrollo_frondend.svg"
-							alt=""
-						/>
-					</td>
-					<td width="30%">
-						<div class="row">
-							<div class="col-12">
-								<h5 class="nombrecurso">
-									<b class="nombrecurso">Desarrollo Frond End </b>
-								</h5>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 eliminar">
-								<a href="#">Eliminar</a>
-							</div>
-							<div class="col-6 d-block d-sm-none">
-								<b class="importe"> S/.269.00</b>
-							</div>
-						</div>
-					</td>
-					<td class="d-none d-sm-block" width="20%">
-						<b class="importe"> S/.269.00</b>
-					</td>
-				</tr>
-			</tbody>
-		</table> -->
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations, mapActions } from 'vuex';
+export default {
+	name: 'ListaCompras',
+	data() {
+		return { apellido: 'Duenas' };
+	},
+	props: {
+		mensaje: String,
+	},
+	components: {},
+	computed: { ...mapState({ shoppingcartA: (state) => state.shoppingcartA }) },
+	methods: {
+		...mapMutations({
+			mutationEliminarPrograma: 'shoppingcartA/mutationEliminarPrograma',
+		}),
+		...mapActions({
+			accionEliminarPrograma: 'shoppingcartA/accionEliminarPrograma',
+		}),
+		carrito: function() {
+			alert('Diste click en el carrito');
+		},
+	},
+};
 </script>
 
 <style scoped>
-.compras {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
 .comprasa {
 	margin: 0 0;
 	padding: 0 1px;
@@ -108,7 +105,7 @@ h5 {
 
 .nombrecurso {
 	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: bold;
 	text-align: left;
 }
@@ -121,5 +118,22 @@ h5 {
 table {
 	table-layout: fixed;
 	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.compras {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	.compras {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 }
 </style>

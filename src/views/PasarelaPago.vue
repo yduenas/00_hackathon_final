@@ -1,12 +1,19 @@
 <template>
-	<div class="container">
-		<HeaderBlack />
+	<div class="container2">
+		<HeaderBlack :mensaje="pagina" />
 
 		<section class="secctions">
 			<div class="row mediopago">
-				<div class="col-xs-12 col-lg-7 pasarela">
+				<div class="col-xs-12 col-lg-7 pasarela ">
+					<!-- d-none d-sm-block -->
 					<router-link to="/carrito" class="routerdecoration">
-						<h3><i class="bi bi-arrow-left"></i> pasarela de pagos</h3>
+						<h3 class="poppins20">
+							<img
+								src="../assets/img/flecha_izquierda.svg"
+								alt=""
+								style="margin-right:10px"
+							/>pasarela de pagos
+						</h3>
 					</router-link>
 
 					<p class="metodo"><b> selecciona tu metodo de pago </b></p>
@@ -39,7 +46,49 @@
 							</div>
 							<div class="col-6" style="text-align:right">
 								<p class="subtotal">
-									S/ 600.00
+									S/
+									{{ shoppingcartA.subTotal }}.00
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;;color: #5640ff;"
+							>
+								<p>Cupon Descuento</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right;color: #5640ff;"
+							>
+								<p>{{ cuponesA.cuponA.porcentaje_descuento * 100 }} %</p>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:left; font-size:12px;;color: #5640ff;"
+							>
+								<p>Nuevo total</p>
+							</div>
+							<div
+								v-if="cuponesA.cuponA.estado"
+								class="col-6 poppins20"
+								style="text-align:right;color: #5640ff;"
+							>
+								<p>
+									S/
+									{{
+										parseFloat(
+											shoppingcartA.subTotal -
+												shoppingcartA.subTotal *
+													cuponesA.cuponA.porcentaje_descuento
+										).toFixed(2)
+									}}
 								</p>
 							</div>
 						</div>
@@ -52,20 +101,36 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
 import MedioPago from '@/components/MedioPago.vue';
 export default {
 	name: 'PasarelaPagos',
+	data() {
+		return {
+			pagina: 'Pasarela de pagos',
+		};
+	},
 	components: {
 		HeaderBlack,
 		ListaCompras,
 		MedioPago,
 	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+		...mapState({ cuponesA: (state) => state.cuponesA }),
+	},
 };
 </script>
 
 <style scoped>
+.poppins20 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	/* color: #5640ff; */
+}
 .container {
 	background-color: #f8f8fa;
 	color: black;
@@ -88,10 +153,12 @@ export default {
 	background-color: white;
 	margin-right: 0 auto;
 	padding-left: 50px 50px;
-	height: 70vh;
+	height: 50%;
+	/* height: 100vh; */
 }
 .pasarela {
 	background-color: transparent;
+	padding-right: 61px;
 }
 .table {
 	margin-top: 40px;

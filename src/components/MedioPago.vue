@@ -45,7 +45,7 @@
 					aria-controls="profile"
 					aria-selected="false"
 				>
-					Pago Efectivo
+					Deposito Pago Efectivo
 				</button>
 			</li>
 		</ul>
@@ -83,7 +83,7 @@
 							/>
 						</div>
 					</div>
-					<br />
+
 					<div class="row">
 						<div class="col-6" style="text-align: left">
 							<label><b>Ingresa informacion de tu tarjeta</b> </label>
@@ -210,6 +210,7 @@
 							to="/resumencompra"
 							type="submit"
 							class="form-control btn-continuar"
+							:style="shoppingcartA.botonDeshabilitado"
 							>Finalizar la compra
 						</router-link>
 					</div>
@@ -390,7 +391,19 @@
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations, mapActions } from 'vuex';
+export default {
+	name: 'Mediodepago',
+	components: {},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+	},
+	data() {
+		return {
+			pagina: 'Medio de Pago',
+		};
+	},
+};
 </script>
 
 <style scoped>
@@ -462,6 +475,7 @@ form {
 .btn-continuar {
 	background-color: #5640ff;
 	color: white;
+	text-decoration: none;
 }
 .inner-addon {
 	position: relative;
@@ -479,6 +493,9 @@ form {
 	font-size: 15px;
 } */
 .nav-tabs .nav-link {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
 	height: 8vh;
 	color: black;
 	margin-bottom: -1px;

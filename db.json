@@ -95,6 +95,46 @@
       "correo_electronico": "CLADUIA@GAMIL.COM",
       "programa": "Desarrollo Back-End",
       "descuento": 0.1
+    },
+    {
+      "id": "d6EHsZW",
+      "nombre": "edgar",
+      "celular": "54431",
+      "correo_electronico": "edgar@gmail.com",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "eB30KyO",
+      "nombre": "edgar2",
+      "celular": "544312",
+      "correo_electronico": "edgar@gmail.com",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
+    },
+    {
+      "id": "KztYo3M",
+      "nombre": "PAOLA",
+      "celular": "1234",
+      "correo_electronico": "ADFAS@GMAIL.COM",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "SIDhacP",
+      "nombre": "JUANITA",
+      "celular": "1234",
+      "correo_electronico": "ADFAS@GMAIL.COM",
+      "programa": "Marketing Digital",
+      "descuento": 0.1
+    },
+    {
+      "id": "jz-HxC-",
+      "nombre": "francisco",
+      "celular": "453",
+      "correo_electronico": "CLADUIA@GAMIL.COM",
+      "programa": "Desarrollo Back-End",
+      "descuento": 0.1
     }
   ],
   "programs": [
@@ -102,86 +142,93 @@
       "id": "1",
       "name": "Desarrollo Front-End",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "109",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_frondend.png"
     },
     {
       "id": "2",
       "name": "Desarrollo Back-End",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "188",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_backend.png"
     },
     {
       "id": "3",
       "name": "Desarrollo de Aplicaciones Móviles",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "177",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_aplicaciones_moviles.png"
     },
     {
       "id": "4",
       "name": "Diseño de Experiencia De Usuario",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "142",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_diseño_experiencia.png"
     },
     {
       "id": "5",
       "name": "Desarrollo de Videojuegos",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "770",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_videojuegos.png"
     },
     {
       "id": "6",
       "name": "Marketing Digital",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "620",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_marketing_digital.png"
     },
     {
       "id": "7",
       "name": "Data Analytics",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "140",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
-<<<<<<< HEAD
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_frondend.svg"
     },
     {
       "id": "8",
       "name": "Desarrollo Front-End Avanzado",
       "description": "aqui aprendera a realizar vestidos",
-      "price": "100",
+      "price": "220",
       "duration": "96 horas académicas (4 horas apróximadamente) ",
+      "horario": "Martes y jueves 7:00pm - 9:15pm",
       "image": "c_desarrollo_videojuegos.svg"
-=======
-      "image": "c_desarrollo_frondend.png"
->>>>>>> fc9e21a8dea4d6bcfa2c91b610de6e8b3c70c077
     }
   ],
   "beneficios": [
     {
       "id": "1",
+      "name": "Aprende de expertos",
       "url_img": "beneficio_001.svg",
-      "descripcion": "este beneficio es el nuemro 1"
+      "descripcion": "Aprende directamente de expertos del mercado a través del análisis y solución de problemas de programación. Utilizando los frameworks y herramientas de mayor relevancia dentro del mundo del coding."
     },
     {
       "id": "2",
+      "name": "Clases virtuales",
       "url_img": "beneficio_002.svg",
-      "descripcion": "este beneficio es el nuemro 2"
+      "descripcion": "Aprovecha tu tiempo al máximo en nuestras clases virtuales y participa presencialmente de nuestras hackathones semanales para conocer y participar de la comunidad profesional que liderará la transformación tecnológica del Perú."
     },
     {
       "id": "3",
+      "name": "Empleabilidad",
       "url_img": "beneficio_003.svg",
-      "descripcion": "este beneficio es el nuemro 3"
+      "descripcion": "Al finalizar el programa y certificarte a nombre de IDAT, podrás acceder a ofertas laborales especialmente identificadas para la comunidad PachaQTec, a través de nuestra plataforma de empleabilidad IDAT JOB."
     }
   ],
   "users": [
@@ -190,6 +237,93 @@
       "username": "ytaloduenas",
       "email": "ytaloduenas@gmail.com",
       "contrasena": "1234",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "name": "",
+      "username": "",
+      "email": "",
+      "address": {
+        "street": "",
+        "suite": "",
+        "city": "",
+        "zipcode": "",
+        "geo": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "id": "83Wuq3i"
+    },
+    {
+      "name": "dsaf",
+      "username": "dsa",
+      "email": "dsa",
+      "address": {
+        "street": "ds",
+        "suite": "dsa",
+        "city": "dsa",
+        "zipcode": "dsa",
+        "geo": {
+          "lat": "dsaf",
+          "lng": "dsfa"
+        }
+      },
+      "id": "bNqNCky"
+    },
+    {
+      "id": "-iL9Jhm",
+      "username": "asdf",
+      "email": "admin@adsf",
+      "contrasena": "admin",
+      "contrasena2": "afdssad",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "id": "x-0ajf-",
+      "username": "claudia fabiola",
+      "email": "claudia@gmail.com",
+      "contrasena": "admin",
+      "contrasena2": "asdf",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "id": "uDDWrf1",
+      "username": "chan chan chan",
+      "email": "admin@chan.cpom",
+      "contrasena": "admin",
+      "contrasena2": "asdfdsf",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "id": "MEQWSAe",
+      "username": "edgarchang",
+      "email": "edgarchang@gmail.com",
+      "contrasena": "1234",
+      "contrasena2": "1234",
+      "terminos": true,
+      "is_verified": true,
+      "is_staff": true,
+      "is_active": true
+    },
+    {
+      "id": "JAMFdeO",
+      "username": "edgar chang",
+      "email": "edgarchang@gmail.com",
+      "contrasena": "1234",
+      "contrasena2": "1234",
       "terminos": true,
       "is_verified": true,
       "is_staff": true,
@@ -221,6 +355,12 @@
     {
       "id_cupon": 3,
       "codigo_cupon": "FGHdasdfdsasdaffdsafdsa",
+      "porcentaje_descuento": 0.2,
+      "estado": true
+    },
+    {
+      "id_cupon": 4,
+      "codigo_cupon": "AABB",
       "porcentaje_descuento": 0.2,
       "estado": true
     }

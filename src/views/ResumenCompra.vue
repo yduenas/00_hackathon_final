@@ -1,6 +1,6 @@
 <template>
-	<div class="container">
-		<HeaderBlack />
+	<div class="container2">
+		<HeaderBlack :mensaje="pagina" />
 		<!-- <header class="header">
 			<div class="row">
 				<div class="col-8 ladoA">
@@ -15,43 +15,18 @@
 		</header> -->
 		<section class="secction">
 			<div class="row">
-				<div class="col-xs-12 col-md-6 flecha">
+				<div class="col-xs-12  flecha d-none d-sm-block">
 					<router-link to="/pasarelapago" class="routerdecoration">
 						<h3 class="poppins">
 							<i class="bi bi-arrow-left"></i> Resumen de compras
 						</h3>
 					</router-link>
-					<ListaCompras />
-					<!-- 
-					<table class="table borderless">
-						<tbody>
-							<tr>
-								<td width="20%">
-									<img
-										class="img_curso"
-										src="../assets/img/c_desarrollo_frondend.svg"
-										alt=""
-									/>
-								</td>
-								<td width="50%">
-									<h5><b> Desarrollo Frond End </b></h5>
-									<div class="row">
-										<div class="col-6">
-											<a href="#">Eliminar</a>
-										</div>
-										<div class="col-6">
-											<b class="d-block d-sm-none"> S/.269.00</b>
-										</div>
-									</div>
-								</td>
-								<td class="d-none d-sm-block" width="30%">
-									<b> S/.269.00</b>
-								</td>
-							</tr>
-						</tbody>
-					</table> -->
+					<!-- <ListaCompras /> -->
 				</div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-xs-12 col-md-7 flecha" style="padding-right:0px;">
+					<ListaCompras />
+				</div>
+				<div class="col-xs-12 col-md-5">
 					<div class="compraexitosa">
 						<h2 class="poppins"><b> ¡Compra exitosa! </b></h2>
 						<h5 class="roboto">
@@ -80,13 +55,22 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import ListaCompras from '@/components/ListaCompras.vue';
 export default {
 	name: 'ResumenCompra',
+	data() {
+		return {
+			pagina: 'Resumen de compras',
+		};
+	},
 	components: {
 		HeaderBlack,
 		ListaCompras,
+	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
 	},
 };
 </script>
@@ -180,9 +164,13 @@ form {
 	padding-right: 50px;
 }
 .btn-continuar {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: bold !important ;
 	background-color: #5640ff;
 	color: white;
 	text-align: center;
+	text-decoration: none;
 }
 .inner-addon {
 	position: relative;
@@ -206,6 +194,16 @@ form {
 		margin-right: 0vh;
 		margin-top: 50px;
 		margin-left: 0vh;
+	}
+	.secction {
+		height: 92vh;
+		padding: 36px 0px;
+	}
+
+	.compraexitosa {
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-left: 0px;
 	}
 }
 @media only screen and (max-width: 1100px) {

@@ -4,19 +4,19 @@
 
 		<!-- <h1>Desde programa individual</h1> -->
 		<section class="banner">
-			<h1 class="nombre">Diplomado FronEnd</h1>
+			<h1 class="nombre">{{ programa.name }}</h1>
 		</section>
 
 		<div class="row">
 			<div class="col-8 ladoD">
 				<h2>
 					<i class="bi bi-book"></i>
-					<b> ¿En qué consiste el Diplomado en Gestión Empresarial?</b>
+					<b> ¿En qué consiste el Diplomado en {{ programa.name }}?</b>
 				</h2>
 				<h3>
 					<i class="bi bi-bookmark-check-fill"></i>
-					Entiende la gestión actual en las organizaciones y aplica lo aprendido
-					como colaborador dentro una empresa
+					Entiende la gestión actual en {{ programa.name }} y aplica lo
+					aprendido como colaborador dentro una empresa
 				</h3>
 				<p>
 					El presente programa tiene por finalidad brindar todo el conocimiento
@@ -48,12 +48,12 @@
 					<i class="bi bi-calendar-date"></i>
 					Duracion:
 				</h4>
-				<p>96 horas académicas (4 meses apróximadamente)</p>
+				<p>{{ programa.duration }}</p>
 				<h4>
 					<i class="bi bi-clock"></i>
 					Horarios:
 				</h4>
-				<p>Martes y jueves 7:00pm - 9:15pm</p>
+				<p>{{ programa.horario }}</p>
 				<h4>
 					<svg
 						width="24"
@@ -86,11 +86,28 @@
 			</div>
 			<div class="col-4"><CelularInteresados /></div>
 		</div>
-		<Footer />
+		<!-- <Footer /> -->
+		<section class="contenedor">
+			<!-- <div class="grupo"> -->
+			<div class="footer">
+				<div>Con el respaldo de:</div>
+				<div>
+					<img
+						class="img"
+						src="../assets/img/logo_intercorp_white.svg"
+						alt=""
+					/>
+					<img class="img" src="../assets/img/logo_idat_white.svg" alt="" />
+					<img class="img" src="../assets/img/logo_zegel_white.svg" alt="" />
+				</div>
+			</div>
+			<!-- </div> -->
+		</section>
 	</div>
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
 import HeaderBlack from '@/components/HeaderBlack.vue';
 import CelularInteresados from '@/components/CelularInteresados.vue';
 import Footer from '@/components/Footer.vue';
@@ -100,6 +117,41 @@ export default {
 		HeaderBlack,
 		CelularInteresados,
 		Footer,
+	},
+	data() {
+		return {
+			message: 'Hola',
+			programa: {},
+		};
+	},
+	computed: {
+		...mapState({ shoppingcartA: (state) => state.shoppingcartA }),
+	},
+	methods: {
+		...mapMutations({
+			mutationIncrementar: 'shoppingcartA/mutationIncrementar',
+			getShoppingCartMutation: 'shoppingcartA/getShoppingCartMutation',
+		}),
+		...mapActions({
+			accionIncrementar: 'shoppingcartA/accionIncrementar',
+			getProgramasActionA: 'programasA/getProgramasAction',
+		}),
+
+		async getPrograma() {
+			const programa = 'this.$route.params.id ';
+			const data = await fetch(
+				`http://localhost:3000/programs/${this.$route.params.id}`
+			);
+			const info = await data.json();
+			this.programa = info;
+			console.log(info);
+		},
+		detalle() {
+			alert('Diste click en el nombre de : ' + this.programa.name);
+		},
+	},
+	created() {
+		this.getPrograma();
 	},
 };
 </script>

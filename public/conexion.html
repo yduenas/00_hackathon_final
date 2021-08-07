@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>
+			hola soy la conexion
+		</h1>
+		<script>
+			getInteresadosAction('auth​/mail_verify​');
+			getInteresadosAction('carrito');
+			getInteresadosAction('carrito/1');
+			getInteresadosAction('curso');
+			getInteresadosAction('curso/1');
+			getInteresadosAction('horariocurso');
+			getInteresadosAction('imagenescurso');
+			getInteresadosAction('interesado');
+			getInteresadosAction('leccionunidad');
+			getInteresadosAction('ordencompra');
+			getInteresadosAction('ordencompra/detail');
+			getInteresadosAction('ordencompra/1');
+			getInteresadosAction('unidadcurso');
+
+			//   async function getInteresadosAction({ commit, state }) {
+			//let URL = 'https://protected-castle-05283.herokuapp.com/curso/';
+			async function getInteresadosAction(tabla) {
+				//	alert('dentro');
+
+				let URL = `https://protected-castle-05283.herokuapp.com/${tabla}/`;
+				const data = await fetch(URL); //'http://localhost:3000/interesados'
+				console.log(tabla);
+				console.log(data.status);
+				if (data.status == 200) {
+					let interesadosA = await data.json();
+					//	commit('getInteresadosMutation', interesadosA);
+
+					console.log(interesadosA);
+				} else {
+					console.log(`error en conexion ${tabla} - ${data.status}`);
+				}
+			}
+		</script>
+	</body>
+</html>

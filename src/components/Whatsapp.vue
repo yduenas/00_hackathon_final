@@ -5,113 +5,19 @@
 		<div>
 			<!-- <h1>Estoy en telefono</h1> -->
 
-			<div class="phone">
-				<!-- <img src="../assets/img/phone.svg" alt="" /> -->
-				<form @submit.prevent="procesarInformacion">
-					<!-- {{ interesadoA.interesadoA.nombre }}
-					{{ $data }} -->
-					<p class="postula">
-						Postula y obten un 10% de descuento en el programa
-					</p>
-					<input
-						class="form-control inputs"
-						type="text"
-						name="nombre"
-						id="nombre"
-						placeholder="NOMBRE"
-						v-model="interesadosA.interesadoA.nombre"
-					/>
-
-					<input
-						class="form-control inputs"
-						type="text"
-						name="celular"
-						id="celular"
-						placeholder="CELULAR"
-						v-model="interesadosA.interesadoA.celular"
-					/>
-
-					<input
-						class="form-control inputs"
-						type="text"
-						name="correo_electronico"
-						id="correo_electronico"
-						placeholder="CORREO"
-						v-model="interesadosA.interesadoA.correo_electronico"
-					/>
-					<!-- <input
-						class="form-control inputs"
-						type="text"
-						name="programa"
-						id="programa"
-						placeholder="programa"
-						v-model="interesadosA.interesadoA.programa"
-					/> -->
-					<select
-						class="form-control inputs"
-						name="programa"
-						id="programa"
-						v-model="interesadosA.interesadoA.programa"
-						@click="select_option()"
-						><option class="redColor" value="" selected disabled
-							>PROGRAMA</option
-						>
-						<option
-							class="greenColor"
-							v-for="(programa, index) in programasA.programasA"
-							:key="index"
-							>{{ programa.name }}</option
-						>
-					</select>
-					<!-- <input
-						class="form-control inputs"
-						type="text"
-						name="descuento"
-						id="descuento"
-						placeholder="descuento"
-						v-model="descuento"
-						readonly
-					/> -->
-					<!-- <input
-						class="inputcheckbox"
-						type="checkbox"
-						name="politica"
-						id="politica"
-					/> -->
-					<!-- <img
-						for="politica"
-						class="check"
-						src="../assets/img/check-uncheck.svg"
-						alt=""
-					/> -->
-
-					<!-- <label class="check" for="politica"></label> -->
-					<!-- <label for="politica" class="check politica">
-						Acepto las politicas de privacidad</label
-					> -->
-
-					<label class="checkbox">
-						<input type="checkbox" />
-						<span class="span">Acepto las politicas de privacidad</span>
-					</label>
-
-					<!-- {{ interesadosA.interesadoA.descuento * 100 + '%' }}
-					{{ descuento }} -->
-					<input
-						class="form-control btn-primary inputs"
-						type="button"
-						value="Quiero postular"
-						@click="crearInteresado(interesadosA.interesadoA)"
-					/>
-
-					<!-- <div>{{ interesadosA.interesadoA }}</div> -->
-					<!-- <div>{{ $data.interesado }}</div> -->
-				</form>
-			</div>
 			<div>
 				<a href=" https://wa.me/+51994084294" target="_blank">
 					<img class="whatsapp" src="../assets/img/logo_whatsapp.svg" alt="" />
 				</a>
+			</div>
+			<div>
+				<router-link to="/login">
+					<img
+						class="inscribete"
+						src="../assets/img/boton_inscribete.svg"
+						alt=""
+					/>
+				</router-link>
 			</div>
 		</div>
 		<br />
@@ -236,11 +142,11 @@ export default {
 			// 'prevContactoAction',
 		]),
 		procesarInformacion() {
-			//	alert(this.interesado.nombre);
+			alert(this.interesado.nombre);
 		},
 
 		crearInteresado(interesado) {
-			alert(interesado.nombre + ' Ya esta registrado para obtener descuento');
+			alert(interesado.nombre);
 			this.crearInteresadoAction(interesado);
 		},
 	},
@@ -292,13 +198,25 @@ export default {
 	padding-top: 15px;
 	margin-bottom: 0; */
 	position: fixed;
+
+	/* left: 0;
+	right: 0; */
+	bottom: 100px;
+	right: 35px;
+	height: 50px;
+	width: 50px;
+}
+.inscribete {
+	position: fixed;
 	bottom: 0;
 	/* left: 0;
 	right: 0; */
 	bottom: 50px;
 	right: 35px;
-	height: 75px;
+	height: 50px;
+	width: 133px;
 }
+
 .politica {
 	font-family: 'Roboto Medium', sans-serif;
 	font-size: 12px;

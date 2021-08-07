@@ -50,6 +50,7 @@ export default {
 				//  console.log(nuevoContacto);
 				//	this.$emit('refrescando', result);
 				//	obtenerInfo();
+				state.interesadoA = '';
 			} catch (err) {
 				console.log(err);
 			}
