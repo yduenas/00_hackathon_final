@@ -135,6 +135,62 @@
       "correo_electronico": "CLADUIA@GAMIL.COM",
       "programa": "Desarrollo Back-End",
       "descuento": 0.1
+    },
+    {
+      "id": "Xd7jnlj",
+      "nombre": "",
+      "celular": "",
+      "correo_electronico": "",
+      "programa": "",
+      "descuento": 0.1
+    },
+    {
+      "id": "xJF4Pc4",
+      "nombre": "qqrw",
+      "celular": "weqr",
+      "correo_electronico": "qwer",
+      "programa": "weqr",
+      "descuento": 0.1
+    },
+    {
+      "id": "Y454e4M",
+      "nombre": "hugo duarte",
+      "celular": "123456789",
+      "correo_electronico": "asdfsa@gamil.com",
+      "programa": "desarrolllo corte y confeccion",
+      "descuento": 0.1
+    },
+    {
+      "id": "7zNXq_A",
+      "nombre": "maria",
+      "celular": "12345",
+      "correo_electronico": "maria@gmail,com",
+      "programa": "",
+      "descuento": 0.1
+    },
+    {
+      "id": "3rwN9IO",
+      "nombre": "mariab",
+      "celular": "13241",
+      "correo_electronico": "maria@gamil.com",
+      "programa": "backend",
+      "descuento": 0.1
+    },
+    {
+      "id": "OhKfywP",
+      "nombre": "mobile",
+      "celular": "1244",
+      "correo_electronico": "mobile@gmail.com",
+      "programa": "frontend",
+      "descuento": 0.1
+    },
+    {
+      "id": "_0OsRXZ",
+      "nombre": "mobile 2",
+      "celular": "1234",
+      "correo_electronico": "mobile2@gamil.com",
+      "programa": "aplicmoviles",
+      "descuento": 0.1
     }
   ],
   "programs": [

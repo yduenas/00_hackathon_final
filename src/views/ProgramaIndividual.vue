@@ -89,7 +89,7 @@
 		<!-- <Footer /> -->
 		<section class="contenedor">
 			<!-- <div class="grupo"> -->
-			<div class="footer">
+			<div class="footer2">
 				<div>Con el respaldo de:</div>
 				<div>
 					<img
@@ -158,6 +158,17 @@ export default {
 HeaderBlack
 
 <style scoped>
+.img {
+	margin-left: 1em;
+}
+.footer2 {
+	color: white;
+	background: #000d29;
+	width: 100%;
+	padding: 2em 2em;
+	text-align: left;
+	font-size: 10px;
+}
 .containerPI {
 	margin: 0 auto;
 }

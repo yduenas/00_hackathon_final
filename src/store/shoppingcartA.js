@@ -67,6 +67,7 @@ export default {
 	},
 	actions: {
 		accionIncrementar({ commit, state }, programa) {
+			//	alert('este es el programa ' + programa);
 			//	commit('mutationIncrementar');
 			//	alert(`estoy accionIncrementar desde shoppingCart - ${programa}`);
 			const programaSeleccionado = state.programasB.find(
@@ -76,7 +77,7 @@ export default {
 			// 	(programaB) => programaB.id === parseInt(programa)
 			// );
 
-			//	alert(programaSeleccionado.name);
+			//alert(programaSeleccionado.name);
 			commit('mutationAgregarPrograma', programaSeleccionado);
 			//	alert(state.programasSeleccionados.length);
 			state.contador = state.programasSeleccionados.length;

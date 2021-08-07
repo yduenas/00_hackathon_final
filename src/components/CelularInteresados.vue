@@ -53,7 +53,8 @@
 						id="programa"
 						v-model="interesadosA.interesadoA.programa"
 						@click="select_option()"
-						><option class="redColor" value="" selected disabled
+					>
+						<option class="redColor" value="" selected disabled
 							>PROGRAMA</option
 						>
 						<option

@@ -31,7 +31,7 @@ export default {
 		},
 		async crearInteresadoAction({ commit, state }, contacto) {
 			//commit('crearContactoMutation', contacto);
-			alert(state.URLInteresados);
+			//	alert(state.URLInteresados);
 			try {
 				const url = state.URLInteresados; //'http://localhost:3000/contactos'
 
